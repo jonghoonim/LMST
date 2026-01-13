@@ -26,9 +26,9 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="text-sm md:text-base tracking-[0.3em] uppercase text-gray-600"
+            className="text-sm md:text-base tracking-[0.3em] text-gray-600"
           >
-            LOGIC, MATTER, SPACE AND TIME
+            Logic, Matter, Space and Time
           </motion.p>
         </div>
       </section>
