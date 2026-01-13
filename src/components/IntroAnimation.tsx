@@ -11,6 +11,7 @@ interface IntroAnimationProps {
 
 export default function IntroAnimation({ onFinish }: IntroAnimationProps) {
     const [text, setText] = useState("");
+    const [isDecoded, setIsDecoded] = useState(false);
 
     useEffect(() => {
         let interval: NodeJS.Timeout;
@@ -31,6 +32,7 @@ export default function IntroAnimation({ onFinish }: IntroAnimationProps) {
             } else {
                 // Decoded state
                 setText("LMST");
+                setIsDecoded(true);
                 clearInterval(interval);
 
                 // Wait 0.5s before triggering the exit animation via parent callback
@@ -49,7 +51,10 @@ export default function IntroAnimation({ onFinish }: IntroAnimationProps) {
             initial={{ y: 0 }}
             exit={{ y: "-100%", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
         >
-            <h1 className="text-8xl md:text-9xl font-bold tracking-[0.35em] text-black">
+            <h1
+                className={`text-5xl md:text-9xl font-bold tracking-[0.35em] text-black ${isDecoded ? "" : "font-mono tracking-widest"
+                    }`}
+            >
                 {text}
             </h1>
         </motion.div>
