@@ -5,7 +5,10 @@ import Footer from "@/components/Footer";
 
 
 export const metadata: Metadata = {
-  title: "LMST",
+  title: {
+    template: 'LMST | %s',
+    default: 'LMST',
+  },
   description: "Logic, Material, Space, Time",
 };
 
