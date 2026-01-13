@@ -24,7 +24,7 @@ export default function ContactClient() {
 
                             <div>
                                 <h3 className="text-xs uppercase tracking-widest text-gray-400 mb-2">Email</h3>
-                                <p>jim.lmst@gmail.com</p>
+                                <p>jim@lmst.kr</p>
                             </div>
 
                             <div>
