@@ -4,7 +4,7 @@ import React from "react";
 
 export default function PastelBackground() {
     return (
-        <div className="fixed inset-0 -z-50 w-full h-full bg-white overflow-hidden pointer-events-none">
+        <div className="fixed inset-0 z-0 w-full h-full bg-white overflow-hidden pointer-events-none">
             {/* 
         Replicating the uploaded image:
         Left side: Warm, pale yellow/green
