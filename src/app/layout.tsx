@@ -7,9 +7,6 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "LMST",
   description: "Logic, Material, Space, Time",
-  icons: {
-    icon: '/icon.png', // Explicitly fallback to this if src/app/icon.png auto-gen fails or for consistency
-  },
 };
 
 export default function RootLayout({
