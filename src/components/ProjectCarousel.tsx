@@ -44,7 +44,7 @@ export default function ProjectCarousel() {
                                     src={project.imageUrl}
                                     alt={project.title}
                                     fill
-                                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                    className="object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-500"
                                 />
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
                                 <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
