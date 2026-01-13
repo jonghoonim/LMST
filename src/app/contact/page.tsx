@@ -23,12 +23,12 @@ export default function Contact() {
 
                         <div>
                             <h3 className="text-xs uppercase tracking-widest text-gray-400 mb-2">Email</h3>
-                            <p>hello@lmstarchitects.com</p>
+                            <p>jim.lmst@gmail.com</p>
                         </div>
 
                         <div>
                             <h3 className="text-xs uppercase tracking-widest text-gray-400 mb-2">Phone</h3>
-                            <p>+82 2 1234 5678</p>
+                            <p>+82 2 7718 1578</p>
                         </div>
 
                         <div>

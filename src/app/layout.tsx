@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Archivo } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 
-const inter = Inter({
+const archivo = Archivo({
   subsets: ["latin"],
-  variable: "--font-inter",
+  axes: ["wdth"],
 });
 
 export const metadata: Metadata = {
   title: "LMST",
-  description: "Minimalist Architecture Studio",
+  description: "Logic, Material, Space, Time",
 };
 
 export default function RootLayout({
@@ -21,9 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body
-        className={`${inter.variable} antialiased bg-white text-black font-sans`}
+        className={`${archivo.className} antialiased bg-white text-black`}
+        style={{ fontStretch: "75%" }}
       >
         <Header />
         <main className="min-h-screen pt-20">
