@@ -15,7 +15,7 @@ body {
   color: var(--foreground);
   font-family: 'Swiss721BT-BlackCondensed', sans-serif;
   font-weight: 700;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.35em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
