@@ -7,14 +7,16 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
+// Update Page Props type for Next.js 15+
 interface ProjectDetailProps {
-    params: {
+    params: Promise<{
         id: string;
-    };
+    }>;
 }
 
-export default function ProjectDetail({ params }: ProjectDetailProps) {
-    const project = projects.find((p) => p.id === params.id);
+export default async function ProjectDetail({ params }: ProjectDetailProps) {
+    const resolvedParams = await params;
+    const project = projects.find((p) => p.id === resolvedParams.id);
 
     if (!project) {
         notFound();
