@@ -26,7 +26,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="text-sm md:text-base tracking-[0.3em] text-gray-400"
+            className="text-sm md:text-base tracking-[0.3em] font-normal text-gray-600"
           >
             Logic, Matter, Space and Time
           </motion.p>
