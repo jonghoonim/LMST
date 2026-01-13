@@ -1,8 +1,8 @@
-@import url('https://fonts.cdnfonts.com/css/swis721-cn-bt');
+@import url(https://db.onlinewebfonts.com/c/184a43669964701942e4d9629cf77c2e?family=Swiss721BT-BlackCondensed);
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Swis721 Cn BT', sans-serif;
+  --font-sans: 'Swiss721BT-BlackCondensed', sans-serif;
 }
 
 :root {
@@ -13,7 +13,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Swis721 Cn BT', sans-serif;
+  font-family: 'Swiss721BT-BlackCondensed', sans-serif;
   font-weight: 700;
   letter-spacing: 0.5em;
   -webkit-font-smoothing: antialiased;
