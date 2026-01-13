@@ -108,7 +108,7 @@ export const projects: Project[] = [
         location: "Hwaseong, South Korea",
         year: "2025",
         description: "A thematic science museum designed for children, creating an immersive learning environment where architecture itself becomes an instrument of scientific exploration. The design integrates playful spatial dynamics with rigorous structural logic to foster curiosity and interaction.",
-        imageUrl: "/projects/hwaseong_science_museum/png7.jpg",
+        imageUrl: "/projects/hwaseong_science_museum/cover_main.jpg",
         images: [
             "/projects/hwaseong_science_museum/png.jpg",
             "/projects/hwaseong_science_museum/png2.jpg",
