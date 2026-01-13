@@ -22,7 +22,7 @@ export default function Header() {
                 }`}
         >
             <div className="container mx-auto px-6 flex justify-between items-center h-full">
-                <Link href="/" className="text-3xl font-bold uppercase">
+                <Link href="/" className="text-3xl font-bold uppercase tracking-[0.1em]">
                     LMST
                 </Link>
 
