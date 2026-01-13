@@ -14,17 +14,19 @@ export default function ModernGridBackground() {
         let animationFrameId: number;
 
         // Configuration
-        const gridSize = 60; // Slightly larger grid for more dramatic deformation
+        const gridSize = 40; // Smaller grid for smoother curve
         const basePointColor = "rgba(0, 0, 0, 0.4)";
-        const baseLineColor = "rgba(0, 0, 0, 0.08)";
-        const activeLineColor = "rgba(0, 0, 0, 0.6)"; // Stronger black for active lines
+        const baseLineColor = "rgba(0, 0, 0, 0.1)";
+        const activeLineColor = "rgba(0, 0, 0, 0.8)";
         const backgroundColor = "#ffffff";
 
-        // Physics - "Radical" Gesture
-        const mass = 15000; // Much stronger gravity (was 2000)
-        const springStiffness = 0.03; // Looser spring for more sway (was 0.05)
-        const friction = 0.92; // Less friction for longer movement (was 0.9)
-        const influenceRadius = 400; // Larger area of effect
+        // Physics - "Einstein Spacetime" (Rubber Sheet)
+        // High connection stiffness (fabric), High drag (syrup), Deep gravity well
+        const mouseMass = 5000;         // Power of the distortion
+        const stiffness = 0.08;         // Structural integrity (Higher = stiffer space)
+        const originStiffness = 0.008;  // Tendency to return to flat space
+        const damping = 0.92;           // Damping (Higher = slower, more viscous movement)
+        const influenceRadius = 600;    // How far the gravity propagates
 
         const mouse = { x: -1000, y: -1000 };
 
@@ -63,28 +65,45 @@ export default function ModernGridBackground() {
         resize();
         window.addEventListener("resize", resize);
 
-        const points: { x: number; y: number; ox: number; oy: number; vx: number; vy: number }[] = [];
+        // Point Definition
+        interface Point {
+            x: number; y: number;       // Current position
+            ox: number; oy: number;     // Original position
+            vx: number; vy: number;     // Velocity
+            neighbors: Point[];         // Connected points (Structural springs)
+        }
 
-        const getGridDimensions = () => {
-            const cols = Math.ceil(canvas.width / gridSize);
-            const rows = Math.ceil(canvas.height / gridSize);
-            const iMin = -2;
-            const iMax = cols + 2;
-            const jMin = -2;
-            const jMax = rows + 2;
-            return { iMin, iMax, jMin, jMax, numCols: iMax - iMin, numRows: jMax - jMin };
-        };
-
-        let gridDims = getGridDimensions();
+        const points: Point[] = [];
+        let gridDims = { cols: 0, rows: 0 };
 
         const initPoints = () => {
             points.length = 0;
-            gridDims = getGridDimensions();
-            for (let i = 0; i < gridDims.numCols; i++) {
-                for (let j = 0; j < gridDims.numRows; j++) {
-                    const x = (i + gridDims.iMin) * gridSize;
-                    const y = (j + gridDims.jMin) * gridSize;
-                    points.push({ x, y, ox: x, oy: y, vx: 0, vy: 0 });
+            // Pad the grid slightly to avoid edge artifacts
+            const cols = Math.ceil(canvas.width / gridSize) + 2;
+            const rows = Math.ceil(canvas.height / gridSize) + 2;
+            gridDims = { cols, rows };
+
+            // 1. Create Points
+            const tempGrid: Point[][] = [];
+            for (let i = 0; i < cols; i++) {
+                tempGrid[i] = [];
+                for (let j = 0; j < rows; j++) {
+                    const x = i * gridSize - gridSize;
+                    const y = j * gridSize - gridSize;
+                    const p = { x, y, ox: x, oy: y, vx: 0, vy: 0, neighbors: [] };
+                    points.push(p);
+                    tempGrid[i][j] = p;
+                }
+            }
+
+            // 2. Connect Neighbors (Structure)
+            for (let i = 0; i < cols; i++) {
+                for (let j = 0; j < rows; j++) {
+                    const p = tempGrid[i][j];
+                    if (i < cols - 1) p.neighbors.push(tempGrid[i + 1][j]); // Right
+                    if (j < rows - 1) p.neighbors.push(tempGrid[i][j + 1]); // Bottom
+                    if (i > 0) p.neighbors.push(tempGrid[i - 1][j]);        // Left
+                    if (j > 0) p.neighbors.push(tempGrid[i][j - 1]);        // Top
                 }
             }
         };
@@ -95,103 +114,133 @@ export default function ModernGridBackground() {
             ctx.fillStyle = backgroundColor;
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            // Update Physics
+            // 1. Physics Step
             points.forEach(p => {
+                let fx = 0;
+                let fy = 0;
+
+                // A. Gravity Well (Curvature)
+                // We model this as a displacement force that inversely scales with distance
                 const dx = mouse.x - p.x;
                 const dy = mouse.y - p.y;
                 const distSq = dx * dx + dy * dy;
                 const dist = Math.sqrt(distSq);
 
-                // Stronger Gravity Force
-                const force = dist < 20 ? 0 : mass / (distSq + 1000);
+                if (dist < influenceRadius) {
+                    // Smooth spacetime well formula
+                    const force = mouseMass / (dist + 100);
+                    const angle = Math.atan2(dy, dx);
+                    fx += Math.cos(angle) * force;
+                    fy += Math.sin(angle) * force;
+                }
 
-                const angle = Math.atan2(dy, dx);
-                const fx = Math.cos(angle) * force;
-                const fy = Math.sin(angle) * force;
+                // B. Elastic Fabric (Neighbor Springs)
+                // This is the "Connected" part - points pull each other
+                p.neighbors.forEach(n => {
+                    const ndx = n.x - p.x;
+                    const ndy = n.y - p.y;
+                    const ndist = Math.sqrt(ndx * ndx + ndy * ndy);
 
-                const springX = (p.ox - p.x) * springStiffness;
-                const springY = (p.oy - p.y) * springStiffness;
+                    // Simple spring: pull towards neighbor if too far
+                    // Ideal distance is 0 in relative terms for a "contraction" effect, 
+                    // or gridSize for "structure". Space warping actually contracts space.
+                    // Let's try to maintain gridSize but allow compression.
+                    const stretch = ndist - gridSize;
+                    const springF = stretch * stiffness;
 
-                p.vx += fx + springX;
-                p.vy += fy + springY;
+                    const angle = Math.atan2(ndy, ndx);
+                    fx += Math.cos(angle) * springF;
+                    fy += Math.sin(angle) * springF;
+                });
 
-                p.vx *= friction;
-                p.vy *= friction;
+                // C. Memory (Origin)
+                // Keeps the whole universe from collapsing into the black hole
+                fx += (p.ox - p.x) * originStiffness;
+                fy += (p.oy - p.y) * originStiffness;
 
+                p.vx += fx;
+                p.vy += fy;
+            });
+
+            // 2. Integration
+            points.forEach(p => {
+                p.vx *= damping;
+                p.vy *= damping;
                 p.x += p.vx;
                 p.y += p.vy;
             });
 
-            // Draw Lines
+            // 3. Render
             ctx.lineWidth = 1;
 
-            // Vertical Lines
-            for (let i = 0; i < gridDims.numCols; i++) {
-                ctx.beginPath();
-                // Determine distortion for this column based on center point proximity
-                const centerIdx = i * gridDims.numRows + Math.floor(gridDims.numRows / 2);
-                const centerP = points[centerIdx];
-                const colDist = centerP ? Math.abs(centerP.x - mouse.x) : 1000;
+            // We draw lines by iterating neighbors (Right/Bottom only to avoid duplicates)
+            // But we need to use the linear array for simpler looping or the nested structure if we kept it.
+            // Using the points array and grid logic:
 
-                ctx.strokeStyle = colDist < influenceRadius ? activeLineColor : baseLineColor;
+            const cols = gridDims.cols;
+            const rows = gridDims.rows;
 
-                // Increase line width for active lines
-                if (colDist < influenceRadius) {
-                    ctx.lineWidth = 1.5 + (1 - colDist / influenceRadius) * 1.5;
-                } else {
-                    ctx.lineWidth = 1;
-                }
-
-                for (let j = 0; j < gridDims.numRows; j++) {
-                    const idx = i * gridDims.numRows + j;
+            for (let i = 0; i < cols; i++) {
+                for (let j = 0; j < rows; j++) {
+                    const idx = i * rows + j;
                     const p = points[idx];
-                    if (!p) continue;
-                    if (j === 0) ctx.moveTo(p.x, p.y);
-                    else ctx.lineTo(p.x, p.y);
+
+                    // Draw Right Connection
+                    if (i < cols - 1) {
+                        const right = points[(i + 1) * rows + j];
+                        // Calculate midpoint distortion for styling
+                        const mx = (p.x + right.x) / 2;
+                        const my = (p.y + right.y) / 2;
+                        const d = Math.sqrt((mx - mouse.x) ** 2 + (my - mouse.y) ** 2);
+
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(right.x, right.y);
+
+                        // Visual Lensing effect: Darker and Thicker near center
+                        if (d < influenceRadius) {
+                            const intensity = 1 - (d / influenceRadius); // 0 to 1
+                            ctx.strokeStyle = `rgba(0, 0, 0, ${0.1 + intensity * 0.7})`;
+                            ctx.lineWidth = 1 + intensity * 1.5;
+                        } else {
+                            ctx.strokeStyle = baseLineColor;
+                            ctx.lineWidth = 1;
+                        }
+                        ctx.stroke();
+                    }
+
+                    // Draw Bottom Connection
+                    if (j < rows - 1) {
+                        const bottom = points[i * rows + (j + 1)];
+                        const mx = (p.x + bottom.x) / 2;
+                        const my = (p.y + bottom.y) / 2;
+                        const d = Math.sqrt((mx - mouse.x) ** 2 + (my - mouse.y) ** 2);
+
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(bottom.x, bottom.y);
+
+                        if (d < influenceRadius) {
+                            const intensity = 1 - (d / influenceRadius);
+                            ctx.strokeStyle = `rgba(0, 0, 0, ${0.1 + intensity * 0.7})`;
+                            ctx.lineWidth = 1 + intensity * 1.5;
+                        } else {
+                            ctx.strokeStyle = baseLineColor;
+                            ctx.lineWidth = 1;
+                        }
+                        ctx.stroke();
+                    }
                 }
-                ctx.stroke();
             }
 
-            // Horizontal Lines
-            for (let j = 0; j < gridDims.numRows; j++) {
-                ctx.beginPath();
-                const centerIdx = Math.floor(gridDims.numCols / 2) * gridDims.numRows + j;
-                const centerP = points[centerIdx];
-                const rowDist = centerP ? Math.abs(centerP.y - mouse.y) : 1000;
-
-                ctx.strokeStyle = rowDist < influenceRadius ? activeLineColor : baseLineColor;
-
-                if (rowDist < influenceRadius) {
-                    ctx.lineWidth = 1.5 + (1 - rowDist / influenceRadius) * 1.5;
-                } else {
-                    ctx.lineWidth = 1;
-                }
-
-                for (let i = 0; i < gridDims.numCols; i++) {
-                    const idx = i * gridDims.numRows + j;
-                    const p = points[idx];
-                    if (!p) continue;
-                    if (i === 0) ctx.moveTo(p.x, p.y);
-                    else ctx.lineTo(p.x, p.y);
-                }
-                ctx.stroke();
-            }
-
-            // Draw Matter Points
-            points.forEach(p => {
-                const dx = p.x - mouse.x;
-                const dy = p.y - mouse.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-
-                if (dist < influenceRadius) {
-                    ctx.fillStyle = basePointColor;
-                    // Dramatic point size scaling
-                    const size = Math.max(0, (influenceRadius - dist) / 40);
-                    ctx.beginPath();
-                    ctx.arc(p.x, p.y, size * 1.5, 0, Math.PI * 2);
-                    ctx.fill();
-                }
-            });
+            // 4. Draw Event Horizon (Optional subtle point at mouse)
+            // Not strictly needed but helps visualize the "mass"
+            /*
+            ctx.beginPath();
+            ctx.arc(mouse.x, mouse.y, 5, 0, Math.PI * 2);
+            ctx.fillStyle = "black";
+            ctx.fill();
+            */
 
             animationFrameId = requestAnimationFrame(draw);
         };
@@ -205,6 +254,7 @@ export default function ModernGridBackground() {
             window.removeEventListener("touchmove", handleTouchMove);
             window.removeEventListener("touchstart", handleTouchMove);
             window.removeEventListener("deviceorientation", handleOrientation);
+            points.length = 0;
         };
     }, []);
 
