@@ -3,10 +3,13 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import ProjectCarousel from "@/components/ProjectCarousel";
+import PastelBackground from "@/components/PastelBackground";
 
 export default function Home() {
   return (
     <div className="min-h-screen relative">
+      <PastelBackground />
+
       {/* Hero Section */}
       <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden text-black z-10">
         {/* Overlay Content */}
