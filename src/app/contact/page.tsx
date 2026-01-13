@@ -17,8 +17,8 @@ export default function Contact() {
                     <div className="space-y-8 text-gray-700 font-light">
                         <div>
                             <h3 className="text-xs uppercase tracking-widest text-gray-400 mb-2">Address</h3>
-                            <p>123 Architecture Blvd</p>
-                            <p>Seoul, South Korea 06000</p>
+                            <p>L Floor, 6-6, Tojeong-ro 2-gil, Mapo-gu, Seoul</p>
+                            <p className="text-sm text-gray-400 mt-1">서울특별시 마포구 토정로2길 6-6</p>
                         </div>
 
                         <div>
