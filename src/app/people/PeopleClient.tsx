@@ -13,7 +13,7 @@ export default function PeopleClient() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="w-full md:w-1/2 relative aspect-[3/4]"
+                    className="w-full md:w-1/3 relative aspect-[3/4]"
                 >
                     <Image
                         src="/jonghoon_im_profile.jpg"
@@ -28,7 +28,7 @@ export default function PeopleClient() {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="w-full md:w-1/2"
+                    className="w-full md:w-2/3"
                 >
                     <h1 className="text-3xl font-bold tracking-widest uppercase mb-2">Jonghoon Im</h1>
                     <p className="text-sm text-gray-500 uppercase tracking-widest mb-8">Principal Architect / Founder</p>
