@@ -100,7 +100,7 @@ export const projects: Project[] = [
         description: "A physical manifestation of binary logic gates, creating a programmable space.",
         imageUrl: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000&auto=format&fit=crop",
         images: ["https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000&auto=format&fit=crop"]
-    }
+    },
     {
         id: "hwaseong-science-museum",
         title: "Hwaseong Children's Science Museum",
