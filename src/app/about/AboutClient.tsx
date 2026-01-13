@@ -12,7 +12,7 @@ export default function AboutClient() {
                 transition={{ duration: 0.8 }}
                 className="max-w-4xl mx-auto"
             >
-                <h1 className="text-4xl font-light tracking-widest uppercase mb-12 text-center">About Us</h1>
+                <h1 className="text-4xl font-bold tracking-widest uppercase mb-12 text-center">About Us</h1>
 
                 <div className="relative w-full h-[400px] mb-16">
                     <Image

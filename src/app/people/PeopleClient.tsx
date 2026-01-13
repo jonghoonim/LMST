@@ -30,7 +30,7 @@ export default function PeopleClient() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="w-full md:w-1/2"
                 >
-                    <h1 className="text-3xl font-light tracking-widest uppercase mb-2">Jonghoon Im</h1>
+                    <h1 className="text-3xl font-bold tracking-widest uppercase mb-2">Jonghoon Im</h1>
                     <p className="text-sm text-gray-500 uppercase tracking-widest mb-8">Principal Architect / Founder</p>
 
                     <div className="space-y-6 text-gray-700 font-light leading-relaxed whitespace-pre-line">

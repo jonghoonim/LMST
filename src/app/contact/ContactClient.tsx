@@ -12,7 +12,7 @@ export default function ContactClient() {
                 className="max-w-4xl mx-auto flex flex-col md:flex-row gap-16"
             >
                 <div className="w-full md:w-1/2">
-                    <h1 className="text-4xl font-light tracking-widest uppercase mb-12">Contact</h1>
+                    <h1 className="text-4xl font-bold tracking-widest uppercase mb-12">Contact</h1>
 
                     <div className="space-y-8 text-gray-700 font-light">
                         <div>
