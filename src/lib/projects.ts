@@ -101,4 +101,35 @@ export const projects: Project[] = [
         imageUrl: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000&auto=format&fit=crop",
         images: ["https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000&auto=format&fit=crop"]
     }
+    {
+        id: "hwaseong-science-museum",
+        title: "Hwaseong Children's Science Museum",
+        category: "Public / Cultural",
+        location: "Hwaseong, South Korea",
+        year: "2025",
+        description: "A thematic science museum designed for children, creating an immersive learning environment where architecture itself becomes an instrument of scientific exploration. The design integrates playful spatial dynamics with rigorous structural logic to foster curiosity and interaction.",
+        imageUrl: "/projects/hwaseong_science_museum/png.png",
+        images: [
+            "/projects/hwaseong_science_museum/png.png",
+            "/projects/hwaseong_science_museum/png2.png",
+            "/projects/hwaseong_science_museum/png3.png",
+            "/projects/hwaseong_science_museum/png4.png",
+            "/projects/hwaseong_science_museum/png5.png",
+            "/projects/hwaseong_science_museum/png6.png",
+            "/projects/hwaseong_science_museum/png7.png",
+            "/projects/hwaseong_science_museum/png8.png",
+            "/projects/hwaseong_science_museum/png9.png",
+            "/projects/hwaseong_science_museum/png10.png",
+            "/projects/hwaseong_science_museum/png11.png",
+            "/projects/hwaseong_science_museum/png12.png",
+            "/projects/hwaseong_science_museum/png13.png",
+            "/projects/hwaseong_science_museum/png14.png",
+            "/projects/hwaseong_science_museum/png15.png",
+            "/projects/hwaseong_science_museum/png16.png",
+            "/projects/hwaseong_science_museum/png17.png",
+            "/projects/hwaseong_science_museum/png18.png",
+            "/projects/hwaseong_science_museum/png19.png",
+            "/projects/hwaseong_science_museum/png20.png"
+        ]
+    }
 ];
