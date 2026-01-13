@@ -47,16 +47,22 @@ export default function IntroAnimation({ onFinish }: IntroAnimationProps) {
 
     return (
         <motion.div
-            className="fixed inset-0 z-[9999] flex items-center justify-center bg-white"
-            initial={{ y: 0 }}
-            exit={{ y: "-100%", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
+            className="fixed inset-0 z-[9999] flex flex-col justify-center items-center bg-white text-black"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: 1, ease: "easeInOut" } }}
         >
-            <h1
-                className={`text-5xl md:text-9xl font-bold tracking-[0.35em] text-black ${isDecoded ? "" : "font-mono tracking-widest"
-                    }`}
-            >
-                {text}
-            </h1>
+            <div className="text-center px-4 pointer-events-none">
+                <h1
+                    className={`text-6xl md:text-8xl font-bold mb-4 text-center tracking-[0.35em] ${isDecoded ? "" : "font-mono tracking-widest"
+                        }`}
+                >
+                    {text}
+                </h1>
+                {/* Placeholder to match the subtitle height in the Hero section for perfect vertical alignment */}
+                <p className="text-sm md:text-base tracking-[0.3em] uppercase text-transparent select-none">
+                    LOGIC, MATTER, SPACE AND TIME
+                </p>
+            </div>
         </motion.div>
     );
 }
