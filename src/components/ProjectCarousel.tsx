@@ -5,62 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const projects = [
-    {
-        id: 1,
-        title: "Quantum Void",
-        category: "Digital Structure",
-        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop"
-    },
-    {
-        id: 2,
-        title: "Neural Network",
-        category: "Algorithmic Design",
-        image: "https://images.unsplash.com/photo-1633613286991-611fe299c4be?q=80&w=1000&auto=format&fit=crop"
-    },
-    {
-        id: 3,
-        title: "Cybernetic Hive",
-        category: "Parametric System",
-        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop"
-    },
-    {
-        id: 4,
-        title: "Digital Horizon",
-        category: "Virtual Landscape",
-        image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=1000&auto=format&fit=crop"
-    },
-    {
-        id: 5,
-        title: "Abstract Logic",
-        category: "Computational Form",
-        image: "https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=1000&auto=format&fit=crop"
-    },
-    {
-        id: 6,
-        title: "Time Dilation",
-        category: "Temporal Space",
-        image: "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=1000&auto=format&fit=crop"
-    },
-    {
-        id: 7,
-        title: "Matter Synthesis",
-        category: "Material Physics",
-        image: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=1000&auto=format&fit=crop"
-    },
-    {
-        id: 8,
-        title: "Spatial Echo",
-        category: "Acoustic Geometry",
-        image: "https://images.unsplash.com/photo-1515462277126-2dd0c162007a?q=80&w=1000&auto=format&fit=crop"
-    },
-    {
-        id: 9,
-        title: "Logic Gate",
-        category: "Binary Architecture",
-        image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000&auto=format&fit=crop"
-    }
-];
+import { projects } from "@/lib/projects";
 
 export default function ProjectCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -96,7 +41,7 @@ export default function ProjectCarousel() {
                                 className="relative aspect-[3/4] bg-gray-100 group cursor-pointer"
                             >
                                 <Image
-                                    src={project.image}
+                                    src={project.imageUrl}
                                     alt={project.title}
                                     fill
                                     className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
