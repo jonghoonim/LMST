@@ -14,15 +14,17 @@ export default function ModernGridBackground() {
         let animationFrameId: number;
 
         // Configuration
-        const gridSize = 50;
-        const pointColor = "rgba(0, 0, 0, 0.2)"; // Black/Gray points
-        const lineColor = "rgba(0, 0, 0, 0.05)"; // Subtle gray grid lines
-        const activeLineColor = "rgba(0, 0, 255, 0.1)"; // Subtle blue tint when active
-        const backgroundColor = "#ffffff"; // White background
+        const gridSize = 60; // Slightly larger grid for more dramatic deformation
+        const basePointColor = "rgba(0, 0, 0, 0.4)";
+        const baseLineColor = "rgba(0, 0, 0, 0.08)";
+        const activeLineColor = "rgba(0, 0, 0, 0.6)"; // Stronger black for active lines
+        const backgroundColor = "#ffffff";
 
-        // Physics
-        const mass = 2000; // Strength of the gravity well
-        const damping = 0.1; // Smoothness of return
+        // Physics - "Radical" Gesture
+        const mass = 15000; // Much stronger gravity (was 2000)
+        const springStiffness = 0.03; // Looser spring for more sway (was 0.05)
+        const friction = 0.92; // Less friction for longer movement (was 0.9)
+        const influenceRadius = 400; // Larger area of effect
 
         const mouse = { x: -1000, y: -1000 };
 
@@ -40,20 +42,11 @@ export default function ModernGridBackground() {
         };
 
         const handleOrientation = (e: DeviceOrientationEvent) => {
-            // Only use gyro if not currently touching (touch takes priority)
-            // Note: iOS requires permission for this, which we are skipping to keep it simple.
-            // This will primarily work on Android or devices that allow it by default.
             if (e.gamma === null || e.beta === null) return;
-
             const centerX = window.innerWidth / 2;
             const centerY = window.innerHeight / 2;
-
-            // Gamma: Left/Right tilt (-90 to 90)
-            // Beta: Front/Back tilt (-180 to 180)
-            // We map a small range (e.g., +/- 20 degrees) to the screen width/height
-            const tiltX = e.gamma * 15; // Sensitivity factor
-            const tiltY = (e.beta - 45) * 15; // Subtract 45 to assume holding phone at 45 deg angle
-
+            const tiltX = e.gamma * 25;
+            const tiltY = (e.beta - 45) * 25;
             mouse.x = centerX + tiltX;
             mouse.y = centerY + tiltY;
         };
@@ -61,7 +54,6 @@ export default function ModernGridBackground() {
         window.addEventListener("mousemove", handleMouseMove);
         window.addEventListener("touchmove", handleTouchMove);
         window.addEventListener("touchstart", handleTouchMove);
-        // Passive listener for gyroscope
         window.addEventListener("deviceorientation", handleOrientation);
 
         const resize = () => {
@@ -71,14 +63,11 @@ export default function ModernGridBackground() {
         resize();
         window.addEventListener("resize", resize);
 
-        // Grid Points
         const points: { x: number; y: number; ox: number; oy: number; vx: number; vy: number }[] = [];
 
-        // Calculate grid dimensions
         const getGridDimensions = () => {
             const cols = Math.ceil(canvas.width / gridSize);
             const rows = Math.ceil(canvas.height / gridSize);
-            // Extend by 2 modules on each side (previously was roughly 1)
             const iMin = -2;
             const iMax = cols + 2;
             const jMin = -2;
@@ -91,19 +80,11 @@ export default function ModernGridBackground() {
         const initPoints = () => {
             points.length = 0;
             gridDims = getGridDimensions();
-
             for (let i = 0; i < gridDims.numCols; i++) {
                 for (let j = 0; j < gridDims.numRows; j++) {
                     const x = (i + gridDims.iMin) * gridSize;
                     const y = (j + gridDims.jMin) * gridSize;
-                    points.push({
-                        x,
-                        y,
-                        ox: x,
-                        oy: y,
-                        vx: 0,
-                        vy: 0
-                    });
+                    points.push({ x, y, ox: x, oy: y, vx: 0, vy: 0 });
                 }
             }
         };
@@ -111,91 +92,103 @@ export default function ModernGridBackground() {
         initPoints();
 
         const draw = () => {
-            // 1. Clear with White
             ctx.fillStyle = backgroundColor;
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            // 2. Update Physics (Gravity Well)
+            // Update Physics
             points.forEach(p => {
                 const dx = mouse.x - p.x;
                 const dy = mouse.y - p.y;
                 const distSq = dx * dx + dy * dy;
                 const dist = Math.sqrt(distSq);
 
-                // Gravity force
-                const force = dist < 50 ? 0 : mass / distSq;
+                // Stronger Gravity Force
+                const force = dist < 20 ? 0 : mass / (distSq + 1000);
 
                 const angle = Math.atan2(dy, dx);
                 const fx = Math.cos(angle) * force;
                 const fy = Math.sin(angle) * force;
 
-                // Spring force
-                const k = 0.05;
-                const springX = (p.ox - p.x) * k;
-                const springY = (p.oy - p.y) * k;
+                const springX = (p.ox - p.x) * springStiffness;
+                const springY = (p.oy - p.y) * springStiffness;
 
                 p.vx += fx + springX;
                 p.vy += fy + springY;
 
-                p.vx *= 0.9;
-                p.vy *= 0.9;
+                p.vx *= friction;
+                p.vy *= friction;
 
                 p.x += p.vx;
                 p.y += p.vy;
             });
 
-            // 3. Draw Grid Lines
+            // Draw Lines
             ctx.lineWidth = 1;
 
             // Vertical Lines
             for (let i = 0; i < gridDims.numCols; i++) {
                 ctx.beginPath();
+                // Determine distortion for this column based on center point proximity
+                const centerIdx = i * gridDims.numRows + Math.floor(gridDims.numRows / 2);
+                const centerP = points[centerIdx];
+                const colDist = centerP ? Math.abs(centerP.x - mouse.x) : 1000;
+
+                ctx.strokeStyle = colDist < influenceRadius ? activeLineColor : baseLineColor;
+
+                // Increase line width for active lines
+                if (colDist < influenceRadius) {
+                    ctx.lineWidth = 1.5 + (1 - colDist / influenceRadius) * 1.5;
+                } else {
+                    ctx.lineWidth = 1;
+                }
+
                 for (let j = 0; j < gridDims.numRows; j++) {
                     const idx = i * gridDims.numRows + j;
                     const p = points[idx];
                     if (!p) continue;
-
                     if (j === 0) ctx.moveTo(p.x, p.y);
                     else ctx.lineTo(p.x, p.y);
                 }
-                const centerIdx = i * gridDims.numRows + Math.floor(gridDims.numRows / 2);
-                const centerP = points[centerIdx];
-                const dist = centerP ? Math.abs(centerP.x - mouse.x) : 1000;
-
-                ctx.strokeStyle = dist < 300 ? activeLineColor : lineColor;
                 ctx.stroke();
             }
 
             // Horizontal Lines
             for (let j = 0; j < gridDims.numRows; j++) {
                 ctx.beginPath();
+                const centerIdx = Math.floor(gridDims.numCols / 2) * gridDims.numRows + j;
+                const centerP = points[centerIdx];
+                const rowDist = centerP ? Math.abs(centerP.y - mouse.y) : 1000;
+
+                ctx.strokeStyle = rowDist < influenceRadius ? activeLineColor : baseLineColor;
+
+                if (rowDist < influenceRadius) {
+                    ctx.lineWidth = 1.5 + (1 - rowDist / influenceRadius) * 1.5;
+                } else {
+                    ctx.lineWidth = 1;
+                }
+
                 for (let i = 0; i < gridDims.numCols; i++) {
                     const idx = i * gridDims.numRows + j;
                     const p = points[idx];
                     if (!p) continue;
-
                     if (i === 0) ctx.moveTo(p.x, p.y);
                     else ctx.lineTo(p.x, p.y);
                 }
-                const centerIdx = Math.floor(gridDims.numCols / 2) * gridDims.numRows + j;
-                const centerP = points[centerIdx];
-                const dist = centerP ? Math.abs(centerP.y - mouse.y) : 1000;
-
-                ctx.strokeStyle = dist < 300 ? activeLineColor : lineColor;
                 ctx.stroke();
             }
 
-            // 4. Draw Points (Matter)
+            // Draw Matter Points
             points.forEach(p => {
-                ctx.fillStyle = pointColor;
                 const dx = p.x - mouse.x;
                 const dy = p.y - mouse.y;
                 const dist = Math.sqrt(dx * dx + dy * dy);
 
-                if (dist < 300) {
-                    const size = Math.max(0, (300 - dist) / 100);
+                if (dist < influenceRadius) {
+                    ctx.fillStyle = basePointColor;
+                    // Dramatic point size scaling
+                    const size = Math.max(0, (influenceRadius - dist) / 40);
                     ctx.beginPath();
-                    ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
+                    ctx.arc(p.x, p.y, size * 1.5, 0, Math.PI * 2);
                     ctx.fill();
                 }
             });
