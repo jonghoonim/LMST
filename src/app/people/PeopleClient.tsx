@@ -16,7 +16,7 @@ export default function PeopleClient() {
                     className="w-full md:w-1/2 relative aspect-[3/4]"
                 >
                     <Image
-                        src="/jonghoon_im.png"
+                        src="/jonghoon_im_profile.jpg"
                         alt="Jonghoon Im"
                         fill
                         className="object-cover"
