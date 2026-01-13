@@ -1,13 +1,21 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import ModernGridBackground from "@/components/ModernGridBackground";
+import IntroAnimation from "@/components/IntroAnimation";
+import { useState } from "react";
 
 export default function Home() {
+  const [showIntro, setShowIntro] = useState(true);
+
   return (
     <div className="min-h-screen relative">
+      <AnimatePresence>
+        {showIntro && <IntroAnimation onFinish={() => setShowIntro(false)} />}
+      </AnimatePresence>
+
       <ModernGridBackground />
 
       {/* Hero Section */}
