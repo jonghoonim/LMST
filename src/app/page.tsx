@@ -1,21 +1,13 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import ModernGridBackground from "@/components/ModernGridBackground";
-import IntroAnimation from "@/components/IntroAnimation";
-import { useState } from "react";
 
 export default function Home() {
-  const [showIntro, setShowIntro] = useState(true);
-
   return (
     <div className="min-h-screen relative">
-      <AnimatePresence>
-        {showIntro && <IntroAnimation onFinish={() => setShowIntro(false)} />}
-      </AnimatePresence>
-
       <ModernGridBackground />
 
       {/* Hero Section */}
@@ -23,6 +15,9 @@ export default function Home() {
         {/* Overlay Content */}
         <div className="z-10 text-center px-4 pointer-events-none">
           <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
             className="text-6xl md:text-8xl font-bold mb-4 text-center text-black tracking-[0.35em]"
           >
             LMST
