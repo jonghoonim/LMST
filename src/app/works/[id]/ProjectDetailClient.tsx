@@ -33,7 +33,7 @@ export default function ProjectDetailClient({ project }: ProjectDetailClientProp
                 {/* Header Section */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20 items-end">
                     <div className="lg:col-span-8">
-                        <h1 className="text-4xl md:text-6xl font-bold tracking-tight uppercase mb-6 leading-tight">
+                        <h1 className="text-2xl md:text-4xl font-bold tracking-tight uppercase mb-6 leading-tight">
                             {project.title}
                         </h1>
                         <div className="flex flex-wrap text-sm text-gray-500 uppercase tracking-widest gap-6 md:gap-12">
