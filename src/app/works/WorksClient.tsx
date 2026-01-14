@@ -9,7 +9,6 @@ export default function WorksClient() {
     const [filterYear, setFilterYear] = useState<string>("All");
     const [filterType, setFilterType] = useState<string>("All");
     const [filterStatus, setFilterStatus] = useState<string>("All");
-    const [onlyCompetition, setOnlyCompetition] = useState<boolean>(false);
 
     // Extract unique values for filters
     const years = useMemo(() => ["All", ...Array.from(new Set(projects.map(p => p.year))).sort().reverse()], []);
@@ -20,7 +19,6 @@ export default function WorksClient() {
         if (filterYear !== "All" && project.year !== filterYear) return false;
         if (filterType !== "All" && project.type !== filterType) return false;
         if (filterStatus !== "All" && project.status !== filterStatus) return false;
-        if (onlyCompetition && !project.isCompetition) return false;
         return true;
     });
 
@@ -77,14 +75,6 @@ export default function WorksClient() {
                             <option key={status} value={status}>{status}</option>
                         ))}
                     </select>
-                </div>
-
-                {/* Competition Toggle */}
-                <div className="flex items-center space-x-2 cursor-pointer" onClick={() => setOnlyCompetition(!onlyCompetition)}>
-                    <div className={`w-4 h-4 border border-black flex items-center justify-center transition-colors ${onlyCompetition ? "bg-black" : "bg-transparent"}`}>
-                        {onlyCompetition && <div className="w-2 h-2 bg-white" />}
-                    </div>
-                    <span className="text-sm font-bold uppercase select-none">Competition</span>
                 </div>
             </div>
 

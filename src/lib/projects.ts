@@ -4,8 +4,7 @@ export interface Project {
     title: string;
     category: string; // Keep for backward compatibility or display
     type: string;     // Residential, Commercial, Cultural, etc.
-    status: string;   // Built, Unbuilt, In Progress
-    isCompetition: boolean;
+    status: string;   // Built, Unbuilt, In Progress, Competition
     location: string;
     year: string;
     description: string;
@@ -20,7 +19,6 @@ export const projects: Project[] = [
         category: "Digital Structure",
         type: "Digital",
         status: "Unbuilt",
-        isCompetition: false,
         location: "Metaverse",
         year: "2025",
         description: "A digital exploration of negative space, where the void itself becomes the primary structural element.",
@@ -33,7 +31,6 @@ export const projects: Project[] = [
         category: "Algorithmic Design",
         type: "Research",
         status: "In Progress",
-        isCompetition: false,
         location: "Seoul, South Korea",
         year: "2024",
         description: "An algorithmic generation of interconnected nodes, mimicking the complexity of biological neural networks.",
@@ -45,8 +42,7 @@ export const projects: Project[] = [
         title: "Cybernetic Hive",
         category: "Parametric System",
         type: "Residential",
-        status: "Unbuilt",
-        isCompetition: true,
+        status: "Competition",
         location: "Tokyo, Japan",
         year: "2024",
         description: "A parametric system designed for high-density living, optimizing light and air flow through cybernetic principles.",
@@ -59,7 +55,6 @@ export const projects: Project[] = [
         category: "Virtual Landscape",
         type: "Digital",
         status: "Built",
-        isCompetition: false,
         location: "Virtual Reality",
         year: "2025",
         description: "A landscape that exists only in the digital realm, challenging our perception of horizon and gravity.",
@@ -72,7 +67,6 @@ export const projects: Project[] = [
         category: "Computational Form",
         type: "Research",
         status: "Unbuilt",
-        isCompetition: false,
         location: "Berlin, Germany",
         year: "2023",
         description: "Pure logic translated into form. A computational study of geometric progression and recursion.",
@@ -84,8 +78,7 @@ export const projects: Project[] = [
         title: "Time Dilation",
         category: "Temporal Space",
         type: "Cultural",
-        status: "In Progress",
-        isCompetition: true,
+        status: "Competition",
         location: "London, UK",
         year: "2024",
         description: "Architecture that manipulates the perception of time through spatial compression and expansion.",
@@ -98,7 +91,6 @@ export const projects: Project[] = [
         category: "Material Physics",
         type: "Research",
         status: "Built",
-        isCompetition: false,
         location: "New York, USA",
         year: "2023",
         description: "Synthesizing new materials at the molecular level to create structures with impossible properties.",
@@ -110,8 +102,7 @@ export const projects: Project[] = [
         title: "Spatial Echo",
         category: "Acoustic Geometry",
         type: "Cultural",
-        status: "Unbuilt",
-        isCompetition: true,
+        status: "Competition",
         location: "Paris, France",
         year: "2024",
         description: "A concert hall designed not just for sound, but as a visual representation of acoustic resonance.",
@@ -124,7 +115,6 @@ export const projects: Project[] = [
         category: "Binary Architecture",
         type: "Digital",
         status: "In Progress",
-        isCompetition: false,
         location: "Silicon Valley, USA",
         year: "2025",
         description: "A physical manifestation of binary logic gates, creating a programmable space.",
@@ -136,8 +126,7 @@ export const projects: Project[] = [
         title: "Hwaseong Children's Science Museum",
         category: "Public / Cultural",
         type: "Cultural",
-        status: "Unbuilt",
-        isCompetition: true,
+        status: "Competition",
         location: "Hwaseong, South Korea",
         year: "2025",
         description: "A thematic science museum designed for children, creating an immersive learning environment where architecture itself becomes an instrument of scientific exploration. The design integrates playful spatial dynamics with rigorous structural logic to foster curiosity and interaction.",
