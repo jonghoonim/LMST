@@ -10,7 +10,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ id, title, category, imageUrl }: ProjectCardProps) {
     return (
-        <Link href={`/projects/${id}`} className="group block relative overflow-hidden aspect-[3/4]">
+        <Link href={`/works/${id}`} className="group block relative overflow-hidden aspect-[3/4]">
             <Image
                 src={imageUrl}
                 alt={title}

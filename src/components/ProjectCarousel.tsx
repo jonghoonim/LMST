@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import { projects } from "@/lib/projects";
@@ -40,17 +41,19 @@ export default function ProjectCarousel() {
                                 transition={{ duration: 0.5, ease: "easeInOut" }}
                                 className="relative aspect-[3/4] bg-gray-100 group cursor-pointer"
                             >
-                                <Image
-                                    src={project.imageUrl}
-                                    alt={project.title}
-                                    fill
-                                    className="object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-500"
-                                />
-                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
-                                <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
-                                    <h3 className="text-2xl font-bold text-white uppercase tracking-tighter mb-1">{project.title}</h3>
-                                    <p className="text-xs font-bold text-white uppercase tracking-widest opacity-80">{project.category}</p>
-                                </div>
+                                <Link href={`/works/${project.id}`} className="block w-full h-full">
+                                    <Image
+                                        src={project.imageUrl}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-500"
+                                    />
+                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
+                                    <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
+                                        <h3 className="text-2xl font-bold text-white uppercase tracking-tighter mb-1">{project.title}</h3>
+                                        <p className="text-xs font-bold text-white uppercase tracking-widest opacity-80">{project.category}</p>
+                                    </div>
+                                </Link>
                             </motion.div>
                         ))}
                     </AnimatePresence>
