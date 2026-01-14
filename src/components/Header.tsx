@@ -28,7 +28,7 @@ export default function Header() {
 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex space-x-8">
-                    {["About", "People", "Projects", "Contact"].map((item) => (
+                    {["About", "People", "Works", "Contact"].map((item) => (
                         <Link
                             key={item}
                             href={`/${item.toLowerCase()}`}
@@ -51,7 +51,7 @@ export default function Header() {
             {/* Mobile Navigation */}
             {isMobileMenuOpen && (
                 <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md py-4 flex flex-col items-center space-y-4">
-                    {["About", "People", "Projects", "Contact"].map((item) => (
+                    {["About", "People", "Works", "Contact"].map((item) => (
                         <Link
                             key={item}
                             href={`/${item.toLowerCase()}`}

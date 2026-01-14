@@ -70,8 +70,8 @@ export default function Home() {
       <section className="py-24 text-black relative z-10">
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-end mb-12">
-            <h2 className="text-4xl font-bold tracking-wide">SELECTED WORKS</h2>
-            <Link href="/projects" className="text-sm border-b border-black pb-1 hover:opacity-50 transition-opacity">
+            <h2 className="text-4xl font-bold tracking-wide">WORKS</h2>
+            <Link href="/works" className="text-sm border-b border-black pb-1 hover:opacity-50 transition-opacity">
               VIEW ALL
             </Link>
           </div>
