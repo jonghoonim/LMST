@@ -7,7 +7,7 @@ export default function Footer() {
                     <p className="text-sm text-gray-500 mt-1">© 2025 LMST. All rights reserved.</p>
                 </div>
                 <div className="flex space-x-6 text-sm text-gray-500">
-                    <a href="#" className="hover:text-black transition-colors">Instagram</a>
+                    <a href="https://www.instagram.com/jim_lmst/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">Instagram</a>
                     <a href="#" className="hover:text-black transition-colors">LinkedIn</a>
                     <a href="/contact" className="hover:text-black transition-colors">Contact</a>
                 </div>
