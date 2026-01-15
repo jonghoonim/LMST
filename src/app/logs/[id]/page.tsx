@@ -3,6 +3,7 @@
 import { use, useEffect, useState } from "react";
 import { INITIAL_LOGS } from "@/lib/data";
 import Link from "next/link";
+import Image from "next/image";
 import { clsx } from "clsx";
 
 // Mock raw data for demonstration
@@ -61,17 +62,25 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
             {/* Split View Content */}
             <div className="flex flex-1 flex-col sm:flex-row">
                 {/* Left: Final Intent */}
-                <div className="relative flex flex-1 flex-col border-b border-black sm:border-b-0 sm:border-r">
+                <div className="relative flex min-h-[50vh] flex-1 flex-col border-b border-black sm:min-h-0 sm:border-b-0 sm:border-r">
                     <div className="absolute top-0 left-0 bg-black text-white px-2 py-1 z-10">
                         VIEW: FINAL_RENDER
                     </div>
-                    <div className="flex h-full w-full items-center justify-center bg-zinc-200">
-                        {/* Placeholder for Final Image */}
-                        <div className="text-zinc-400 text-center">
-                            [IMG_PLACEHOLDER]
-                            <br />
-                            {log.title}_FINAL.jpg
-                        </div>
+                    <div className="relative flex h-full w-full items-center justify-center bg-zinc-200 overflow-hidden">
+                        {log.finalImage ? (
+                            <Image
+                                src={log.finalImage}
+                                alt={`${log.title} Final Render`}
+                                fill
+                                className="object-cover"
+                            />
+                        ) : (
+                            <div className="text-zinc-400 text-center">
+                                [IMG_PLACEHOLDER]
+                                <br />
+                                {log.title}_FINAL.jpg
+                            </div>
+                        )}
                     </div>
                 </div>
 
@@ -81,6 +90,20 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                         VIEW: PROCESS_LOG & ERROR
                     </div>
                     <div className="flex h-full w-full flex-col p-8 overflow-auto">
+                        {log.rawImage && (
+                            <div className="relative mb-6 w-full border border-zinc-300">
+                                <Image
+                                    src={log.rawImage}
+                                    alt="Process Log"
+                                    width={1000}
+                                    height={800}
+                                    className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-300"
+                                />
+                                <div className="bg-zinc-200 text-[10px] px-1 py-0.5 font-mono text-zinc-500 border-t border-zinc-300">
+                                    IMG_SOURCE: SCREEN_CAPTURE_{log.date.replace(/\./g, "")}.PNG
+                                </div>
+                            </div>
+                        )}
                         <pre className="whitespace-pre-wrap font-mono text-xs leading-relaxed font-sans">
                             {log.description || MOCK_RAW_DATA}
                         </pre>
