@@ -39,17 +39,17 @@ export function IntroOverlay() {
 
     return (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black text-white font-mono text-lg sm:text-2xl font-bold">
-            <div className="flex flex-col gap-2 w-64">
-                <div className={step >= 1 ? "opacity-100" : "opacity-0"}>
+            <div className="flex flex-col gap-2 w-auto min-w-[300px]">
+                <div className={`whitespace-nowrap ${step >= 1 ? "opacity-100" : "opacity-0"}`}>
                     Loading LOGIC... <span className="text-[#00FF00]">OK</span>
                 </div>
-                <div className={step >= 2 ? "opacity-100" : "opacity-0"}>
+                <div className={`whitespace-nowrap ${step >= 2 ? "opacity-100" : "opacity-0"}`}>
                     Loading MATTER... <span className="text-[#00FF00]">OK</span>
                 </div>
-                <div className={step >= 3 ? "opacity-100" : "opacity-0"}>
+                <div className={`whitespace-nowrap ${step >= 3 ? "opacity-100" : "opacity-0"}`}>
                     Loading SPACE... <span className="text-[#00FF00]">OK</span>
                 </div>
-                <div className={step >= 4 ? "opacity-100" : "opacity-0"}>
+                <div className={`whitespace-nowrap ${step >= 4 ? "opacity-100" : "opacity-0"}`}>
                     Loading TIME... <span className="text-[#00FF00]">OK</span>
                 </div>
 
