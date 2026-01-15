@@ -18,6 +18,15 @@ export default function ProfilePage() {
                     <div>
                         <h2 className="mb-4 bg-black px-1 text-white w-fit">KERNEL_INFO</h2>
                         <div className="space-y-4 leading-relaxed text-zinc-900">
+                            <div className="mb-4 bg-zinc-100 p-2 font-mono text-[10px] text-zinc-500 border border-zinc-200">
+                                {`// LMST_CORE_VARIABLES
+const L = "LOGIC";   // Algorithms & Structure
+const M = "MATTER";  // Physical Substance
+const S = "SPACE";   // Void & Volume
+const T = "TIME";    // Sequence & Experience
+
+> SYSTEM STATUS: READY TO COMPILE.`}
+                            </div>
                             <p>
                                 <span className="font-bold block mb-1">SYSTEM STATUS: OPERATIONAL</span>
                                 <span className="font-bold block mb-2">CURRENT OBJECTIVE: REFACTORING ARCHITECTURE</span>
