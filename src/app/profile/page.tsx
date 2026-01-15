@@ -76,11 +76,11 @@ export default function ProfilePage() {
                     <div className="grid grid-cols-1 gap-1 text-zinc-600">
                         <div className="flex justify-between border-b border-zinc-200 border-dashed">
                             <span>EMAIL_PROTOCOL</span>
-                            <a href="mailto:contact@lmst.kr" className="hover:bg-black hover:text-white">contact@lmst.kr</a>
+                            <a href="mailto:jim@lmst.kr" className="hover:bg-black hover:text-white">jim@lmst.kr</a>
                         </div>
                         <div className="flex justify-between border-b border-zinc-200 border-dashed">
                             <span>INSTAGRAM_FEED</span>
-                            <a href="https://instagram.com" target="_blank" className="hover:bg-black hover:text-white">@lmst_arch</a>
+                            <a href="https://instagram.com/jim_lmst" target="_blank" className="hover:bg-black hover:text-white">@jim_lmst</a>
                         </div>
                         <div className="flex justify-between border-b border-zinc-200 border-dashed">
                             <span>GITHUB_REPO</span>
@@ -88,7 +88,7 @@ export default function ProfilePage() {
                         </div>
                         <div className="flex justify-between border-b border-zinc-200 border-dashed">
                             <span>PHYSICAL_ADDR</span>
-                            <span>Seoul, Republic of Korea</span>
+                            <span>서울특별시 마포구 토정로2길 6-6</span>
                         </div>
                     </div>
                 </div>

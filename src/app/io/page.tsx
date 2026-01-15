@@ -10,8 +10,9 @@ export default function IOPage() {
 > ESTABLISHED.
 
 > [CONTACT_CHANNELS]
-> EMAIL:     arch.jonghoon.im@gmail.com
-> INSTAGRAM: @lmst.archive
+> EMAIL:     jim@lmst.kr
+> INSTAGRAM: @jim_lmst
+> ADDRESS:   6-6, Tojeong-ro 2-gil, Mapo-gu, Seoul, ROC
 
 > SENDING_PACKET...
 > WAITING_FOR_INPUT_
@@ -44,10 +45,10 @@ export default function IOPage() {
                 </div>
 
                 <div className="mt-4 border-t border-[#00FF00]/30 pt-4 flex flex-col gap-2 text-xs opacity-80">
-                    <Link href="mailto:arch.jonghoon.im@gmail.com" className="hover:bg-[#00FF00] hover:text-black w-fit px-1">
+                    <Link href="mailto:jim@lmst.kr" className="hover:bg-[#00FF00] hover:text-black w-fit px-1">
                         [EXECUTE] SEND_EMAIL
                     </Link>
-                    <Link href="https://instagram.com/lmst.archive" target="_blank" className="hover:bg-[#00FF00] hover:text-black w-fit px-1">
+                    <Link href="https://instagram.com/jim_lmst" target="_blank" className="hover:bg-[#00FF00] hover:text-black w-fit px-1">
                         [EXECUTE] OPEN_INSTAGRAM
                     </Link>
                 </div>
