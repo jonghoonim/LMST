@@ -73,6 +73,9 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                                 alt={`${log.title} Final Render`}
                                 fill
                                 className="object-cover"
+                                priority
+                                quality={100}
+                                sizes="(max-width: 768px) 100vw, 50vw"
                             />
                         ) : (
                             <div className="text-zinc-400 text-center">
