@@ -36,6 +36,7 @@ export default function Home() {
                 log.status === "RUNTIME_ERROR" && "text-red-600 group-hover:text-black",
                 log.status === "COMPILED" && "text-green-600 group-hover:text-black",
                 log.status === "WARNING" && "text-yellow-600 group-hover:text-black",
+                log.status === "UNREACHABLE" && "text-purple-600 group-hover:text-black",
                 log.status === "NULL" && "text-gray-400 group-hover:text-black"
               )}
             >

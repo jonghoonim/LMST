@@ -3,7 +3,7 @@ export type ProjectLog = {
     date: string;
     title: string;
     phase: string;
-    status: "COMPILED" | "RUNTIME_ERROR" | "WARNING" | "NULL";
+    status: "COMPILED" | "RUNTIME_ERROR" | "WARNING" | "NULL" | "UNREACHABLE";
     size: string;
 };
 
@@ -13,7 +13,7 @@ export const INITIAL_LOGS: ProjectLog[] = [
         date: "2024.12.10",
         title: "Hwaseong Science Museum",
         phase: "Competition",
-        status: "RUNTIME_ERROR",
+        status: "UNREACHABLE",
         size: "1.2GB",
     },
     {

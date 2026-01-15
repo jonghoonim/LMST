@@ -48,7 +48,9 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                         className={clsx(
                             log.status === "RUNTIME_ERROR" && "text-red-500",
                             log.status === "COMPILED" && "text-green-500",
-                            log.status === "WARNING" && "text-yellow-500"
+                            log.status === "WARNING" && "text-yellow-500",
+                            log.status === "UNREACHABLE" && "text-purple-500",
+                            log.status === "NULL" && "text-gray-400"
                         )}
                     >
                         {log.status}
