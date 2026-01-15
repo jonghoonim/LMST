@@ -22,20 +22,21 @@ export default function Home() {
           <Link
             key={log.id}
             href={`/logs/${log.id}`}
-            className="group grid grid-cols-[1fr_2fr_1fr_1fr] border-b border-black/10 py-3 text-black transition-colors hover:bg-black hover:text-white sm:grid-cols-[1fr_3fr_1fr_1fr_1fr]"
+            className="group grid grid-cols-[1fr_2fr_1fr_1fr] border-b border-black/10 py-3 text-black transition-none hover:bg-[#00FF00] hover:text-black sm:grid-cols-[1fr_3fr_1fr_1fr_1fr]"
           >
             <div className="pl-2 group-hover:underline">{log.id}</div>
-            <div className="font-bold">{log.title}</div>
-            <div className="hidden text-black/50 group-hover:text-white/70 sm:block">
+            <div className="font-bold truncate pr-2">{log.title}</div>
+            <div className="hidden text-black/50 group-hover:text-black/70 sm:block">
               {log.phase}
             </div>
             <div className="text-right tabular-nums">{log.date}</div>
             <div
               className={clsx(
                 "pr-2 text-right font-bold",
-                log.status === "RUNTIME_ERROR" && "text-red-600 group-hover:text-red-400",
-                log.status === "COMPILED" && "text-green-600 group-hover:text-green-400",
-                log.status === "WARNING" && "text-yellow-600 group-hover:text-yellow-400"
+                log.status === "RUNTIME_ERROR" && "text-red-600 group-hover:text-black",
+                log.status === "COMPILED" && "text-green-600 group-hover:text-black",
+                log.status === "WARNING" && "text-yellow-600 group-hover:text-black",
+                log.status === "NULL" && "text-gray-400 group-hover:text-black"
               )}
             >
               {log.status}

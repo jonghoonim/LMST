@@ -36,7 +36,7 @@ export function SystemNav() {
         <nav className="fixed top-0 left-0 z-50 flex w-full items-center justify-between border-b border-black/10 bg-[#F4F4F4]/80 px-4 py-2 backdrop-blur-sm dark:border-white/10 dark:bg-black/80">
             <div className="flex items-center gap-4">
                 <span className="font-archivo text-lg font-bold tracking-tighter mix-blend-difference">
-                    LMST_OS
+                    LMST_OS<span className="animate-blink inline-block bg-black w-[8px] h-[16px] sm:bg-transparent sm:text-inherit sm:w-auto sm:h-auto align-middle ml-1">_</span>
                 </span>
                 <div className="flex gap-2">
                     <NavLink href="/" label="INDEX" />
