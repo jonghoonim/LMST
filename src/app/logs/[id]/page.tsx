@@ -81,14 +81,20 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                         VIEW: PROCESS_LOG & ERROR
                     </div>
                     <div className="flex h-full w-full flex-col p-8 overflow-auto">
-                        <pre className="whitespace-pre-wrap font-mono text-xs leading-relaxed">
-                            {MOCK_RAW_DATA}
+                        <pre className="whitespace-pre-wrap font-mono text-xs leading-relaxed font-sans">
+                            {log.description || MOCK_RAW_DATA}
                         </pre>
-                        <div className="mt-8 border border-red-500 p-4 text-red-600 bg-red-50">
-                            <h3 className="font-bold mb-2">⚠ SYSTEM WARNING</h3>
-                            <p>Geometry deviation exceeds tolerance (0.05mm).</p>
-                            <p>Check parameter `t` in definition `surface_gen.gh`.</p>
-                        </div>
+                        {log.warningMessage && (
+                            <div className="mt-8 border border-red-500 p-4 text-red-600 bg-red-50">
+                                <h3 className="font-bold mb-2">⚠ SYSTEM WARNING</h3>
+                                <p>{log.warningMessage}</p>
+                            </div>
+                        )}
+                        {!log.warningMessage && (
+                            <div className="mt-8 border border-zinc-300 p-4 text-zinc-500 bg-zinc-100 italic">
+                                NO_SYSTEM_WARNINGS_DETECTED
+                            </div>
+                        )}
                         <div className="mt-8">
                             <h3 className="font-bold mb-2 uppercase text-black">Data_Manifest</h3>
                             <div className="grid grid-cols-2 gap-2 text-zinc-500">
