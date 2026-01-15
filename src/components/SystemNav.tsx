@@ -17,6 +17,20 @@ export function SystemNav() {
         return () => clearInterval(timer);
     }, []);
 
+    const SysMemIndicator = () => {
+        const [mem, setMem] = useState(32);
+
+        useEffect(() => {
+            const interval = setInterval(() => {
+                // Random fluctuation between 30 and 45
+                setMem(Math.floor(Math.random() * (45 - 30 + 1) + 30));
+            }, 3000);
+            return () => clearInterval(interval);
+        }, []);
+
+        return <span>SYS_MEM: {mem}%</span>;
+    };
+
     const NavLink = ({ href, label }: { href: string; label: string }) => {
         const isActive = pathname === href;
         return (
@@ -42,10 +56,12 @@ export function SystemNav() {
                     <NavLink href="/" label="INDEX" />
                     <NavLink href="/logs" label="LOGS" />
                     <NavLink href="/profile" label="PROFILE" />
+                    <NavLink href="/io" label="I/O" />
                 </div>
             </div>
 
             <div className="hidden items-center gap-4 font-mono text-xs text-zinc-400 sm:flex">
+                <SysMemIndicator />
                 <span>SYS.READY</span>
                 <span>{time}</span>
             </div>

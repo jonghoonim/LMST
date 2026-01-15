@@ -13,41 +13,57 @@ export default function ProfilePage() {
                     </div>
                 </div>
 
-                {/* Section: Kernel Information (Bio) */}
-                <div className="mb-8">
-                    <h2 className="mb-2 bg-black text-white px-1 inline-block uppercase">
-                        1.0 KERNEL_INFO
-                    </h2>
-                    <p className="leading-relaxed text-zinc-700">
-                        Arguments for architecture have shifted from visual aesthetics to logic and systems.
-                        This operator focuses on the <span className="bg-zinc-200 px-1">process</span> of construction—both physical and digital.
-                        Archiving errors, refactoring logic, and optimizing structure.
-                    </p>
-                </div>
-
-                {/* Section: Stack (Skills) */}
-                <div className="mb-8">
-                    <h2 className="mb-2 bg-black text-white px-1 inline-block uppercase">
-                        2.0 RUNTIME_ENVIRONMENT
-                    </h2>
-                    <div className="grid grid-cols-2 gap-4 sm:grid-cols-2">
-                        <div>
-                            <h3 className="mb-1 font-bold border-b border-zinc-300">CORE_MODULES</h3>
-                            <ul className="list-inside list-disc text-zinc-600">
-                                <li>Architectural Design</li>
-                                <li>Computational Logic</li>
-                                <li>BIM Management</li>
-                                <li>Full-stack Development</li>
-                            </ul>
+                {/* Main Content */}
+                <div className="grid gap-8 sm:grid-cols-2">
+                    <div>
+                        <h2 className="mb-4 bg-black px-1 text-white w-fit">KERNEL_INFO</h2>
+                        <div className="space-y-4 leading-relaxed text-zinc-900">
+                            <p>
+                                <span className="font-bold block mb-1">SYSTEM STATUS: OPERATIONAL</span>
+                                <span className="font-bold block mb-2">CURRENT OBJECTIVE: REFACTORING ARCHITECTURE</span>
+                            </p>
+                            <p>
+                                <span className="font-bold">[DESCRIPTION]</span><br />
+                                This system prioritizes <span className="bg-zinc-200 px-1">LOGIC</span> and <span className="bg-zinc-200 px-1">STRUCTURE</span> over decorative rendering.
+                                Optimizing physical construction through digital algorithms.
+                            </p>
+                            <div className="border-l-2 border-black pl-3 my-4">
+                                <span className="font-bold">[PROTOCOL]</span><br />
+                                1. Analyze Context<br />
+                                2. Define Logic<br />
+                                3. Execute Construction
+                            </div>
                         </div>
-                        <div>
-                            <h3 className="mb-1 font-bold border-b border-zinc-300">DEPENDENCIES</h3>
-                            <ul className="list-inside list-disc text-zinc-600">
-                                <li>Revit API (C#)</li>
-                                <li>Rhino / Grasshopper</li>
-                                <li>Next.js / React</li>
-                                <li>Python / AI Integration</li>
-                            </ul>
+                    </div>
+
+                    <div>
+                        <h2 className="mb-4 border-b border-black w-fit">DEPENDENCIES</h2>
+                        <ul className="list-inside list-square space-y-1 text-zinc-600">
+                            <li>Rhinoceros 3D / Grasshopper</li>
+                            <li>Revit (BIM) / Dynamo</li>
+                            <li>Python / C# (Scripting)</li>
+                            <li>Next.js / TypeScript (Web)</li>
+                            <li>Arduino / Physical Computing</li>
+                        </ul>
+
+                        <h2 className="mt-8 mb-4 border-b border-black w-fit">CORE_MODULES</h2>
+                        <div className="grid grid-cols-2 gap-2 text-xs">
+                            <div className="border border-zinc-300 p-2">
+                                <div className="font-bold">PARAMETRIC_DESIGN</div>
+                                <div className="text-zinc-400">STATUS: ACTIVE</div>
+                            </div>
+                            <div className="border border-zinc-300 p-2">
+                                <div className="font-bold">FABRICATION</div>
+                                <div className="text-zinc-400">STATUS: STANDBY</div>
+                            </div>
+                            <div className="border border-zinc-300 p-2">
+                                <div className="font-bold">DATA_VISUALIZATION</div>
+                                <div className="text-zinc-400">STATUS: ACTIVE</div>
+                            </div>
+                            <div className="border border-zinc-300 p-2">
+                                <div className="font-bold">SYSTEM_ARCHITECTURE</div>
+                                <div className="text-zinc-400">STATUS: OPTIMIZING</div>
+                            </div>
                         </div>
                     </div>
                 </div>

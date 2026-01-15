@@ -1,40 +1,108 @@
 "use client";
 
-import { INITIAL_LOGS } from "@/lib/data";
+import { INITIAL_LOGS, ProjectLog } from "@/lib/data";
 import Link from "next/link";
 
+type LogNode = {
+    type: "PROJECT" | "FILE";
+    date: string; // YYYY.MM.DD
+    name: string;
+    size?: string;
+    id?: string; // Only for PROJECT
+    ext?: string; // Only for FILE
+};
+
+const MOCK_FILES = [
+    { date: "2026.01.15", name: "Facade_Pattern_Test", ext: ".gh", size: "124KB" },
+    { date: "2026.01.14", name: "SH_Housing_Idea_Note", ext: ".txt", size: "2KB" },
+    { date: "2025.12.02", name: "Optimization_Logic_v3", ext: ".py", size: "15KB" },
+    { date: "2025.07.11", name: "Site_Analysis_Map", ext: ".dwg", size: "5.4MB" },
+    { date: "2025.04.20", name: "Structure_Review_Report", ext: ".pdf", size: "8.1MB" },
+    { date: "2024.11.05", name: "Concept_Sketch_Scans", ext: ".zip", size: "450MB" },
+    { date: "2024.01.02", name: "Kickoff_Meeting_Minutes", ext: ".hwp", size: "24KB" },
+];
+
 export default function LogsIndexPage() {
+    // Merge Real Projects and Mock Files
+    const nodes: LogNode[] = [
+        ...INITIAL_LOGS.map((log: ProjectLog) => ({
+            type: "PROJECT" as const,
+            date: log.date,
+            name: log.title,
+            size: log.size,
+            id: log.id,
+        })),
+        ...MOCK_FILES.map((file) => ({
+            type: "FILE" as const,
+            date: file.date,
+            name: file.name,
+            size: file.size,
+            ext: file.ext,
+        })),
+    ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    // Group by Year
+    const groupedNodes: Record<string, LogNode[]> = {};
+    nodes.forEach((node) => {
+        const year = node.date.split(".")[0];
+        if (!groupedNodes[year]) groupedNodes[year] = [];
+        groupedNodes[year].push(node);
+    });
+
     return (
-        <main className="flex min-h-screen w-full flex-col bg-[#F4F4F4] font-mono text-xs sm:text-sm pt-16 px-4">
+        <main className="min-h-screen w-full bg-[#F4F4F4] pt-20 px-4 pb-12 font-mono text-xs sm:text-sm">
             <h1 className="mb-8 font-bold text-lg">/ROOT/LOGS_DIRECTORY</h1>
 
             <div className="flex flex-col gap-1">
                 <div className="text-zinc-500">.</div>
-                <div className="text-zinc-500">└── projects</div>
 
-                {INITIAL_LOGS.map((log, index) => {
-                    const isLast = index === INITIAL_LOGS.length - 1;
-                    return (
-                        <div key={log.id} className="flex gap-2 pl-4">
-                            <span className="text-zinc-400">{isLast ? "└──" : "├──"}</span>
-                            <Link
-                                href={`/logs/${log.id}`}
-                                className="hover:bg-black hover:text-white px-1 transition-colors"
-                            >
-                                {log.id} _ {log.title} <span className="text-zinc-400">[{log.size}]</span>
-                            </Link>
+                {Object.keys(groupedNodes)
+                    .sort((a, b) => Number(b) - Number(a))
+                    .map((year, i, arr) => (
+                        <div key={year}>
+                            <div className="flex gap-2 font-bold text-black mt-4 mb-1">
+                                <span className="text-zinc-400">├──</span>
+                                <span>{year}_ARCHIVE</span>
+                            </div>
+
+                            {groupedNodes[year].map((node, j) => {
+                                // Last item in the year group?
+                                // Actually we just tree it down.
+                                const isProject = node.type === "PROJECT";
+
+                                return (
+                                    <div key={j} className="flex gap-2 pl-8 hover:bg-zinc-200/50 transition-colors group">
+                                        <span className="text-zinc-300">├──</span>
+                                        <span className="text-zinc-400 w-24 shrink-0">[{node.date}]</span>
+
+                                        {isProject ? (
+                                            <Link
+                                                href={`/logs/${node.id}`}
+                                                className="font-bold text-black hover:underline flex gap-2"
+                                            >
+                                                <span>{node.id}_{node.name}</span>
+                                                <span className="text-blue-600 ml-2">[DIR]</span>
+                                            </Link>
+                                        ) : (
+                                            <span className="text-zinc-500 cursor-not-allowed flex gap-2">
+                                                <span>{node.name}{node.ext}</span>
+                                                <span className="text-zinc-400 opacity-50 ml-2">({node.size})</span>
+                                            </span>
+                                        )}
+                                    </div>
+                                );
+                            })}
                         </div>
-                    );
-                })}
+                    ))}
 
-                <div className="pl-4 text-zinc-400">
-                    └── <span className="italic opacity-50">...more_data_fetching...</span>
+                <div className="mt-4 text-zinc-400">
+                    └── <span className="italic opacity-50">...end_of_stream...</span>
                 </div>
             </div>
 
             <div className="fixed bottom-4 right-4 text-right text-zinc-400 text-[10px]">
-                TOTAL_NODES: {INITIAL_LOGS.length}<br />
-                DIR_SIZE: {INITIAL_LOGS.length * 124}MB (EST)
+                TOTAL_NODES: {nodes.length}<br />
+                LAST_SYNC: {new Date().toLocaleDateString()}
             </div>
         </main>
     );
