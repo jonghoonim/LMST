@@ -99,7 +99,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                                 return (
                                     <>
                                         <div className="transition-all duration-300">
-                                            <p className="whitespace-pre-wrap">
+                                            <p className="whitespace-pre-wrap text-justify">
                                                 {isExpanded ? text : firstParagraph}
                                                 {!isExpanded && hasMore && "..."}
                                             </p>
