@@ -38,7 +38,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
             <div className="flex items-center justify-between border-b border-black px-4 py-2 bg-white z-50">
                 <div className="flex gap-4">
                     <Link href="/" className="hover:bg-black hover:text-white px-1 transition-colors">
-                        ← BACK_TO_INDEX
+                        [ CD .. ]
                     </Link>
                     <span className="font-bold">{log.title}</span>
                 </div>
