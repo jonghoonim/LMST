@@ -10,6 +10,13 @@ export default function IOPage() {
 > ESTABLISHED.
 
 
+
+
+
+
+
+
+
 > [CONTACT_CHANNELS]
 > EMAIL:     jim@lmst.kr
 > INSTAGRAM: @jim_lmst
