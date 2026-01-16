@@ -7,22 +7,22 @@ import Image from "next/image";
 import { clsx } from "clsx";
 
 // Mock raw data for demonstration
-const MOCK_RAW_DATA = `Error: Mesh topology invalid at index 4022.
-Attempting auto-repair... Failed.
-> Optimization terminated. 
-> Result: 154 unstable nodes.
+const MOCK_RAW_DATA = `OMA-STYLE NARRATION MOCKUP:
+This project explores the intersection of algorithmic logic and material reality. By utilizing recursive subdivision techniques, we generated a mesh that responds to curvature parameters derived from environmental analysis. The process involved 154 iterations of optimization, resulting in a stable yet complex topology.
 
-// Grasshopper Logic Patch v0.4
-if (curvature > 0.8) {
-  panel.subdivide(u=4, v=4);
-} else {
-  return null; // Unexpected null reference
-}`;
+The structural integrity was verified through finite element analysis, revealing stress concentration at the nodes which were subsequently reinforced. The aesthetic language emerges from this rigorous logic, avoiding arbitrary form-making.
+
+Data flow:
+1. Input: Site Boundaries & Wind Rose
+2. Process: Curvature Field Generation
+3. Output: Rationalized Panel Geometry
+
+Final compilation achieved with 0.4s compute time per iteration. The system remains open for further adaptation to varying scales.`;
 
 export default function LogDetailPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params);
     const log = INITIAL_LOGS.find((l) => l.id === id);
-    const [activeTab, setActiveTab] = useState<"FINAL" | "RAW">("FINAL");
+    const [isExpanded, setIsExpanded] = useState(false);
 
     if (!log) {
         return (
@@ -35,39 +35,28 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
     return (
         <main className="flex h-screen w-full flex-col font-mono text-xs sm:text-sm">
             {/* Top Bar Info */}
-            <div className="flex items-center justify-between border-b border-black px-4 py-2">
+            <div className="flex items-center justify-between border-b border-black px-4 py-2 bg-white z-50">
                 <div className="flex gap-4">
-                    <Link href="/" className="hover:bg-black hover:text-white px-1">
+                    <Link href="/" className="hover:bg-black hover:text-white px-1 transition-colors">
                         ← BACK_TO_INDEX
                     </Link>
                     <span className="font-bold">{log.title}</span>
                 </div>
                 <div className="flex gap-4 text-zinc-500">
                     <span>{log.id}</span>
-                    <span>{log.phase}</span>
-                    <span
-                        className={clsx(
-                            log.status === "RUNTIME_ERROR" && "text-red-500",
-                            log.status === "COMPILED" && "text-green-500",
-                            log.status === "WARNING" && "text-yellow-500",
-                            log.status === "UNREACHABLE" && "text-purple-500",
-                            log.status === "NULL" && "text-gray-400"
-                        )}
-                    >
-                        {log.status}
-                    </span>
                 </div>
             </div>
 
-            {/* Vertical Stack Content */}
-            <div className="flex flex-1 flex-col overflow-y-auto">
-                {/* Top: Final Intent (Image) - OMA Style Full Width */}
+            {/* Scrollable Content */}
+            <div className="flex flex-1 flex-col overflow-y-auto bg-white">
+
+                {/* 1. Hero Image (Final Render) - Full Width */}
                 <div className="relative w-full border-b border-black">
+                    {/* View Label */}
                     <div className="absolute top-0 left-0 bg-black text-white px-2 py-1 z-10">
                         VIEW: FINAL_RENDER
                     </div>
 
-                    {/* Full Width, Auto Height (No Crop) */}
                     <div className="relative w-full bg-zinc-200">
                         {log.finalImage ? (
                             <Image
@@ -91,84 +80,120 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                     </div>
                 </div>
 
-                {/* Bottom: Raw Process (Documentation) */}
-                <div className="relative flex flex-col bg-[#F4F4F4] text-black pb-32 pt-16 px-4">
-                    {/* Floating Badge */}
-                    <div className="absolute top-0 left-4 -translate-y-1/2 bg-red-600 text-white px-4 py-2 text-sm font-bold tracking-widest z-10 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                        PROCESS_LOG & ERROR
+                {/* Content Section: OMA Layout (Narration -> Overview -> Images) */}
+                <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-16 sm:py-24">
+
+                    {/* 2. Title & Narration (Expandable) */}
+                    <div className="mb-24 max-w-4xl">
+                        <h1 className="text-4xl sm:text-6xl font-black uppercase tracking-tighter leading-none mb-8">
+                            {log.title}
+                        </h1>
+
+                        <div className="text-lg sm:text-xl font-medium leading-relaxed text-black">
+                            <div className={clsx(
+                                "overflow-hidden transition-all duration-300 relative",
+                                !isExpanded && "max-h-[8em]" // Approx 5 lines
+                            )}>
+                                <p className="whitespace-pre-wrap">
+                                    {log.description || MOCK_RAW_DATA}
+                                </p>
+                                {/* Fade out effect when collapsed */}
+                                {!isExpanded && (
+                                    <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-white to-transparent" />
+                                )}
+                            </div>
+
+                            <button
+                                onClick={() => setIsExpanded(!isExpanded)}
+                                className="mt-4 underline decoration-2 underline-offset-4 hover:bg-black hover:text-white transition-all font-bold text-sm uppercase"
+                            >
+                                {isExpanded ? "Read Less" : "Read More"}
+                            </button>
+                        </div>
                     </div>
 
-                    {/* Widened container, Removed Frames */}
-                    <div className="w-full max-w-7xl mx-auto">
-                        <h2 className="text-3xl sm:text-4xl font-black mb-12 uppercase tracking-tight">
-                            Process Record
-                        </h2>
-
-                        {log.rawImage && (
-                            <div className="relative mb-12 w-full border border-black">
-                                <Image
-                                    src={log.rawImage}
-                                    alt="Process Log"
-                                    width={1000}
-                                    height={800}
-                                    className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-300"
-                                />
-                                <div className="bg-black text-white text-xs px-2 py-1 font-mono border-t border-black flex justify-between">
-                                    <span>RAW_CAPTURE</span>
-                                    <span>{log.date}</span>
-                                </div>
+                    {/* 3. Project Overview (Data Grid) */}
+                    <div className="mb-24 w-full">
+                        <h2 className="text-sm font-bold uppercase border-b-2 border-black mb-4 pb-1">Project Data</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-4 border-t-2 border-black">
+                            {/* Column 1 */}
+                            <div className="border-b border-zinc-200 py-3 sm:border-r sm:pr-4">
+                                <div className="text-[10px] text-zinc-500 mb-1">STATUS</div>
+                                <div className="font-bold">{log.status}</div>
                             </div>
-                        )}
-
-                        <div className="space-y-16">
-                            <div>
-                                <h3 className="text-xl font-bold mb-4 uppercase inline-block border-b-2 border-black">System Log</h3>
-                                {/* Raw Text, No Frame */}
-                                <pre className="whitespace-pre-wrap font-mono text-sm leading-relaxed mt-4">
-                                    {log.description || MOCK_RAW_DATA}
-                                </pre>
+                            {/* Column 2 */}
+                            <div className="border-b border-zinc-200 py-3 sm:border-r sm:px-4">
+                                <div className="text-[10px] text-zinc-500 mb-1">PHASE</div>
+                                <div className="font-bold">{log.phase}</div>
+                            </div>
+                            {/* Column 3 */}
+                            <div className="border-b border-zinc-200 py-3 sm:border-r sm:px-4">
+                                <div className="text-[10px] text-zinc-500 mb-1">DATE</div>
+                                <div className="font-bold">{log.date}</div>
+                            </div>
+                            {/* Column 4 */}
+                            <div className="border-b border-zinc-200 py-3 sm:pl-4">
+                                <div className="text-[10px] text-zinc-500 mb-1">FILE SIZE</div>
+                                <div className="font-bold">{log.size}</div>
                             </div>
 
-                            {log.warningMessage && (
-                                <div>
-                                    <h3 className="text-xl font-bold mb-4 uppercase text-red-600 inline-block border-b-2 border-red-600">Critical Warning</h3>
-                                    {/* Raw Text, No Frame */}
-                                    <div className="text-red-600 font-mono text-lg mt-4 font-bold">
-                                        ⚠ {log.warningMessage}
-                                    </div>
-                                </div>
-                            )}
-
-                            {!log.warningMessage && (
-                                <div className="text-zinc-400 italic font-mono mt-4">
-                                    // NO_SYSTEM_WARNINGS_DETECTED
-                                </div>
-                            )}
-
-                            <div>
-                                <h3 className="text-xl font-bold mb-4 uppercase inline-block border-b-2 border-black">Data Manifest</h3>
-                                {/* Grid with Top Border only */}
-                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-sm font-mono border-t border-black pt-4 mt-2">
-                                    <div>
-                                        <div className="text-zinc-500 text-xs mb-1">FILE_SIZE</div>
-                                        <div className="font-bold text-lg">{log.size}</div>
-                                    </div>
-                                    <div>
-                                        <div className="text-zinc-500 text-xs mb-1">LAST_MOD</div>
-                                        <div className="font-bold text-lg">{log.date}</div>
-                                    </div>
-                                    <div>
-                                        <div className="text-zinc-500 text-xs mb-1">AUTHOR</div>
-                                        <div className="font-bold text-lg">User_01</div>
-                                    </div>
-                                    <div>
-                                        <div className="text-zinc-500 text-xs mb-1">PHASE</div>
-                                        <div className="font-bold text-lg">{log.phase}</div>
-                                    </div>
-                                </div>
+                            {/* Row 2 (Mock Data for OMA feel) */}
+                            <div className="border-b border-zinc-200 py-3 sm:border-r sm:pr-4">
+                                <div className="text-[10px] text-zinc-500 mb-1">PROGRAM</div>
+                                <div className="font-bold">Algorithmic Study</div>
+                            </div>
+                            <div className="border-b border-zinc-200 py-3 sm:border-r sm:px-4">
+                                <div className="text-[10px] text-zinc-500 mb-1">LOCATION</div>
+                                <div className="font-bold">Digital Space</div>
+                            </div>
+                            <div className="border-b border-zinc-200 py-3 sm:border-r sm:px-4">
+                                <div className="text-[10px] text-zinc-500 mb-1">PARTNER</div>
+                                <div className="font-bold">LMST_CORE</div>
+                            </div>
+                            <div className="border-b border-zinc-200 py-3 sm:pl-4">
+                                <div className="text-[10px] text-zinc-500 mb-1">TEAM</div>
+                                <div className="font-bold">User_01, Copilot</div>
                             </div>
                         </div>
                     </div>
+
+                    {/* 4. Process Images (The "Small Images") */}
+                    <div className="w-full">
+                        <h2 className="text-sm font-bold uppercase border-b-2 border-black mb-8 pb-1">Process Documentation</h2>
+
+                        {log.rawImage ? (
+                            <div className="grid grid-cols-1 gap-8">
+                                <div className="relative w-full">
+                                    <Image
+                                        src={log.rawImage}
+                                        alt="Process Log"
+                                        width={1200}
+                                        height={800}
+                                        className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-300"
+                                    />
+                                    <div className="text-[10px] mt-2 font-mono text-zinc-500">
+                                        FIG 1. RAW_CAPTURE_{log.date}
+                                    </div>
+                                </div>
+                                {/* Mock placeholders to show "multiple images" vibe if needed, 
+                                    but sticking to real data for now. 
+                                    User said "Small images", so if we had more we'd grid them.
+                                    For now, just one large process image serves the purpose. */}
+                            </div>
+                        ) : (
+                            <div className="text-zinc-400 italic">topological_data_pending...</div>
+                        )}
+
+                        {log.warningMessage && (
+                            <div className="mt-12 p-6 border-l-4 border-red-600 bg-red-50">
+                                <div className="text-red-600 font-bold uppercase mb-2 text-xs">System Alert</div>
+                                <div className="text-red-600 font-mono text-lg font-bold">
+                                    {log.warningMessage}
+                                </div>
+                            </div>
+                        )}
+                    </div>
+
                 </div>
             </div>
         </main>
