@@ -42,7 +42,7 @@ export default function IOPage() {
 
     return (
         <main className="min-h-screen w-full p-4 font-mono text-xs sm:text-sm">
-            <div className="mx-auto max-w-2xl border border-black p-4 bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            <div className="mx-auto max-w-4xl border border-black p-4 bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                 {/* Header */}
                 <div className="mb-6 flex items-center justify-between border-b border-black pb-2">
                     <h1 className="text-xl font-bold uppercase tracking-tighter text-black">
