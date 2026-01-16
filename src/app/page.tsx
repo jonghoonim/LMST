@@ -3,10 +3,12 @@
 import { INITIAL_LOGS } from "@/lib/data";
 import Link from "next/link";
 import { clsx } from "clsx";
+import { IntroOverlay } from "@/components/IntroOverlay";
 
 export default function Home() {
   return (
     <main className="min-h-screen w-full px-4 py-8 font-mono text-xs uppercase tracking-tight sm:text-sm">
+      <IntroOverlay />
       <div className="overflow-x-auto pb-4">
         <div className="min-w-[600px] sm:min-w-0">
           {/* Header Row */}

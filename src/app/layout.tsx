@@ -4,7 +4,6 @@ import "./globals.css";
 import { SystemNav } from "@/components/SystemNav";
 
 import { SystemFooter } from "@/components/SystemFooter";
-import { IntroOverlay } from "@/components/IntroOverlay";
 
 const archivoNarrow = Archivo_Narrow({
   variable: "--font-archivo-narrow",
@@ -31,7 +30,6 @@ export default function RootLayout({
       <body
         className={`${archivoNarrow.variable} ${geistMono.variable} antialiased font-sans bg-[#F4F4F4] text-black selection:bg-black selection:text-white pb-8`}
       >
-        <IntroOverlay />
         <SystemNav />
         <div className="pt-12">{children}</div>
         <SystemFooter />
