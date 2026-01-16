@@ -9,7 +9,7 @@ export function IntroOverlay() {
 
     useEffect(() => {
         // Check session storage to only run once per session
-        const hasSeenIntro = sessionStorage.getItem("lmst_intro_seen");
+        const hasSeenIntro = sessionStorage.getItem("lmst_intro_seen_v24");
         if (hasSeenIntro) {
             setVisible(false);
             return;
@@ -32,7 +32,7 @@ export function IntroOverlay() {
 
     const handleEnter = () => {
         setVisible(false);
-        sessionStorage.setItem("lmst_intro_seen", "true");
+        sessionStorage.setItem("lmst_intro_seen_v24", "true");
     };
 
     if (!visible) return null;
