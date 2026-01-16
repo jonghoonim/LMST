@@ -32,35 +32,39 @@ export function SystemNav() {
     };
 
     const NavLink = ({ href, label }: { href: string; label: string }) => {
-        const isActive = pathname === href;
+        const isActive = pathname === href || (href !== "/" && pathname?.startsWith(href));
         return (
             <Link
                 href={href}
                 className={clsx(
-                    "px-2 py-1 font-mono text-sm uppercase tracking-tight transition-colors hover:bg-black hover:text-white",
-                    isActive ? "bg-black text-white" : "text-zinc-500"
+                    "px-2 py-1 font-mono text-sm uppercase tracking-tight transition-all",
+                    isActive
+                        ? "bg-black text-white"
+                        : "text-zinc-500 hover:text-black"
                 )}
             >
-                [{label}]
+                {isActive ? label : `[${label}]`}
             </Link>
         );
     };
 
     return (
-        <nav className="fixed top-0 left-0 z-50 flex w-full items-center justify-between border-b border-black/10 bg-[#F4F4F4]/80 px-4 py-2 backdrop-blur-sm dark:border-white/10 dark:bg-black/80">
-            <div className="flex items-center gap-4">
-                <Link href="/" className="font-archivo text-lg font-bold tracking-tighter mix-blend-difference hover:opacity-50 transition-opacity">
-                    LMST_OS<span className="animate-blink inline-block bg-black w-[8px] h-[16px] sm:bg-transparent sm:text-inherit sm:w-auto sm:h-auto align-middle ml-1">_</span>
+        <nav className="fixed top-0 left-0 z-50 flex w-full flex-col sm:flex-row items-center justify-between border-b border-black/10 bg-[#F4F4F4]/90 px-4 py-2 backdrop-blur-sm sm:h-12 transition-all">
+            <div className="flex w-full sm:w-auto items-center justify-between sm:justify-start gap-4">
+                <Link href="/" className="font-archivo text-lg font-bold tracking-tighter hover:opacity-50 transition-opacity">
+                    LMST_OS<span className="animate-blink inline-block bg-black w-[8px] h-[16px] align-middle ml-1">_</span>
                 </Link>
-                <div className="flex gap-2">
-                    <NavLink href="/" label="INDEX" />
-                    <NavLink href="/logs" label="LOGS" />
-                    <NavLink href="/profile" label="PROFILE" />
-                    <NavLink href="/io" label="I/O" />
-                </div>
+                {/* Mobile Menu (Moved below on mobile via flex/grid or just simple wrapping) */}
             </div>
 
-            <div className="hidden items-center gap-4 font-mono text-xs text-zinc-400 sm:flex">
+            <div className="flex w-full sm:w-auto gap-1 mt-2 sm:mt-0 justify-between sm:justify-end overflow-x-auto no-scrollbar">
+                <NavLink href="/" label="INDEX" />
+                <NavLink href="/logs" label="LOGS" />
+                <NavLink href="/profile" label="PROFILE" />
+                <NavLink href="/io" label="I/O" />
+            </div>
+
+            <div className="hidden absolute right-4 top-1/2 -translate-y-1/2 items-center gap-4 font-mono text-xs text-zinc-400 sm:flex">
                 <SysMemIndicator />
                 <span>SYS.READY</span>
                 <span>{time}</span>
