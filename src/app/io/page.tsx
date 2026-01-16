@@ -42,7 +42,11 @@ export default function IOPage() {
     };
 
     return (
-        <main className="min-h-screen w-full p-4 font-mono text-xs sm:text-sm">
+        <main
+            className="min-h-screen w-full p-4 font-mono text-xs sm:text-sm cursor-pointer"
+            onClick={handleSkip}
+            title="[CLICK_ANYWHERE_TO_SKIP]"
+        >
             <div className="mx-auto max-w-4xl border border-black p-4 bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                 {/* Header */}
                 <div className="mb-6 flex items-center justify-between border-b border-black pb-2">
@@ -59,9 +63,7 @@ export default function IOPage() {
                 <div className="grid gap-8 sm:grid-cols-2">
                     {/* Left: Text Area */}
                     <div
-                        className="cursor-pointer min-h-[200px]"
-                        onClick={handleSkip}
-                        title="[CLICK_TO_SKIP_ANIMATION]"
+                        className="min-h-[200px]"
                     >
                         <div className="whitespace-pre-wrap leading-relaxed">
                             {text}
@@ -122,4 +124,5 @@ export default function IOPage() {
                 </div>
             </div>
         </main>
+    );
 }
