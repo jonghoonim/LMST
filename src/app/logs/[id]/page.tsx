@@ -59,14 +59,15 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                 </div>
             </div>
 
-            {/* Split View Content */}
-            <div className="flex flex-1 flex-col sm:flex-row">
-                {/* Left: Final Intent */}
-                <div className="relative flex min-h-[50vh] flex-1 flex-col border-b border-black sm:min-h-0 sm:border-b-0 sm:border-r">
+            {/* Vertical Stack Content */}
+            <div className="flex flex-1 flex-col overflow-y-auto">
+                {/* Top: Final Intent (Image) */}
+                <div className="relative w-full border-b border-black">
                     <div className="absolute top-0 left-0 bg-black text-white px-2 py-1 z-10">
                         VIEW: FINAL_RENDER
                     </div>
-                    <div className="relative flex h-full w-full items-center justify-center bg-zinc-200 overflow-hidden">
+                    {/* Maintain a cinematic aspect ratio or fixed height that feels "OMA-like" */}
+                    <div className="relative w-full aspect-video min-h-[400px] bg-zinc-200 overflow-hidden">
                         {log.finalImage ? (
                             <Image
                                 src={log.finalImage}
@@ -75,26 +76,28 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                                 className="object-cover"
                                 priority
                                 quality={100}
-                                sizes="(max-width: 768px) 100vw, 50vw"
+                                sizes="100vw"
                             />
                         ) : (
-                            <div className="text-zinc-400 text-center">
-                                [IMG_PLACEHOLDER]
-                                <br />
-                                {log.title}_FINAL.jpg
+                            <div className="flex h-full w-full items-center justify-center text-zinc-400 text-center">
+                                <div>
+                                    [IMG_PLACEHOLDER]
+                                    <br />
+                                    {log.title}_FINAL.jpg
+                                </div>
                             </div>
                         )}
                     </div>
                 </div>
 
-                {/* Right: Raw Process */}
-                <div className="relative flex flex-1 flex-col bg-[#F4F4F4] text-zinc-600">
-                    <div className="absolute top-0 left-0 bg-red-600 text-white px-2 py-1 z-10">
+                {/* Bottom: Raw Process (Documentation) */}
+                <div className="relative flex flex-col bg-[#F4F4F4] text-zinc-600 pb-16">
+                    <div className="sticky top-0 left-0 bg-red-600 text-white px-2 py-1 z-10 w-fit">
                         VIEW: PROCESS_LOG & ERROR
                     </div>
-                    <div className="flex h-full w-full flex-col p-8 overflow-auto">
+                    <div className="flex w-full flex-col p-8">
                         {log.rawImage && (
-                            <div className="relative mb-6 w-full border border-zinc-300">
+                            <div className="relative mb-6 w-full max-w-4xl border border-zinc-300">
                                 <Image
                                     src={log.rawImage}
                                     alt="Process Log"
@@ -107,21 +110,21 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                                 </div>
                             </div>
                         )}
-                        <pre className="whitespace-pre-wrap font-mono text-xs leading-relaxed font-sans">
+                        <pre className="whitespace-pre-wrap font-mono text-xs leading-relaxed font-sans max-w-4xl">
                             {log.description || MOCK_RAW_DATA}
                         </pre>
                         {log.warningMessage && (
-                            <div className="mt-8 border border-red-500 p-4 text-red-600 bg-red-50">
+                            <div className="mt-8 border border-red-500 p-4 text-red-600 bg-red-50 max-w-2xl">
                                 <h3 className="font-bold mb-2">⚠ SYSTEM WARNING</h3>
                                 <p>{log.warningMessage}</p>
                             </div>
                         )}
                         {!log.warningMessage && (
-                            <div className="mt-8 border border-zinc-300 p-4 text-zinc-500 bg-zinc-100 italic">
+                            <div className="mt-8 border border-zinc-300 p-4 text-zinc-500 bg-zinc-100 italic max-w-2xl">
                                 NO_SYSTEM_WARNINGS_DETECTED
                             </div>
                         )}
-                        <div className="mt-8">
+                        <div className="mt-8 max-w-2xl">
                             <h3 className="font-bold mb-2 uppercase text-black">Data_Manifest</h3>
                             <div className="grid grid-cols-2 gap-2 text-zinc-500">
                                 <div>File_Size:</div><div>{log.size}</div>

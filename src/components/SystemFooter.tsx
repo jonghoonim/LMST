@@ -14,8 +14,8 @@ export function SystemFooter() {
     }, []);
 
     return (
-        <footer className="fixed bottom-0 w-full border-t border-black bg-[#F4F4F4] text-[10px] uppercase font-mono py-1 px-4 z-50 flex justify-between items-center sm:text-xs">
-            <div className="animate-pulse">
+        <footer className="fixed bottom-0 w-full border-t border-black bg-[#F4F4F4] text-[10px] uppercase font-mono py-2 px-4 z-50 flex flex-col items-center gap-1 sm:text-xs text-center">
+            <div className="animate-pulse whitespace-nowrap">
                 {isAlt
                     ? "RUNNING PROCESS: LET'S MAKE SOMETHING TOGETHER"
                     : "RUNNING PROCESS: LOGIC / MATTER / SPACE / TIME"}
