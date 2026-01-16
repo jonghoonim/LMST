@@ -85,7 +85,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
 
                     {/* 2. Title & Narration (Expandable - First Paragraph Only) */}
                     <div className="mb-24 w-full">
-                        <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tighter leading-none mb-8 font-roboto-condensed">
+                        <h1 className="text-3xl sm:text-5xl font-bold uppercase tracking-tighter leading-none mb-8 font-roboto-condensed">
                             {log.title}
                         </h1>
 
