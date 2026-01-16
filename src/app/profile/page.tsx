@@ -16,7 +16,7 @@ export default function ProfilePage() {
                 {/* Main Content */}
                 <div className="grid gap-8 sm:grid-cols-2">
                     <div>
-                        <h2 className="mb-4 bg-black px-1 text-white w-fit">KERNEL_INFO</h2>
+                        <h2 className="mb-4 bg-black px-1 text-white w-fit">1.0 KERNEL_INFO</h2>
                         <div className="space-y-4 leading-relaxed text-zinc-900">
                             <pre className="mb-4 bg-zinc-100 p-2 font-mono text-[10px] text-zinc-500 border border-zinc-200 whitespace-pre overflow-x-auto">
                                 {`// LMST_CORE_VARIABLES
@@ -46,8 +46,10 @@ const T = "TIME";     // Sequence & Experience
                     </div>
 
                     <div>
-                        <h2 className="mb-4 border-b border-black w-fit text-black">DEPENDENCIES</h2>
-                        <ul className="list-inside list-square space-y-1 text-zinc-600">
+                        <h2 className="mb-4 bg-black px-1 text-white w-fit">2.0 RUNTIME_ENVIRONMENT</h2>
+
+                        <h3 className="mb-2 font-bold underline decoration-2 underline-offset-4">DEPENDENCIES</h3>
+                        <ul className="list-inside list-square space-y-1 text-zinc-600 mb-8">
                             <li>Rhinoceros 3D / Grasshopper</li>
                             <li>Revit (BIM) / Dynamo</li>
                             <li>Python / C# (Scripting)</li>
@@ -55,7 +57,7 @@ const T = "TIME";     // Sequence & Experience
                             <li>Arduino / Physical Computing</li>
                         </ul>
 
-                        <h2 className="mt-8 mb-4 border-b border-black w-fit text-black">CORE_MODULES</h2>
+                        <h3 className="mb-2 font-bold underline decoration-2 underline-offset-4">CORE_MODULES</h3>
                         <div className="grid grid-cols-2 gap-2 text-xs">
                             <div className="border border-zinc-300 p-2">
                                 <div className="font-bold text-black">PARAMETRIC_DESIGN</div>
