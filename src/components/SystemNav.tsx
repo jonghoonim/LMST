@@ -49,7 +49,7 @@ export function SystemNav() {
     };
 
     return (
-        <nav className="fixed top-0 left-0 z-50 flex w-full flex-col sm:flex-row items-center justify-between border-b border-black/10 bg-[#F4F4F4]/90 px-4 py-2 backdrop-blur-sm sm:h-12 transition-all">
+        <nav className="fixed top-0 left-0 z-50 flex w-full flex-col sm:flex-row items-center justify-between sm:justify-start border-b border-black/10 bg-[#F4F4F4]/90 px-4 py-2 backdrop-blur-sm sm:h-12 transition-all">
             <div className="flex w-full sm:w-auto items-center justify-between sm:justify-start gap-4">
                 <Link href="/" className="font-archivo text-lg font-bold tracking-tighter hover:opacity-50 transition-opacity">
                     LMST_OS<span className="animate-blink inline-block bg-black w-[8px] h-[16px] align-middle ml-1">_</span>
@@ -57,7 +57,7 @@ export function SystemNav() {
                 {/* Mobile Menu (Moved below on mobile via flex/grid or just simple wrapping) */}
             </div>
 
-            <div className="flex w-full sm:w-auto gap-1 mt-2 sm:mt-0 justify-between sm:justify-end overflow-x-auto no-scrollbar">
+            <div className="flex w-full sm:w-auto gap-1 mt-2 sm:mt-0 justify-between sm:justify-start sm:ml-12 overflow-x-auto no-scrollbar">
                 <NavLink href="/" label="INDEX" />
                 <NavLink href="/logs" label="LOGS" />
                 <NavLink href="/profile" label="PROFILE" />
