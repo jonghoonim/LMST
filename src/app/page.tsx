@@ -10,7 +10,7 @@ export default function Home() {
       <div className="overflow-x-auto pb-4">
         <div className="min-w-[600px] sm:min-w-0">
           {/* Header Row */}
-          <div className="mb-2 grid grid-cols-[1fr_2fr_1fr_1fr] border-b border-black text-black/50 sm:grid-cols-[1fr_3fr_1fr_1fr_1fr] dark:border-white dark:text-white/50">
+          <div className="mb-2 grid grid-cols-[1fr_2fr_1fr_1fr] border-b border-black text-black/50 sm:grid-cols-[1fr_3fr_1fr_1fr_1fr]">
             <div className="pb-2 pl-2">ID</div>
             <div className="pb-2">PROJECT NAME</div>
             <div className="hidden pb-2 sm:block">PHASE</div>
@@ -24,11 +24,11 @@ export default function Home() {
               <Link
                 key={log.id}
                 href={`/logs/${log.id}`}
-                className="group grid grid-cols-[1fr_2fr_1fr_1fr] border-b border-black/10 py-3 text-black transition-none hover:bg-[#00FF00] hover:text-black sm:grid-cols-[1fr_3fr_1fr_1fr_1fr] dark:border-white/10 dark:text-white dark:hover:text-black"
+                className="group grid grid-cols-[1fr_2fr_1fr_1fr] border-b border-black/10 py-3 text-black transition-none hover:bg-[#00FF00] hover:text-black sm:grid-cols-[1fr_3fr_1fr_1fr_1fr]"
               >
                 <div className="pl-2 group-hover:underline">{log.id}</div>
                 <div className="font-bold truncate pr-2">{log.title}</div>
-                <div className="hidden text-black/50 group-hover:text-black/70 sm:block dark:text-white/50 dark:group-hover:text-black/70">
+                <div className="hidden text-black/50 group-hover:text-black/70 sm:block">
                   {log.phase}
                 </div>
                 <div className="text-right tabular-nums">{log.date}</div>
@@ -51,7 +51,7 @@ export default function Home() {
       </div>
 
       {/* Footer Info */}
-      <div className="mt-8 flex justify-between border-t border-black/20 pt-4 text-black/40 dark:border-white/20 dark:text-white/40">
+      <div className="mt-8 flex justify-between border-t border-black/20 pt-4 text-black/40">
         <div>TOTAL RECORDS: {INITIAL_LOGS.length}</div>
         <div>SYS_MEM: 32%</div>
       </div>
