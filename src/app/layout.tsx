@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo_Narrow, Geist_Mono } from "next/font/google"; // Removed separate Geist import
+import { Archivo_Narrow, Geist_Mono, Roboto_Condensed } from "next/font/google"; // Removed separate Geist import
 import "./globals.css";
 import { SystemNav } from "@/components/SystemNav";
 
@@ -7,6 +7,11 @@ import { SystemFooter } from "@/components/SystemFooter";
 
 const archivoNarrow = Archivo_Narrow({
   variable: "--font-archivo-narrow",
+  subsets: ["latin"],
+});
+
+const robotoCondensed = Roboto_Condensed({
+  variable: "--font-roboto-condensed",
   subsets: ["latin"],
 });
 
@@ -28,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${archivoNarrow.variable} ${geistMono.variable} antialiased font-sans bg-[#F4F4F4] text-black selection:bg-black selection:text-white pb-8`}
+        className={`${archivoNarrow.variable} ${robotoCondensed.variable} ${geistMono.variable} antialiased font-sans bg-[#F4F4F4] text-black selection:bg-black selection:text-white pb-8`}
       >
         <SystemNav />
         <div className="pt-12">{children}</div>

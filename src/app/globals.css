@@ -28,6 +28,10 @@
     scrollbar-width: none;
     /* Firefox */
   }
+
+  .font-roboto-condensed {
+    font-family: var(--font-roboto-condensed);
+  }
 }
 
 @keyframes blink {
