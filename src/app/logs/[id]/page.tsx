@@ -83,32 +83,39 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                 {/* Content Section: OMA Layout (Narration -> Overview -> Images) */}
                 <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-16 sm:py-24">
 
-                    {/* 2. Title & Narration (Expandable) */}
+                    {/* 2. Title & Narration (Expandable - First Paragraph Only) */}
                     <div className="mb-24 max-w-4xl">
                         <h1 className="text-4xl sm:text-6xl font-black uppercase tracking-tighter leading-none mb-8">
                             {log.title}
                         </h1>
 
                         <div className="text-lg sm:text-xl font-medium leading-relaxed text-black">
-                            <div className={clsx(
-                                "overflow-hidden transition-all duration-300 relative",
-                                !isExpanded && "max-h-[8em]" // Approx 5 lines
-                            )}>
-                                <p className="whitespace-pre-wrap">
-                                    {log.description || MOCK_RAW_DATA}
-                                </p>
-                                {/* Fade out effect when collapsed */}
-                                {!isExpanded && (
-                                    <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-white to-transparent" />
-                                )}
-                            </div>
+                            {(() => {
+                                const text = log.description || MOCK_RAW_DATA;
+                                const paragraphs = text.split(/\n\n/);
+                                const firstParagraph = paragraphs[0];
+                                const hasMore = paragraphs.length > 1;
 
-                            <button
-                                onClick={() => setIsExpanded(!isExpanded)}
-                                className="mt-4 underline decoration-2 underline-offset-4 hover:bg-black hover:text-white transition-all font-bold text-sm uppercase"
-                            >
-                                {isExpanded ? "Read Less" : "Read More"}
-                            </button>
+                                return (
+                                    <>
+                                        <div className="transition-all duration-300">
+                                            <p className="whitespace-pre-wrap">
+                                                {isExpanded ? text : firstParagraph}
+                                                {!isExpanded && hasMore && "..."}
+                                            </p>
+                                        </div>
+
+                                        {hasMore && (
+                                            <button
+                                                onClick={() => setIsExpanded(!isExpanded)}
+                                                className="mt-4 underline decoration-2 underline-offset-4 hover:bg-black hover:text-white transition-all font-bold text-sm uppercase"
+                                            >
+                                                {isExpanded ? "Read Less" : "Read More"}
+                                            </button>
+                                        )}
+                                    </>
+                                );
+                            })()}
                         </div>
                     </div>
 
@@ -175,10 +182,6 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                                         FIG 1. RAW_CAPTURE_{log.date}
                                     </div>
                                 </div>
-                                {/* Mock placeholders to show "multiple images" vibe if needed, 
-                                    but sticking to real data for now. 
-                                    User said "Small images", so if we had more we'd grid them.
-                                    For now, just one large process image serves the purpose. */}
                             </div>
                         ) : (
                             <div className="text-zinc-400 italic">topological_data_pending...</div>
