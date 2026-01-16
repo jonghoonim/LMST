@@ -61,13 +61,21 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
 
             {/* Vertical Stack Content */}
             <div className="flex flex-1 flex-col overflow-y-auto">
-                {/* Top: Final Intent (Image) */}
-                <div className="relative w-full border-b border-black">
-                    <div className="absolute top-0 left-0 bg-black text-white px-2 py-1 z-10">
+                {/* Top: Final Intent (Image) - OMA Style Full Width */}
+                <div className="relative w-full">
+                    {/* Massive Bold Title Overlay */}
+                    <div className="absolute top-0 left-0 w-full p-4 sm:p-8 z-20 pointer-events-none mix-blend-difference text-white">
+                        <h1 className="text-5xl sm:text-8xl font-black uppercase tracking-tighter leading-none opacity-90">
+                            {log.title}
+                        </h1>
+                    </div>
+
+                    <div className="absolute top-4 right-4 bg-black text-white px-3 py-1 z-10 text-xs font-bold tracking-widest">
                         VIEW: FINAL_RENDER
                     </div>
-                    {/* Maintain a cinematic aspect ratio or fixed height that feels "OMA-like" */}
-                    <div className="relative w-full aspect-video min-h-[400px] bg-zinc-200 overflow-hidden">
+
+                    {/* Full Bleed Image Container */}
+                    <div className="relative w-full h-[60vh] sm:h-[80vh] bg-zinc-200 overflow-hidden">
                         {log.finalImage ? (
                             <Image
                                 src={log.finalImage}
@@ -81,8 +89,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                         ) : (
                             <div className="flex h-full w-full items-center justify-center text-zinc-400 text-center">
                                 <div>
-                                    [IMG_PLACEHOLDER]
-                                    <br />
+                                    <span className="text-4xl sm:text-6xl font-black opacity-20 block mb-4">NO_IMAGE</span>
                                     {log.title}_FINAL.jpg
                                 </div>
                             </div>
@@ -90,14 +97,20 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                     </div>
                 </div>
 
-                {/* Bottom: Raw Process (Documentation) */}
-                <div className="relative flex flex-col bg-[#F4F4F4] text-zinc-600 pb-16">
-                    <div className="sticky top-0 left-0 bg-red-600 text-white px-2 py-1 z-10 w-fit">
-                        VIEW: PROCESS_LOG & ERROR
+                {/* Bottom: Raw Process (Documentation) - "Not Filled" Space */}
+                <div className="relative flex flex-col bg-[#F4F4F4] text-black pb-24 pt-16 px-4">
+                    {/* Floating Badge */}
+                    <div className="absolute top-0 left-4 -translate-y-1/2 bg-red-600 text-white px-4 py-2 text-sm font-bold tracking-widest z-10 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                        PROCESS_LOG & ERROR
                     </div>
-                    <div className="flex w-full flex-col p-8">
+
+                    <div className="w-full max-w-3xl mx-auto">
+                        <h2 className="text-3xl sm:text-4xl font-black mb-8 border-b-4 border-black pb-2 uppercase tracking-tight">
+                            Process Record
+                        </h2>
+
                         {log.rawImage && (
-                            <div className="relative mb-6 w-full max-w-4xl border border-zinc-300">
+                            <div className="relative mb-12 w-full border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,0.1)]">
                                 <Image
                                     src={log.rawImage}
                                     alt="Process Log"
@@ -105,31 +118,56 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                                     height={800}
                                     className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-300"
                                 />
-                                <div className="bg-zinc-200 text-[10px] px-1 py-0.5 font-mono text-zinc-500 border-t border-zinc-300">
-                                    IMG_SOURCE: SCREEN_CAPTURE_{log.date.replace(/\./g, "")}.PNG
+                                <div className="bg-black text-white text-xs px-2 py-1 font-mono border-t-2 border-black flex justify-between">
+                                    <span>RAW_CAPTURE</span>
+                                    <span>{log.date}</span>
                                 </div>
                             </div>
                         )}
-                        <pre className="whitespace-pre-wrap font-mono text-xs leading-relaxed font-sans max-w-4xl">
-                            {log.description || MOCK_RAW_DATA}
-                        </pre>
-                        {log.warningMessage && (
-                            <div className="mt-8 border border-red-500 p-4 text-red-600 bg-red-50 max-w-2xl">
-                                <h3 className="font-bold mb-2">⚠ SYSTEM WARNING</h3>
-                                <p>{log.warningMessage}</p>
+
+                        <div className="space-y-12">
+                            <div>
+                                <h3 className="text-xl font-bold mb-4 uppercase bg-black text-white inline-block px-2">System Log</h3>
+                                <pre className="whitespace-pre-wrap font-mono text-sm leading-relaxed bg-white border-2 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                                    {log.description || MOCK_RAW_DATA}
+                                </pre>
                             </div>
-                        )}
-                        {!log.warningMessage && (
-                            <div className="mt-8 border border-zinc-300 p-4 text-zinc-500 bg-zinc-100 italic max-w-2xl">
-                                NO_SYSTEM_WARNINGS_DETECTED
-                            </div>
-                        )}
-                        <div className="mt-8 max-w-2xl">
-                            <h3 className="font-bold mb-2 uppercase text-black">Data_Manifest</h3>
-                            <div className="grid grid-cols-2 gap-2 text-zinc-500">
-                                <div>File_Size:</div><div>{log.size}</div>
-                                <div>Last_Mod:</div><div>{log.date}</div>
-                                <div>Author:</div><div>User_01</div>
+
+                            {log.warningMessage && (
+                                <div>
+                                    <h3 className="text-xl font-bold mb-4 uppercase text-red-600 bg-red-100 inline-block px-2">Critical Warning</h3>
+                                    <div className="border-4 border-red-600 p-6 text-red-600 bg-white shadow-[4px_4px_0px_0px_rgba(220,38,38,1)]">
+                                        <p className="font-bold text-lg">⚠ {log.warningMessage}</p>
+                                    </div>
+                                </div>
+                            )}
+
+                            {!log.warningMessage && (
+                                <div className="border-2 border-zinc-300 p-6 text-zinc-400 bg-zinc-50 italic text-center">
+                                    NO_SYSTEM_WARNINGS_DETECTED
+                                </div>
+                            )}
+
+                            <div>
+                                <h3 className="text-xl font-bold mb-4 uppercase border-b-2 border-black inline-block">Data Manifest</h3>
+                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-sm font-mono border-t-2 border-black pt-4">
+                                    <div>
+                                        <div className="text-zinc-500 text-xs mb-1">FILE_SIZE</div>
+                                        <div className="font-bold text-lg">{log.size}</div>
+                                    </div>
+                                    <div>
+                                        <div className="text-zinc-500 text-xs mb-1">LAST_MOD</div>
+                                        <div className="font-bold text-lg">{log.date}</div>
+                                    </div>
+                                    <div>
+                                        <div className="text-zinc-500 text-xs mb-1">AUTHOR</div>
+                                        <div className="font-bold text-lg">User_01</div>
+                                    </div>
+                                    <div>
+                                        <div className="text-zinc-500 text-xs mb-1">PHASE</div>
+                                        <div className="font-bold text-lg">{log.phase}</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
