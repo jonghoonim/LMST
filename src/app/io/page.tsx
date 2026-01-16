@@ -9,6 +9,7 @@ export default function IOPage() {
 > CONNECTING TO OPERATOR [JONGHOON_IM]...
 > ESTABLISHED.
 
+
 > [CONTACT_CHANNELS]
 > EMAIL:     jim@lmst.kr
 > INSTAGRAM: @jim_lmst
@@ -69,18 +70,7 @@ export default function IOPage() {
                             )}
                         </div>
 
-                        {/* Static Links (Only show when text is mostly done or fully done, or always show but below?) 
-                            User request: "Typing effect... click to skip". 
-                            The links were separate in previous version. I'll append them or put them below.
-                            Actually, the user layout suggestion shows them IN the typing text.
-                            But they need to be clickable. 
-                            Let's render the text, but maybe overlay clickable areas or just put buttons below.
-                            The previous version had separate [EXECUTE] links.
-                            The user prompt says:
-                            > EMAIL: jim@lmst.kr
-                            
-                            I'll leave the text as display, and put the actionable links below the text block in the left column.
-                        */}
+                        {/* Static Links */}
                         {text === fullText && (
                             <div className="mt-4 border-t border-black/30 pt-4 flex flex-col gap-2 text-xs opacity-80 animate-in fade-in duration-500">
                                 <Link href="mailto:jim@lmst.kr" className="hover:bg-black hover:text-white w-fit px-1 transition-colors">
@@ -95,12 +85,18 @@ export default function IOPage() {
 
                     {/* Right: Map Area */}
                     <div className="flex flex-col gap-2">
-                        <div className="relative w-full aspect-square border border-black overflow-hidden bg-black">
+                        <a
+                            href="https://map.naver.com/v5/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%ED%86%A0%EC%A0%95%EB%A1%9C2%EA%B8%B8%206-6"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group relative w-full aspect-square border border-black overflow-hidden bg-black cursor-pointer"
+                        >
                             {/* Map Iframe with CSS Filter */}
                             <iframe
                                 width="100%"
                                 height="100%"
                                 frameBorder="0"
+                                className="pointer-events-none" // Disable iframe interaction to allow anchor click
                                 style={{
                                     filter: "grayscale(100%) invert(100%) contrast(150%)",
                                     border: 0
@@ -109,22 +105,21 @@ export default function IOPage() {
                                 allowFullScreen
                             ></iframe>
 
-                            {/* Overlay Label matching "TARGET_COORDINATES" request if needed, but caption is requested below */}
-                            <div className="absolute top-0 left-0 bg-black text-white px-2 py-1 text-[10px] font-bold">
+                            {/* Overlay Label */}
+                            <div className="absolute top-0 left-0 bg-black text-white px-2 py-1 text-[10px] font-bold group-hover:bg-[#00FF00] group-hover:text-black transition-colors">
                                 [ TARGET_COORDINATES ]
                             </div>
-                        </div>
+
+                            {/* Hover Hint */}
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20">
+                                <span className="bg-black text-white px-2 py-1 text-xs">[ OPEN_NAVER_MAP ]</span>
+                            </div>
+                        </a>
                         <div className="text-[10px] text-zinc-500 font-mono text-center">
                             LAT: 37.54, LON: 126.94 // TARGET_LOCALE
                         </div>
                     </div>
                 </div>
-
-                {/* Footer matching Profile style implies just the box end, but we can add the timestamp footer if desired. 
-                    Profile has a date footer. I/O usually didn't. I'll skip it to keep it clean or add simple status.
-                    User Request: "2-column layout... Text left, Map right".
-                */}
             </div>
         </main>
-    );
 }
