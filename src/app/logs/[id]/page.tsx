@@ -153,10 +153,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                                 <div className="text-[10px] text-zinc-500 mb-1">LOCATION</div>
                                 <div className="font-bold">Digital Space</div>
                             </div>
-                            <div className="border-b border-zinc-200 py-3 sm:border-r sm:px-4">
-                                <div className="text-[10px] text-zinc-500 mb-1">PARTNER</div>
-                                <div className="font-bold">LMST_CORE</div>
-                            </div>
+
                             <div className="border-b border-zinc-200 py-3 sm:pl-4">
                                 <div className="text-[10px] text-zinc-500 mb-1">TEAM</div>
                                 <div className="font-bold">User_01, Copilot</div>

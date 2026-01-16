@@ -9,6 +9,11 @@ export type ProjectLog = {
     warningMessage?: string;
     finalImage?: string;
     rawImage?: string;
+    // OMA Style Data
+    location?: string;
+    client?: string;
+    program?: string;
+    team?: string;
 };
 
 
