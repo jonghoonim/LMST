@@ -58,7 +58,7 @@ export default function IOPage() {
                 {/* Header */}
                 <div className="mb-6 flex items-center justify-between border-b border-black pb-2">
                     <h1 className="text-xl font-bold uppercase tracking-tighter text-black">
-                        3.0 I/O_CHANNELS
+                        I/O_CHANNELS
                     </h1>
                     <div className="text-right text-black">
                         <div>STATUS: ACTIVE</div>
