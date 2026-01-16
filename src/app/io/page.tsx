@@ -33,7 +33,6 @@ export default function IOPage() {
     }, [fullText]);
 
     return (
-    return (
         <main className="flex h-screen w-full items-center justify-center bg-[#F4F4F4]/90 p-4 font-mono text-sm sm:text-base backdrop-blur-sm z-40 fixed top-0 left-0">
             <div className="w-full max-w-lg overflow-hidden border border-black bg-white p-4 text-black shadow-2xl relative">
                 <div className="absolute top-0 left-0 w-full bg-black text-white px-2 py-0.5 text-xs font-bold flex justify-between">
