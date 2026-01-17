@@ -33,9 +33,9 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
     }
 
     return (
-        <main className="flex h-screen w-full flex-col font-mono text-xs sm:text-sm">
+        <main className="flex h-screen w-full flex-col font-mono text-xs sm:text-sm -mt-12">
             {/* Top Bar Info: System Breadcrumb */}
-            <div className="absolute top-0 left-0 w-full flex items-center justify-between px-4 py-3 z-50 mix-blend-difference text-white">
+            <div className="absolute top-12 left-0 w-full flex items-center justify-between px-4 py-3 z-50 mix-blend-difference text-white">
                 <div className="flex items-center gap-2 font-mono text-xs">
                     <Link href="/" className="hover:underline transition-all font-bold">
                         [ ../ ]
@@ -58,7 +58,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                     onContextMenu={(e) => e.preventDefault()}
                 >
                     {/* View Label */}
-                    <div className="absolute top-0 left-0 bg-black text-white px-2 py-1 z-10">
+                    <div className="absolute bottom-0 left-0 bg-black text-white px-2 py-1 z-10">
                         VIEW: FINAL_RENDER
                     </div>
 
