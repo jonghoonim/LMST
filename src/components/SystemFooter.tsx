@@ -27,7 +27,7 @@ export function SystemFooter() {
                 )}
             </div>
             <Link href="/" className="hover:bg-black hover:text-white transition-colors px-1">
-                LMST_OS_VER_2.4
+                LMST_OS_VER_2.1
             </Link>
         </footer>
     );
