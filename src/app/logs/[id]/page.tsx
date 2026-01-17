@@ -136,7 +136,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                                 {log.title}
                             </h1>
 
-                            <div className="text-base sm:text-lg font-normal leading-relaxed text-black">
+                            <div className="text-base sm:text-lg font-pretendard font-normal leading-relaxed text-black">
                                 {(() => {
                                     const text = log.description || MOCK_RAW_DATA;
                                     const paragraphs = text.split(/\n\n/);
