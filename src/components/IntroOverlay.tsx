@@ -66,7 +66,7 @@ export function IntroOverlay() {
                 </div>
                 <div className={`mt-1 ${step >= 6 ? "opacity-100" : "opacity-0"}`}>
                     <div className="whitespace-pre">&gt; ROOT IDENTITY : </div>
-                    <div className="pl-6 sm:pl-8 whitespace-normal sm:whitespace-nowrap mt-1 font-bold">
+                    <div className="mt-1 font-bold whitespace-normal text-center sm:text-left sm:whitespace-nowrap sm:pl-8">
                         Let's Make Something Together!
                     </div>
                 </div>
