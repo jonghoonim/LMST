@@ -66,7 +66,7 @@ if (Logic == true) {
 
                             <h3 className="mb-2 font-bold">[ CORE_MODULES ]</h3>
                             <div className="text-xs font-mono space-y-2 text-zinc-700">
-                                <div className="border-b border-zinc-200 pb-1">------------------------------------------------</div>
+                                <div className="border-b border-zinc-200 pb-1"></div>
                                 <div className="flex gap-3">
                                     <span className="text-zinc-400">[ ACTIVE ]</span>
                                     <span>PARAMETRIC_DESIGN (Rhino.Inside)</span>
@@ -93,7 +93,7 @@ if (Logic == true) {
 
                             {/* 2.1 EDUCATION */}
                             <div className="mb-8">
-                                <div className="mb-2 border-b border-zinc-300 border-dashed pb-1">
+                                <div className="mb-2 border-b border-zinc-300 pb-1">
                                     <span className="font-bold text-black">&gt; EDUCATION_SEQUENCE</span>
                                 </div>
                                 <ul className="space-y-1">
@@ -111,7 +111,7 @@ if (Logic == true) {
 
                             {/* 2.2 ACADEMIC */}
                             <div className="mb-8">
-                                <div className="mb-2 border-b border-zinc-300 border-dashed pb-1">
+                                <div className="mb-2 border-b border-zinc-300 pb-1">
                                     <span className="font-bold text-black">&gt; ACADEMIC_SEQUENCE</span>
                                 </div>
                                 <div>
@@ -130,7 +130,7 @@ if (Logic == true) {
 
                             {/* 2.3 PROFESSIONAL */}
                             <div className="mb-8">
-                                <div className="mb-2 border-b border-zinc-300 border-dashed pb-1">
+                                <div className="mb-2 border-b border-zinc-300 pb-1">
                                     <span className="font-bold text-black">&gt; PROFESSIONAL_SEQUENCE</span>
                                 </div>
 
@@ -177,7 +177,7 @@ if (Logic == true) {
 
                             {/* 2.4 HONORS */}
                             <div>
-                                <div className="mb-2 border-b border-zinc-300 border-dashed pb-1">
+                                <div className="mb-2 border-b border-zinc-300 pb-1">
                                     <span className="font-bold text-black">&gt; HONORS_PACKET</span>
                                 </div>
                                 <ul className="space-y-1 text-zinc-600 pl-2">
@@ -192,24 +192,24 @@ if (Logic == true) {
                 </div>
 
                 {/* Section: I/O (Contact) */}
-                <div className="mt-8 pt-4 border-t border-black border-dashed">
+                <div className="mt-8 pt-4 border-t border-black">
                     <h2 className="mb-4 bg-black text-white px-1 inline-block uppercase w-fit">
                         4.0 I/O_CHANNELS
                     </h2>
                     <div className="grid grid-cols-1 gap-1 text-zinc-600 text-xs">
-                        <div className="flex justify-between border-b border-zinc-200 border-dashed py-1">
+                        <div className="flex justify-between border-b border-zinc-200 py-1">
                             <span>EMAIL_PROTOCOL</span>
                             <a href="mailto:jim@lmst.kr" className="hover:bg-black hover:text-white">jim@lmst.kr</a>
                         </div>
-                        <div className="flex justify-between border-b border-zinc-200 border-dashed py-1">
+                        <div className="flex justify-between border-b border-zinc-200 py-1">
                             <span>INSTAGRAM_FEED</span>
                             <a href="https://instagram.com/jim_lmst" target="_blank" className="hover:bg-black hover:text-white">@jim_lmst</a>
                         </div>
-                        <div className="flex justify-between border-b border-zinc-200 border-dashed py-1">
+                        <div className="flex justify-between border-b border-zinc-200 py-1">
                             <span>GITHUB_REPO</span>
                             <a href="https://github.com/jonghoonim" target="_blank" className="hover:bg-black hover:text-white">github.com/jonghoonim</a>
                         </div>
-                        <div className="flex justify-between border-b border-zinc-200 border-dashed py-1">
+                        <div className="flex justify-between border-b border-zinc-200 py-1">
                             <span>LOCALE_ADDR (ko-KR)</span>
                             <span>서울특별시 마포구 토정로2길 6-6</span>
                         </div>
