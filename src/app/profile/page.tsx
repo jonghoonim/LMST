@@ -103,6 +103,9 @@ if (Logic == true) {
                                     <li>
                                         <span className="font-bold text-zinc-900">[2006]</span> M.S., <span className="font-bold">Seoul National Univ.</span>
                                     </li>
+                                    <li>
+                                        <span className="font-bold text-zinc-900">[2004]</span> B.S., <span className="font-bold">Chonnam National Univ.</span>
+                                    </li>
                                 </ul>
                             </div>
 
