@@ -31,7 +31,7 @@ export const INITIAL_LOGS: ProjectLog[] = [
         status: "COMPILED",
         size: "12.4GB",
         finalImage: "/projects/LOG_2506/05_Stone_Front_LMST.png",
-        description: "**포스코 프리패브 화장실 상품화 디자인 및 실시설계 (POSCO Modular Restroom)**\n\n모듈러 건축의 효율성과 디자인적 가치를 결합한 프리패브 화장실 상품화 프로젝트. 시공 오차를 최소화하고 공사 기간을 단축하는 동시에, 사용자 중심의 쾌적한 환경을 제공하는 표준 모델을 개발했다.",
+        description: "포스코 프리패브 화장실 상품화 디자인 및 실시설계 (POSCO Modular Restroom)\n\n모듈러 건축의 효율성과 디자인적 가치를 결합한 프리패브 화장실 상품화 프로젝트. 시공 오차를 최소화하고 공사 기간을 단축하는 동시에, 사용자 중심의 쾌적한 환경을 제공하는 표준 모델을 개발했다.",
     },
     {
         id: "LOG_2505",
@@ -78,7 +78,7 @@ export const INITIAL_LOGS: ProjectLog[] = [
         phase: "Competition",
         status: "RUNTIME_ERROR",
         size: "3.5GB",
-        description: "**중랑구 묵1동 복합청사 (Jungnang-gu Muk 1-dong Complex Center)**\n\n주민 밀착형 행정 서비스와 문화 공간을 통합한 복합 청사 계획안.",
+        description: "중랑구 묵1동 복합청사 (Jungnang-gu Muk 1-dong Complex Center)\n\n주민 밀착형 행정 서비스와 문화 공간을 통합한 복합 청사 계획안.",
     },
     {
         id: "LOG_2403",
@@ -87,7 +87,7 @@ export const INITIAL_LOGS: ProjectLog[] = [
         phase: "Competition",
         status: "UNREACHABLE",
         size: "1.8GB",
-        description: "**화성 우리꽃 식물원 건축 리모델링 (Hwaseong Our Flower Botanical Garden)**\n\n노후화된 온실과 전시관을 리모델링하여 생태 교육과 휴식이 공존하는 새로운 식물원 환경을 조성하는 제안.",
+        description: "화성 우리꽃 식물원 건축 리모델링 (Hwaseong Our Flower Botanical Garden)\n\n노후화된 온실과 전시관을 리모델링하여 생태 교육과 휴식이 공존하는 새로운 식물원 환경을 조성하는 제안.",
     },
     {
         id: "LOG_2402",
@@ -96,7 +96,7 @@ export const INITIAL_LOGS: ProjectLog[] = [
         phase: "Competition",
         status: "RUNTIME_ERROR",
         size: "4.2GB",
-        description: "**서울동신초등학교 그린스마트 미래학교 (Seoul Dongshin Elementary School)**\n\n미래 교육을 위한 스마트 학습 환경과 친환경 건축 요소를 결합한 학교 개축 프로젝트.",
+        description: "서울동신초등학교 그린스마트 미래학교 (Seoul Dongshin Elementary School)\n\n미래 교육을 위한 스마트 학습 환경과 친환경 건축 요소를 결합한 학교 개축 프로젝트.",
     },
     {
         id: "LOG_2401",
@@ -105,6 +105,6 @@ export const INITIAL_LOGS: ProjectLog[] = [
         phase: "Competition",
         status: "RUNTIME_ERROR",
         size: "3.9GB",
-        description: "**서울동명초등학교 그린스마트 미래학교 (Seoul Dongmyung Elementary School)**\n\n기존 교사의 노후화를 개선하고 탄소 중립 실현을 위한 그린 에너지 기술을 도입한 미래형 학교 모델.",
+        description: "서울동명초등학교 그린스마트 미래학교 (Seoul Dongmyung Elementary School)\n\n기존 교사의 노후화를 개선하고 탄소 중립 실현을 위한 그린 에너지 기술을 도입한 미래형 학교 모델.",
     },
 ];
