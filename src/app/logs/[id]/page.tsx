@@ -35,17 +35,17 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
     return (
         <main className="flex h-screen w-full flex-col font-mono text-xs sm:text-sm">
             {/* Top Bar Info: System Breadcrumb */}
-            <div className="flex items-center justify-between border-b border-black px-4 py-3 bg-white z-50 sticky top-0">
+            <div className="absolute top-0 left-0 w-full flex items-center justify-between px-4 py-3 z-50 mix-blend-difference text-white">
                 <div className="flex items-center gap-2 font-mono text-xs">
-                    <Link href="/" className="hover:bg-black hover:text-white transition-colors font-bold">
+                    <Link href="/" className="hover:underline transition-all font-bold">
                         [ ../ ]
                     </Link>
-                    <span className="text-zinc-300">/</span>
-                    <span className="text-zinc-400">ROOT</span>
-                    <span className="text-zinc-300">/</span>
-                    <span className="text-zinc-400">LOGS</span>
-                    <span className="text-zinc-300">/</span>
-                    <span className="text-black font-bold">{log.id}</span>
+                    <span className="opacity-50">/</span>
+                    <span className="opacity-70">ROOT</span>
+                    <span className="opacity-50">/</span>
+                    <span className="opacity-70">LOGS</span>
+                    <span className="opacity-50">/</span>
+                    <span className="font-bold">{log.id}</span>
                 </div>
             </div>
 
