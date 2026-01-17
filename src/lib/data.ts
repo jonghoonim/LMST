@@ -30,7 +30,7 @@ export const INITIAL_LOGS: ProjectLog[] = [
         phase: "Realization",
         status: "COMPILED",
         size: "12.4GB",
-        finalImage: "/images/LOG_2506_FINAL.png",
+        finalImage: "/projects/LOG_2506/05_Stone_Front_LMST.png",
         description: "**포스코 프리패브 화장실 상품화 디자인 및 실시설계 (POSCO Modular Restroom)**\n\n모듈러 건축의 효율성과 디자인적 가치를 결합한 프리패브 화장실 상품화 프로젝트. 시공 오차를 최소화하고 공사 기간을 단축하는 동시에, 사용자 중심의 쾌적한 환경을 제공하는 표준 모델을 개발했다.",
     },
     {
