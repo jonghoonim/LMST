@@ -47,7 +47,21 @@ export const INITIAL_LOGS: ProjectLog[] = [
         totalArea: "12,866.92m²",
         structure: "RC, Steel",
         buildingScope: "B1 / 4F",
-        description: "염창초등학교 서관동 개축 프로젝트는 교실을 넘어서는 배움의 장을 만드는 데 초점을 맞추고 있다. 우리는 교실이 단지 지붕과 벽으로 둘러싸인 공간이 아니라, 빛과 바람, 자연, 지역과 연결되는 열린 배움터가 될 수 있다고 믿는다.\n\n이를 상징하는 공간이 바로 “러닝 가든”이다. 층별로 계단식으로 물러난 교실들은 테라스를 만들고, 이 테라스는 학생들이 책을 읽거나 실험을 하고, 휴식을 즐기며, 서로 어울릴 수 있는 확장된 교실이 된다. 옥상 또한 하늘 정원으로 이어져, 아이들이 도시 속에서도 자연을 경험하며 배우도록 한다.\n\n운동장과 육상트랙, 학년별 운동마당, 바닥놀이와 움직임 놀이공간, 생태학습장과 텃밭, 그리고 야외 학습공연장은 모두 “러닝 가든”의 철학을 공유한다. 즉, 배움과 놀이, 생태와 공동체가 자연스럽게 어우러지는 외부 학습 환경이다. 또한, 기존 본관동과의 맥락을 존중하면서도 스텝백 매스와 다양한 외부공간을 통해 학교 전체가 하나의 학습 네트워크로 엮이도록 했다. 정문앞의 환영광장은 협소하고 혼잡했던 진입부 문제를 해결하며, 학생과 학부모를 맞이하는 열린 얼굴이 된다.\n\n결국, 이 프로젝트가 지향하는 것은 단순한 교사동의 개축이 아니라, “러닝 가든”이라는 이름 아래, 교실에서 마당으로, 마당에서 도시로 확장되는 새로운 학교의 풍경이다.",
+        description: `Located within a dense residential fabric of high-rise apartments, the project addresses the constraints of a limited site and the need for a coherent connection with the existing main building. The design moves beyond the conventional corridor-classroom typology, proposing a 'Step-back' massing strategy that responds to the urban scale while securing optimal daylight conditions.
+
+고밀도 아파트 단지로 둘러싸인 도심지 학교의 특성을 고려하여, 협소한 대지의 한계를 극복하고 기존 본관동과의 유기적 연결을 시도했다. 우리는 전형적인 중복도 학교 유형을 탈피하고, '스텝백(Step-back)' 매스 전략을 통해 도시적 스케일에 대응하며 최적의 채광 조건을 확보하는 해법을 제안한다.
+
+The core logic of the form is the 'Learning Garden,' created by shifting the volume on each level. These terraced outdoor spaces extend the learning environment beyond the classroom, blurring the boundary between indoor instruction and outdoor activity. This structural shift allows for a diverse range of educational scenarios, transforming the school into a multi-layered landscape rather than a static container.
+
+건물 형태를 결정짓는 핵심 논리는 층별 볼륨을 후퇴시키며 만들어낸 '러닝 가든(Learning Garden)'이다. 이 테라스형 외부 공간은 교실의 영역을 외부로 확장하며, 실내 수업과 야외 활동의 경계를 허문다. 이러한 구조적 변화는 다양한 교육 시나리오를 가능하게 하며, 학교를 정적인 건물이 아닌 입체적인 학습의 풍경으로 전환시킨다.
+
+Internally, the central atrium serves as an environmental engine. By facilitating the stack effect, it maximizes natural ventilation and daylight penetration, reducing energy loads. On the ground level, the 'Welcome Plaza' and pilotis structure create a permeable interface, alleviating congestion at the entrance and providing a flexible, covered activity space for students.
+
+내부의 중앙 아트리움은 환경적 엔진으로 작동한다. 수직적으로 열린 이 공간은 굴뚝 효과(Stack Effect)를 유도하여 자연 환기와 채광을 극대화하고 에너지 부하를 저감한다. 지상 레벨의 '환영 광장'과 필로티 구조는 투과적인 인터페이스를 형성하여, 등하교 시간의 혼잡을 완화하고 학생들에게 날씨에 구애받지 않는 유연한 활동 공간을 제공한다.
+
+The façade establishes a dialogue with the existing context by reinterpreting the brick materiality of the main building, while integrating vertical louvers for environmental performance. Seoul Yeomchang Elementary School is designed not just as an educational facility, but as a dynamic platform that integrates logic, nature, and community within a dense urban grid.
+
+입면은 기존 본관동의 벽돌 물성을 재해석하여 맥락적 조화를 이루는 동시에, 수직 루버를 통합하여 환경적 성능을 최적화했다. 서울염창초등학교는 단순한 교육 시설을 넘어, 고밀도 도시 조직 안에서 논리와 자연, 커뮤니티를 통합하는 역동적인 플랫폼으로 설계되었다.`,
     },
     {
         id: "LOG_2503",
