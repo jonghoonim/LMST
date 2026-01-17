@@ -1,4 +1,16 @@
+'use client';
+
+import { useState } from 'react';
+
 export default function ProfilePage() {
+    const [copied, setCopied] = useState(false);
+
+    const handleCopyEmail = () => {
+        navigator.clipboard.writeText("jim@lmst.kr");
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    };
+
     return (
         <main className="min-h-screen w-full p-4 font-mono text-xs sm:text-sm">
             <div className="mx-auto max-w-4xl border border-black p-4 bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
@@ -199,7 +211,16 @@ if (Logic == true) {
                     <div className="grid grid-cols-1 gap-1 text-zinc-600 text-xs">
                         <div className="flex justify-between border-b border-zinc-200 py-1">
                             <span>EMAIL_PROTOCOL</span>
-                            <a href="mailto:jim@lmst.kr" className="hover:bg-black hover:text-white">jim@lmst.kr</a>
+                            <button
+                                onClick={handleCopyEmail}
+                                className="hover:bg-black hover:text-white transition-colors uppercase"
+                            >
+                                {copied ? (
+                                    <span className="text-green-600 font-bold">COPIED_[OK]</span>
+                                ) : (
+                                    "jim@lmst.kr"
+                                )}
+                            </button>
                         </div>
                         <div className="flex justify-between border-b border-zinc-200 py-1">
                             <span>INSTAGRAM_FEED</span>
