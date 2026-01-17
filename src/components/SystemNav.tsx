@@ -62,10 +62,7 @@ export function SystemNav() {
             )}
         >
             <div className="flex w-full sm:w-auto items-center justify-between sm:justify-start gap-4">
-                <Link href="/" className={clsx(
-                    "font-archivo text-lg tracking-tighter hover:opacity-50 transition-opacity",
-                    isTransparentPage ? "font-semibold" : "font-bold"
-                )}>
+                <Link href="/" className="font-archivo text-lg font-bold tracking-tighter hover:opacity-50 transition-opacity antialiased">
                     LMST_OS<span className="animate-blink inline-block bg-current w-[8px] h-[16px] align-middle ml-1">_</span>
                 </Link>
                 {/* Mobile Menu (Moved below on mobile via flex/grid or just simple wrapping) */}
