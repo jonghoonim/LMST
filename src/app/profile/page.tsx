@@ -15,7 +15,7 @@ export default function ProfilePage() {
         <main className="min-h-screen w-full p-4 font-mono text-xs sm:text-sm">
             <div className="mx-auto max-w-4xl border border-black p-4 bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                 {/* Header */}
-                <div className="mb-6 flex items-center justify-between border-b border-black pb-2">
+                <div className="mb-6 flex items-center justify-between pb-2">
                     <h1 className="text-xl font-bold uppercase tracking-tighter text-black">
                         OPERATOR_SPEC_SHEET
                     </h1>
@@ -204,7 +204,7 @@ if (Logic == true) {
                 </div>
 
                 {/* Section: I/O (Contact) */}
-                <div className="mt-8 pt-4 border-t border-black">
+                <div className="mt-8 pt-4">
                     <h2 className="mb-4 bg-black text-white px-1 inline-block uppercase w-fit">
                         4.0 I/O_CHANNELS
                     </h2>
