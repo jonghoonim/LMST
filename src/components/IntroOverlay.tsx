@@ -49,20 +49,20 @@ export function IntroOverlay() {
             <div className="flex flex-col gap-1 w-auto min-w-[300px] max-w-[95vw]">
                 {/* L, M, S, T Alignment: Materializing_ (14 chars) is the anchor for the next word start */}
                 <div className={`whitespace-pre ${step >= 1 ? "opacity-100" : "opacity-0"}`}>
-                    &gt; DECODING______LOGIC... <span className="text-[#00FF00] font-bold">OK</span>
+                    &gt; DECODING______LOGIC... <span className="text-[#16a34a] font-bold">OK</span>
                 </div>
                 <div className={`whitespace-pre ${step >= 2 ? "opacity-100" : "opacity-0"}`}>
-                    &gt; MATERIALIZING_MATTER... <span className="text-[#00FF00] font-bold">OK</span>
+                    &gt; MATERIALIZING_MATTER... <span className="text-[#16a34a] font-bold">OK</span>
                 </div>
                 <div className={`whitespace-pre ${step >= 3 ? "opacity-100" : "opacity-0"}`}>
-                    &gt; OCCUPYING_____SPACE... <span className="text-[#00FF00] font-bold">OK</span>
+                    &gt; OCCUPYING_____SPACE... <span className="text-[#16a34a] font-bold">OK</span>
                 </div>
                 <div className={`whitespace-pre ${step >= 4 ? "opacity-100" : "opacity-0"}`}>
                     &gt; ARCHIVING_____TIME... <div className="inline-block sm:inline"><span className="text-orange-500 font-bold">[IN PROGRESS]</span></div>
                 </div>
 
                 <div className={`whitespace-pre mt-4 ${step >= 5 ? "opacity-100" : "opacity-0"}`}>
-                    &gt; CHECKING______KERNEL... <span className="text-[#00FF00] font-bold">FOUND.</span>
+                    &gt; CHECKING______KERNEL... <span className="text-[#16a34a] font-bold">FOUND.</span>
                 </div>
                 <div className={`mt-1 ${step >= 6 ? "opacity-100" : "opacity-0"}`}>
                     <div className="whitespace-pre">&gt; ROOT IDENTITY : </div>
