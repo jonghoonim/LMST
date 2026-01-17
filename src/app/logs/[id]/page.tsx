@@ -53,7 +53,10 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
             <div className="flex flex-1 flex-col overflow-y-auto bg-white">
 
                 {/* 1. Hero Image (Final Render) - Full Width */}
-                <div className="relative w-full border-b border-black">
+                <div
+                    className="relative w-full border-b border-black"
+                    onContextMenu={(e) => e.preventDefault()}
+                >
                     {/* View Label */}
                     <div className="absolute top-0 left-0 bg-black text-white px-2 py-1 z-10">
                         VIEW: FINAL_RENDER
@@ -67,7 +70,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                                 width={3840}
                                 height={2160}
                                 sizes="100vw"
-                                className="w-full h-auto"
+                                className="w-full h-auto select-none pointer-events-none"
                                 priority
                                 unoptimized
                             />
@@ -127,38 +130,27 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                         <div className="grid grid-cols-1 sm:grid-cols-4 border-t-2 border-black">
                             {/* Column 1 */}
                             <div className="border-b border-zinc-200 py-3 sm:border-r sm:pr-4">
-                                <div className="text-[10px] text-zinc-500 mb-1">STATUS</div>
+                                <div className="text-[10px] text-zinc-500 mb-1">STATUS / PHASE</div>
                                 <div className="font-bold">{log.status}</div>
+                                <div className="text-xs text-zinc-500">{log.phase}</div>
                             </div>
                             {/* Column 2 */}
                             <div className="border-b border-zinc-200 py-3 sm:border-r sm:px-4">
-                                <div className="text-[10px] text-zinc-500 mb-1">PHASE</div>
-                                <div className="font-bold">{log.phase}</div>
+                                <div className="text-[10px] text-zinc-500 mb-1">LOCATION / DATE</div>
+                                <div className="font-bold truncate">{log.location || "N/A"}</div>
+                                <div className="text-xs text-zinc-500">{log.date}</div>
                             </div>
                             {/* Column 3 */}
                             <div className="border-b border-zinc-200 py-3 sm:border-r sm:px-4">
-                                <div className="text-[10px] text-zinc-500 mb-1">DATE</div>
-                                <div className="font-bold">{log.date}</div>
+                                <div className="text-[10px] text-zinc-500 mb-1">PROGRAM / STRUCTURE</div>
+                                <div className="font-bold truncate">{log.program || "Algorithmic Study"}</div>
+                                <div className="text-xs text-zinc-500">{log.structure || "-"}</div>
                             </div>
                             {/* Column 4 */}
                             <div className="border-b border-zinc-200 py-3 sm:pl-4">
-                                <div className="text-[10px] text-zinc-500 mb-1">FILE SIZE</div>
-                                <div className="font-bold">{log.size}</div>
-                            </div>
-
-                            {/* Row 2 (Mock Data for OMA feel) */}
-                            <div className="border-b border-zinc-200 py-3 sm:border-r sm:pr-4">
-                                <div className="text-[10px] text-zinc-500 mb-1">PROGRAM</div>
-                                <div className="font-bold">Algorithmic Study</div>
-                            </div>
-                            <div className="border-b border-zinc-200 py-3 sm:border-r sm:px-4">
-                                <div className="text-[10px] text-zinc-500 mb-1">LOCATION</div>
-                                <div className="font-bold">Digital Space</div>
-                            </div>
-
-                            <div className="border-b border-zinc-200 py-3 sm:pl-4">
-                                <div className="text-[10px] text-zinc-500 mb-1">TEAM</div>
-                                <div className="font-bold">User_01, Copilot</div>
+                                <div className="text-[10px] text-zinc-500 mb-1">AREA (SITE / TOTAL)</div>
+                                <div className="font-bold">{log.siteArea || "-"} / {log.totalArea || "-"}</div>
+                                <div className="text-xs text-zinc-500">{log.buildingScope || "-"}</div>
                             </div>
                         </div>
                     </div>
@@ -169,13 +161,16 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
 
                         {log.rawImage ? (
                             <div className="grid grid-cols-1 gap-8">
-                                <div className="relative w-full">
+                                <div
+                                    className="relative w-full"
+                                    onContextMenu={(e) => e.preventDefault()}
+                                >
                                     <Image
                                         src={log.rawImage}
                                         alt="Process Log"
                                         width={1200}
                                         height={800}
-                                        className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-300"
+                                        className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-300 pointer-events-none"
                                     />
                                     <div className="text-[10px] mt-2 font-mono text-zinc-500">
                                         FIG 1. RAW_CAPTURE_{log.date}
