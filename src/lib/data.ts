@@ -84,17 +84,18 @@ Reinterpreting the brick materiality of the existing main building, the new desi
         id: "LOG_2503",
         date: "2025.05.29",
         title: "Hwaseong Children's Science Museum",
-        phase: "Competition",
+        phase: "Design Proposal (2025)",
         status: "UNREACHABLE",
         size: "8.37GB",
         finalImage: "/images/LOG_2503_FINAL.png",
         rawImage: "/images/LOG_2503_PROCESS.png",
-        location: "Gyeonggi-do, Hwaseong-si, Byeongjeom-dong 899",
-        program: "Cultural (Science Museum)",
-        siteArea: "4,251.20m²",
-        totalArea: "9,277.97m²",
+        location: "Hwaseong, Gyeonggi-do, Korea",
+        program: "Cultural & Educational Facility",
+        siteArea: "4,251.20 m²",
+        totalArea: "9,277.97 m²",
         structure: "RC, Partial Steel",
         buildingScope: "B1 / 4F",
+        architects: "LMST Architects",
         description: `Located at the intersection of urban velocity and natural landscape, Hwaseong Children’s Science Museum mediates the contrast between the high-speed transit of Byeongjeom Station and the tranquil topography of the adjacent park. The project operates as an interface, establishing a coherent link between the fragmented urban fabric and the open green space.
 
 화성시 어린이 과학관은 병점역의 빠른 도시 속도와 근린공원의 정적인 풍경이 교차하는 지점에 위치한다. 이 프로젝트는 상반된 두 맥락을 중재하며, 파편화된 도시 조직과 자연을 잇는 새로운 인터페이스로 작동한다.
