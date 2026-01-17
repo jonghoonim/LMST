@@ -130,25 +130,25 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                         <div className="grid grid-cols-1 sm:grid-cols-4 border-t-2 border-black">
                             {/* Column 1 */}
                             <div className="border-b border-zinc-200 py-3 sm:border-r sm:pr-4">
-                                <div className="text-[10px] text-zinc-500 mb-1">STATUS / PHASE</div>
+                                <div className="text-xs text-zinc-500 mb-1">STATUS / PHASE</div>
                                 <div className="font-bold">{log.status}</div>
                                 <div className="text-xs text-zinc-500">{log.phase}</div>
                             </div>
                             {/* Column 2 */}
                             <div className="border-b border-zinc-200 py-3 sm:border-r sm:px-4">
-                                <div className="text-[10px] text-zinc-500 mb-1">LOCATION / DATE</div>
+                                <div className="text-xs text-zinc-500 mb-1">LOCATION / DATE</div>
                                 <div className="font-bold truncate">{log.location || "N/A"}</div>
                                 <div className="text-xs text-zinc-500">{log.date}</div>
                             </div>
                             {/* Column 3 */}
                             <div className="border-b border-zinc-200 py-3 sm:border-r sm:px-4">
-                                <div className="text-[10px] text-zinc-500 mb-1">PROGRAM / STRUCTURE</div>
+                                <div className="text-xs text-zinc-500 mb-1">PROGRAM / STRUCTURE</div>
                                 <div className="font-bold truncate">{log.program || "Algorithmic Study"}</div>
                                 <div className="text-xs text-zinc-500">{log.structure || "-"}</div>
                             </div>
                             {/* Column 4 */}
                             <div className="border-b border-zinc-200 py-3 sm:pl-4">
-                                <div className="text-[10px] text-zinc-500 mb-1">AREA (SITE / TOTAL)</div>
+                                <div className="text-xs text-zinc-500 mb-1">AREA (SITE / TOTAL)</div>
                                 <div className="font-bold">{log.siteArea || "-"} / {log.totalArea || "-"}</div>
                                 <div className="text-xs text-zinc-500">{log.buildingScope || "-"}</div>
                             </div>
@@ -172,7 +172,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                                         height={800}
                                         className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-300 pointer-events-none"
                                     />
-                                    <div className="text-[10px] mt-2 font-mono text-zinc-500">
+                                    <div className="text-xs mt-2 font-mono text-zinc-500">
                                         FIG 1. RAW_CAPTURE_{log.date}
                                     </div>
                                 </div>
