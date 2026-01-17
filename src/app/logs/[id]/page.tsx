@@ -69,7 +69,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                                 sizes="100vw"
                                 className="w-full h-auto"
                                 priority
-                                quality={100}
+                                unoptimized
                             />
                         ) : (
                             <div className="flex w-full aspect-video items-center justify-center text-zinc-400 text-center">
