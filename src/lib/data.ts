@@ -47,23 +47,21 @@ export const INITIAL_LOGS: ProjectLog[] = [
         totalArea: "12,866.92m²",
         structure: "RC, Steel",
         buildingScope: "B1 / 4F",
-        description: `학습의 테라스, 도시 속의 입체적 지형 (The Terraced Landscape of Learning)
+        description: `A strategic 'Step-back' volume defines the reconstruction of Seoul Yeomchang Elementary School. Instead of a monolithic block typical of urban schools, the massing recedes at each level, responding to the dense residential context while securing optimal daylight conditions.
 
-Located within a dense residential fabric of high-rise apartments, the project addresses the constraints of a limited site and the need for a coherent connection with the existing main building. The design moves beyond the conventional corridor-classroom typology, proposing a 'Step-back' massing strategy that responds to the urban scale while securing optimal daylight conditions.
+서울염창초등학교 서관동의 형태는 전략적인 '스텝백(Step-back)' 볼륨으로 규정된다. 우리는 고밀도 주거지로 둘러싸인 대지에서, 위압적인 단일 매스 대신 층별로 후퇴하는 볼륨을 통해 주변 맥락에 대응하고 최적의 채광 환경을 확보했다.
 
-고밀도 아파트 단지로 둘러싸인 도심지 학교의 특성을 고려하여, 협소한 대지의 한계를 극복하고 기존 본관동과의 유기적 연결을 시도했다. 우리는 전형적인 중복도 학교 유형을 탈피하고, '스텝백(Step-back)' 매스 전략을 통해 도시적 스케일에 대응하며 최적의 채광 조건을 확보하는 해법을 제안한다.
+This structural logic generates 'Learning Gardens'—terraced outdoor spaces that extend the classroom environment. By blurring the boundary between indoor instruction and outdoor activity, the architecture transforms from a static educational facility into a multi-layered landscape of learning.
 
-The core logic of the form is the 'Learning Garden,' created by shifting the volume on each level. These terraced outdoor spaces extend the learning environment beyond the classroom, blurring the boundary between indoor instruction and outdoor activity. This structural shift allows for a diverse range of educational scenarios, transforming the school into a multi-layered landscape rather than a static container.
+이 구조적 논리는 '러닝 가든(Learning Garden)'이라는 테라스형 외부 공간을 파생시킨다. 교실 영역을 외부로 확장하여 실내 수업과 야외 활동의 경계를 허무는 이 시도는, 학교를 정적인 교육 시설에서 입체적인 학습의 풍경으로 전환시킨다.
 
-건물 형태를 결정짓는 핵심 논리는 층별 볼륨을 후퇴시키며 만들어낸 '러닝 가든(Learning Garden)'이다. 이 테라스형 외부 공간은 교실의 영역을 외부로 확장하며, 실내 수업과 야외 활동의 경계를 허문다. 이러한 구조적 변화는 다양한 교육 시나리오를 가능하게 하며, 학교를 정적인 건물이 아닌 입체적인 학습의 풍경으로 전환시킨다.
+The internal atrium operates as an environmental engine, utilizing the stack effect to maximize natural ventilation and reduce energy loads. On the ground level, a permeable pilotis structure and 'Welcome Plaza' resolve congestion, offering a flexible, weather-protected interface for the community.
 
-Internally, the central atrium serves as an environmental engine. By facilitating the stack effect, it maximizes natural ventilation and daylight penetration, reducing energy loads. On the ground level, the 'Welcome Plaza' and pilotis structure create a permeable interface, alleviating congestion at the entrance and providing a flexible, covered activity space for students.
+내부의 아트리움은 굴뚝 효과를 통해 자연 환기를 극대화하고 에너지 부하를 낮추는 환경적 엔진으로 작동한다. 지상부의 투과적인 필로티와 '환영 광장'은 등하교 시간의 혼잡을 해소하며, 날씨에 관계없이 활용 가능한 유연한 커뮤니티 인터페이스를 제공한다.
 
-내부의 중앙 아트리움은 환경적 엔진으로 작동한다. 수직적으로 열린 이 공간은 굴뚝 효과(Stack Effect)를 유도하여 자연 환기와 채광을 극대화하고 에너지 부하를 저감한다. 지상 레벨의 '환영 광장'과 필로티 구조는 투과적인 인터페이스를 형성하여, 등하교 시간의 혼잡을 완화하고 학생들에게 날씨에 구애받지 않는 유연한 활동 공간을 제공한다.
+Reinterpreting the brick materiality of the existing main building, the new design establishes a coherent dialogue with its history. Seoul Yeomchang Elementary School stands as a dynamic platform that integrates urban logic, nature, and community.
 
-The façade establishes a dialogue with the existing context by reinterpreting the brick materiality of the main building, while integrating vertical louvers for environmental performance. Seoul Yeomchang Elementary School is designed not just as an educational facility, but as a dynamic platform that integrates logic, nature, and community within a dense urban grid.
-
-입면은 기존 본관동의 벽돌 물성을 재해석하여 맥락적 조화를 이루는 동시에, 수직 루버를 통합하여 환경적 성능을 최적화했다. 서울염창초등학교는 단순한 교육 시설을 넘어, 고밀도 도시 조직 안에서 논리와 자연, 커뮤니티를 통합하는 역동적인 플랫폼으로 설계되었다.`,
+기존 본관동의 벽돌 물성을 재해석한 새로운 디자인은 학교의 역사와 맥락적 대화를 시도한다. 서울염창초등학교는 도시의 논리와 자연, 커뮤니티를 통합하는 역동적인 플랫폼이다.`,
     },
     {
         id: "LOG_2503",
