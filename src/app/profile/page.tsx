@@ -116,7 +116,7 @@ if (Logic == true) {
                                 </div>
                                 <div>
                                     <div className="flex justify-between mb-1">
-                                        <div><span className="font-bold text-black">Seoul_National_Univ</span> <span className="text-zinc-500">(Dept. of Arch)</span></div>
+                                        <div><span className="font-bold text-black">Seoul National Univ.</span> <span className="text-zinc-500">(Dept. of Arch)</span></div>
                                         <span className="text-green-600 font-bold">[RUNNING]</span>
                                     </div>
                                     <div className="text-zinc-500 mb-2 pl-2">2015.03 ~ PRESENT | Lecturer</div>
