@@ -37,6 +37,10 @@
   .font-swis721 {
     font-family: "Swis721 Cn BT", "Swis721", sans-serif;
   }
+
+  .font-archivo {
+    font-family: var(--font-archivo-narrow);
+  }
 }
 
 @keyframes blink {
