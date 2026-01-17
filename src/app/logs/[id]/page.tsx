@@ -186,7 +186,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                                             <div className="w-[180px] shrink-0 font-bold uppercase text-zinc-500 sm:text-black">
                                                 {item.label}
                                             </div>
-                                            <div className="font-normal text-black font-pretendard">
+                                            <div className="font-normal text-black font-mono">
                                                 {item.value}
                                             </div>
                                         </div>
