@@ -64,8 +64,8 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                             <Image
                                 src={log.finalImage}
                                 alt={`${log.title} Final Render`}
-                                width={0}
-                                height={0}
+                                width={3840}
+                                height={2160}
                                 sizes="100vw"
                                 className="w-full h-auto"
                                 priority
