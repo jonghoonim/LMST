@@ -78,7 +78,7 @@ if (Logic == true) {
 
                             <h3 className="mb-2 font-bold">[ CORE_MODULES ]</h3>
                             <div className="text-xs font-mono space-y-2 text-zinc-700">
-                                <div className="border-b border-zinc-200 pb-1"></div>
+
                                 <div className="flex gap-3">
                                     <span className="text-zinc-400">[ ACTIVE ]</span>
                                     <span>PARAMETRIC_DESIGN (Rhino.Inside)</span>
@@ -105,7 +105,7 @@ if (Logic == true) {
 
                             {/* 2.1 EDUCATION */}
                             <div className="mb-8">
-                                <div className="mb-2 border-b border-zinc-300 pb-1">
+                                <div className="mb-2 pb-1">
                                     <span className="font-bold text-black">&gt; EDUCATION_SEQUENCE</span>
                                 </div>
                                 <ul className="space-y-1">
@@ -123,7 +123,7 @@ if (Logic == true) {
 
                             {/* 2.2 ACADEMIC */}
                             <div className="mb-8">
-                                <div className="mb-2 border-b border-zinc-300 pb-1">
+                                <div className="mb-2 pb-1">
                                     <span className="font-bold text-black">&gt; ACADEMIC_SEQUENCE</span>
                                 </div>
                                 <div>
@@ -142,7 +142,7 @@ if (Logic == true) {
 
                             {/* 2.3 PROFESSIONAL */}
                             <div className="mb-8">
-                                <div className="mb-2 border-b border-zinc-300 pb-1">
+                                <div className="mb-2 pb-1">
                                     <span className="font-bold text-black">&gt; PROFESSIONAL_SEQUENCE</span>
                                 </div>
 
@@ -189,7 +189,7 @@ if (Logic == true) {
 
                             {/* 2.4 HONORS */}
                             <div>
-                                <div className="mb-2 border-b border-zinc-300 pb-1">
+                                <div className="mb-2 pb-1">
                                     <span className="font-bold text-black">&gt; HONORS_PACKET</span>
                                 </div>
                                 <ul className="space-y-1 text-zinc-600 pl-2">
