@@ -61,7 +61,7 @@ export function SystemNav() {
                     : "bg-[#F4F4F4]/90 border-b border-black/10 backdrop-blur-sm text-black"
             )}
         >
-            <div className="flex w-full sm:w-auto items-center justify-between sm:justify-start gap-4">
+            <div className="flex w-full sm:w-[140px] items-center justify-between sm:justify-start gap-4">
                 <Link href="/" className={clsx(
                     "font-archivo text-lg tracking-tighter hover:opacity-50 transition-opacity",
                     isTransparentPage ? "font-extrabold" : "font-bold"
