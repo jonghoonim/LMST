@@ -40,7 +40,7 @@ export const INITIAL_LOGS: ProjectLog[] = [
         phase: "Competition",
         status: "UNREACHABLE",
         size: "2.1GB",
-        finalImage: "/projects/LOG_2505/LOG_2505_FINAL.jpg",
+        finalImage: "/projects/LOG_2505/LOG_2505_Final_v2.jpg",
         location: "Seoul, Gangseo-gu, Yangcheon-ro 646-28",
         program: "Educational Facility",
         siteArea: "13,836.3m²",
