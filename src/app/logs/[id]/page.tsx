@@ -35,7 +35,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
     return (
         <main className="flex h-screen w-full flex-col font-mono text-xs sm:text-sm -mt-12">
             {/* Top Bar Info: System Breadcrumb */}
-            <div className="fixed top-12 left-0 w-full flex items-center justify-between px-4 py-3 z-50 mix-blend-exclusion text-white">
+            <div className="fixed top-24 sm:top-12 left-0 w-full flex items-center justify-between px-4 py-3 z-50 mix-blend-exclusion text-white">
                 <div className="flex items-center gap-2 font-mono text-xs">
                     <Link href="/" className="hover:underline transition-all font-bold">
                         [ ../ ]
@@ -90,7 +90,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
 
                     {/* 2. Title & Narration (Expandable - First Paragraph Only) */}
                     <div className="mb-24 w-full">
-                        <h1 className="text-3xl sm:text-5xl font-bold uppercase tracking-tighter leading-none mb-8 font-roboto-condensed">
+                        <h1 className="text-2xl sm:text-5xl font-bold uppercase tracking-tighter leading-none mb-8 font-swis721">
                             {log.title}
                         </h1>
 
