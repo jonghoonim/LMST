@@ -112,7 +112,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                     </div>
 
                     {/* Content Section: OMA Layout (Narration -> Overview -> Images) */}
-                    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-16 sm:py-24">
+                    <div className="flex flex-col w-full max-w-[960px] mx-auto px-4 py-16 sm:py-24">
 
                         {/* 2. Title & Narration (Expandable - First Paragraph Only) */}
                         <div className="mb-24 w-full">
