@@ -31,6 +31,8 @@ export function SystemNav() {
         return <span>SYS_MEM: {mem}%</span>;
     };
 
+    const isTransparentPage = pathname?.startsWith("/logs/") && pathname.length > 6;
+
     const NavLink = ({ href, label }: { href: string; label: string }) => {
         const isActive = pathname === href || (href !== "/" && pathname?.startsWith(href));
         return (
@@ -40,7 +42,9 @@ export function SystemNav() {
                     "px-2 py-1 font-mono text-sm uppercase tracking-tight transition-all",
                     isActive
                         ? "bg-black text-white"
-                        : "text-zinc-500 hover:text-black"
+                        : isTransparentPage
+                            ? "text-white/70 hover:text-white mix-blend-exclusion"
+                            : "text-zinc-500 hover:text-black"
                 )}
             >
                 {isActive ? label : `[${label}]`}
@@ -49,10 +53,17 @@ export function SystemNav() {
     };
 
     return (
-        <nav className="fixed top-0 left-0 z-50 flex w-full flex-col sm:flex-row items-center justify-between sm:justify-start border-b border-black/10 bg-[#F4F4F4]/90 px-4 py-2 backdrop-blur-sm sm:h-12 transition-all">
+        <nav
+            className={clsx(
+                "fixed top-0 left-0 z-50 flex w-full flex-col sm:flex-row items-center justify-between sm:justify-start px-4 py-2 transition-all sm:h-12",
+                isTransparentPage
+                    ? "bg-transparent text-white mix-blend-exclusion border-b border-transparent"
+                    : "bg-[#F4F4F4]/90 border-b border-black/10 backdrop-blur-sm text-black"
+            )}
+        >
             <div className="flex w-full sm:w-auto items-center justify-between sm:justify-start gap-4">
                 <Link href="/" className="font-archivo text-lg font-bold tracking-tighter hover:opacity-50 transition-opacity">
-                    LMST_OS<span className="animate-blink inline-block bg-black w-[8px] h-[16px] align-middle ml-1">_</span>
+                    LMST_OS<span className="animate-blink inline-block bg-current w-[8px] h-[16px] align-middle ml-1">_</span>
                 </Link>
                 {/* Mobile Menu (Moved below on mobile via flex/grid or just simple wrapping) */}
             </div>
@@ -64,7 +75,10 @@ export function SystemNav() {
                 <NavLink href="/io" label="I/O" />
             </div>
 
-            <div className="hidden absolute right-4 top-1/2 -translate-y-1/2 items-center gap-4 font-mono text-xs text-zinc-400 sm:flex">
+            <div className={clsx(
+                "hidden absolute right-4 top-1/2 -translate-y-1/2 items-center gap-4 font-mono text-xs sm:flex",
+                isTransparentPage ? "text-white/70 mix-blend-exclusion" : "text-zinc-400"
+            )}>
                 <SysMemIndicator />
                 <span>SYS.READY</span>
                 <span>{time}</span>
