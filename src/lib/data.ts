@@ -64,11 +64,21 @@ export const INITIAL_LOGS: ProjectLog[] = [
         totalArea: "9,277.97m²",
         structure: "RC, Partial Steel",
         buildingScope: "B1 / 4F",
-        description: `과학관은 병점역과 근린공원 사이, 도시의 여러 흐름이 교차하는 지점에 놓인다. 건축은 그 사이에서 연결을 제안한다. 연결을 위해 새롭게 도입된 축은 도시와 공원을 가로지르는 보행의 흐름이자, 빛과 바람의 방향을 고려한 환경적 틀로 작동한다. 이 축을 따라  프로그램이 배치되고, 공간은 안팎의 경계를 넘나들며 유기적으로 펼쳐진다. 도시의 흐름, 자연의 조건, 프로그램의 구조를 하나로 엮는 열린 장치로서의 건축. 이것이 우리가 제안하는 과학관의 전략이다.
+        description: `Located at the intersection of urban velocity and natural landscape, Hwaseong Children’s Science Museum mediates the contrast between the high-speed transit of Byeongjeom Station and the tranquil topography of the adjacent park. The project operates as an interface, establishing a coherent link between the fragmented urban fabric and the open green space.
 
-건축은 다양한 거리와 속도에서 인식된다. 고가도로, 지하철, 진입 광장, 공원… 각기 다른 위치에서 조우하는 이 건물은 단순한 매스가 아닌, 장소를 각인시키는 선명한 형상으로 작동한다. 외피는 호기심을 유발하고, 틈과 겹침을 통해 내부를 암시한다. 이러한 인지적 전략은 방문자에게 기대감을 유도하며, 공간은 동선을 따라 펼쳐지는 발견의 서사로 확장된다.
+화성시 어린이 과학관은 병점역의 빠른 도시 속도와 근린공원의 정적인 풍경이 교차하는 지점에 위치한다. 이 프로젝트는 상반된 두 맥락을 중재하며, 파편화된 도시 조직과 자연을 잇는 새로운 인터페이스로 작동한다.
 
-단면을 통해 시간성과 공간성을 동시에 담아낸다. 수직 이동과 수평 흐름이 교차하는 이 과학관에서는 브릿지, 계단, 오픈 라운지, 슬래브의 틈새를 따라 각기 다른 레벨의 장면들이 겹쳐지며 감각된다. 이는 단순한 층의 나열이 아닌, 발견의 리듬을 가진 서사적 단면을 구성한다. 관람자는 오르내리며, 내부와 외부의 관계, 프로그램 간의 연결, 시선의 변화 속에서 공간을 완성해나간다. 과학관은 머무름과 이동, 몰입과 전환이 교차하는 열린 경험의 흐름 위에 놓인다. 공간은 기능의 나열이 아닌, 감각의 리듬과 움직임의 사로 구성된다. 관람자는 하나의 정해진 길이 아니라, 여러 갈래의 흐름 속에서 스스로의 여정을 구성하며 공간을 통과하게 된다. 건축은 이 흐름 속에서 탐색의 밀도, 휴식의 여유, 발견의 순간들을 자연스럽게 조직하는 배경이 된다.`,
+The design responds to this duality through the ‘Discovery Canyon,’ a carved-out void that reinterprets the conventional museum circulation. Rather than a static exhibition hall, this continuous spatial artery draws the park’s pathway into the building, orchestrating a seamless flow of movement and light. It organizes the program vertically, creating a rhythmic sequence of discovery from the ground level up to the roof terrace.
+
+건물의 중심을 관통하는 ‘디스커버리 캐년(Discovery Canyon)’은 박물관의 전형적인 동선 체계를 재해석한 결과물이다. 공원의 오솔길을 내부로 끌어들인 이 입체적인 협곡은 단순한 이동 공간을 넘어, 빛과 움직임이 공명하는 탐험의 축으로 기능한다. 이는 프로그램을 수직적으로 조직하며, 지상에서 옥상 테라스까지 이어지는 발견의 시퀀스를 형성한다.
+
+The façade is articulated with folded aluminum panels, designed to respond to the varying speeds of the surrounding infrastructure. From the highway and subway, the building reads as a dynamic, legible volume; from the park, it dissolves into a permeable backdrop for activity. This intelligent skin not only defines the museum's visual identity but also optimizes environmental performance by controlling daylight and views.
+
+입면은 주변 인프라의 속도에 반응하는 알루미늄 절곡 패널로 분절된다. 고속도로와 지하철의 빠른 시선에서는 선명한 조형적 볼륨으로, 공원의 느린 시선에서는 내외부가 투과되는 유연한 배경으로 읽히도록 설계되었다. 이 지능적인 표피(Skin)는 과학관의 시각적 정체성을 규정할 뿐 아니라, 채광과 조망을 제어하며 환경적 성능을 최적화한다.
+
+Integrating the ‘Science Arena’ and ‘Cosmic Terrace,’ the museum transcends functional separation, offering an open platform where logic and imagination intersect. Hwaseong Children’s Science Museum is not merely a container for artifacts, but a structural landscape that encapsulates the flow of the city and the curiosity of its users.
+
+‘사이언스 아레나’와 ‘코스믹 테라스’를 통합한 이 공간은 기능적 구분을 넘어 논리와 상상력이 교차하는 열린 플랫폼을 제공한다. 화성시 어린이 과학관은 단순히 전시물을 담는 그릇이 아니라, 도시의 흐름과 사용자의 호기심을 구조적으로 담아낸 입체적인 풍경이다.`,
         warningMessage: "RhinoInsideRevit에서 Revit으로 넘기는 효과적인 전략 수립 실패. 결국 Direct Shape으로 할 수 밖에 없었음. Family 제작은 다음 프로젝트에서 기대할 수 밖에 ㅠㅠ",
     },
     {
