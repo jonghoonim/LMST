@@ -47,7 +47,9 @@ export const INITIAL_LOGS: ProjectLog[] = [
         totalArea: "12,866.92m²",
         structure: "RC, Steel",
         buildingScope: "B1 / 4F",
-        description: `Located within a dense residential fabric of high-rise apartments, the project addresses the constraints of a limited site and the need for a coherent connection with the existing main building. The design moves beyond the conventional corridor-classroom typology, proposing a 'Step-back' massing strategy that responds to the urban scale while securing optimal daylight conditions.
+        description: `학습의 테라스, 도시 속의 입체적 지형 (The Terraced Landscape of Learning)
+
+Located within a dense residential fabric of high-rise apartments, the project addresses the constraints of a limited site and the need for a coherent connection with the existing main building. The design moves beyond the conventional corridor-classroom typology, proposing a 'Step-back' massing strategy that responds to the urban scale while securing optimal daylight conditions.
 
 고밀도 아파트 단지로 둘러싸인 도심지 학교의 특성을 고려하여, 협소한 대지의 한계를 극복하고 기존 본관동과의 유기적 연결을 시도했다. 우리는 전형적인 중복도 학교 유형을 탈피하고, '스텝백(Step-back)' 매스 전략을 통해 도시적 스케일에 대응하며 최적의 채광 조건을 확보하는 해법을 제안한다.
 
