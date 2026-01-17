@@ -21,10 +21,14 @@ export function SystemNav() {
         const [mem, setMem] = useState(32);
 
         useEffect(() => {
+            // Initial random set on mount to avoid hydration mismatch (start at 32, then jump)
+            setMem(Math.floor(Math.random() * (64 - 12 + 1) + 12));
+
             const interval = setInterval(() => {
-                // Random fluctuation between 30 and 45
-                setMem(Math.floor(Math.random() * (45 - 30 + 1) + 30));
-            }, 3000);
+                // Random fluctuation between 12% and 64%
+                // Simulating active memory usage
+                setMem(Math.floor(Math.random() * (64 - 12 + 1) + 12));
+            }, 800); // 0.8s update for "active" feel
             return () => clearInterval(interval);
         }, []);
 
