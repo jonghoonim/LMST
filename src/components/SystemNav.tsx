@@ -53,15 +53,16 @@ export function SystemNav() {
     };
 
     return (
+    return (
         <nav
             className={clsx(
-                "fixed top-0 left-0 z-50 flex w-full flex-col sm:flex-row items-center justify-between sm:justify-start px-4 py-2 transition-all sm:h-12",
+                "fixed top-0 left-0 z-50 w-full flex flex-col sm:grid sm:grid-cols-[180px_1fr_auto] items-center px-4 py-2 transition-all sm:h-12",
                 isTransparentPage
                     ? "bg-transparent text-white mix-blend-exclusion border-b border-transparent"
                     : "bg-[#F4F4F4]/90 border-b border-black/10 backdrop-blur-sm text-black"
             )}
         >
-            <div className="flex w-full sm:w-[140px] items-center justify-between sm:justify-start gap-4">
+            <div className="flex w-full sm:w-auto items-center justify-between sm:justify-start gap-4">
                 <Link href="/" className={clsx(
                     "font-archivo text-lg tracking-tighter hover:opacity-50 transition-opacity",
                     isTransparentPage ? "font-extrabold" : "font-bold"
@@ -71,7 +72,7 @@ export function SystemNav() {
                 {/* Mobile Menu (Moved below on mobile via flex/grid or just simple wrapping) */}
             </div>
 
-            <div className="flex w-full sm:w-auto gap-1 mt-2 sm:mt-0 justify-between sm:justify-start sm:ml-12 overflow-x-auto no-scrollbar">
+            <div className="flex w-full sm:w-auto gap-1 mt-2 sm:mt-0 justify-between sm:justify-start overflow-x-auto no-scrollbar">
                 <NavLink href="/" label="INDEX" />
                 <NavLink href="/logs" label="LOGS" />
                 <NavLink href="/profile" label="PROFILE" />
@@ -79,7 +80,7 @@ export function SystemNav() {
             </div>
 
             <div className={clsx(
-                "hidden absolute right-4 top-1/2 -translate-y-1/2 items-center gap-4 font-mono text-xs sm:flex",
+                "hidden sm:flex items-center justify-end gap-4 font-mono text-xs",
                 isTransparentPage ? "text-white/70 mix-blend-exclusion" : "text-zinc-400"
             )}>
                 <SysMemIndicator />
