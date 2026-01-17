@@ -44,27 +44,30 @@ export function IntroOverlay() {
     return (
         <div
             onClick={handleEnter}
-            className={`fixed inset-0 z-[9999] flex items-center justify-center bg-[#F4F4F4]/90 backdrop-blur-md text-black font-mono text-lg sm:text-lg font-bold ${ready ? "cursor-pointer" : "cursor-wait"}`}
+            className={`fixed inset-0 z-[9999] flex items-center justify-center bg-[#F4F4F4]/90 backdrop-blur-md text-black font-mono text-lg sm:text-lg ${ready ? "cursor-pointer" : "cursor-wait"}`}
         >
             <div className="flex flex-col gap-1 w-auto min-w-[300px]">
-                <div className={`whitespace-nowrap ${step >= 1 ? "opacity-100" : "opacity-0"}`}>
-                    &gt; DECODING_LOGIC... <span className="text-[#00FF00]">OK</span>
+                <div className={`whitespace-pre ${step >= 1 ? "opacity-100" : "opacity-0"}`}>
+                    &gt;      DECODING_LOGIC... <span className="text-[#00FF00] font-bold">OK</span>
                 </div>
-                <div className={`whitespace-nowrap ${step >= 2 ? "opacity-100" : "opacity-0"}`}>
-                    &gt; MATERIALIZING_MATTER... <span className="text-[#00FF00]">OK</span>
+                <div className={`whitespace-pre ${step >= 2 ? "opacity-100" : "opacity-0"}`}>
+                    &gt; MATERIALIZING_MATTER... <span className="text-[#00FF00] font-bold">OK</span>
                 </div>
-                <div className={`whitespace-nowrap ${step >= 3 ? "opacity-100" : "opacity-0"}`}>
-                    &gt; OCCUPYING_SPACE... <span className="text-[#00FF00]">OK</span>
+                <div className={`whitespace-pre ${step >= 3 ? "opacity-100" : "opacity-0"}`}>
+                    &gt;     OCCUPYING_SPACE... <span className="text-[#00FF00] font-bold">OK</span>
                 </div>
-                <div className={`whitespace-nowrap ${step >= 4 ? "opacity-100" : "opacity-0"}`}>
-                    &gt; ARCHIVING_TIME... <span className="text-orange-500">[IN PROGRESS]</span>
+                <div className={`whitespace-pre ${step >= 4 ? "opacity-100" : "opacity-0"}`}>
+                    &gt;     ARCHIVING_TIME... <span className="text-orange-500 font-bold">[IN PROGRESS]</span>
                 </div>
 
-                <div className={`whitespace-nowrap mt-4 ${step >= 5 ? "opacity-100" : "opacity-0"}`}>
-                    &gt; CHECKING_KERNEL... <span className="text-[#00FF00]">FOUND.</span>
+                <div className={`whitespace-pre mt-4 ${step >= 5 ? "opacity-100" : "opacity-0"}`}>
+                    &gt; CHECKING_KERNEL... <span className="text-[#00FF00] font-bold">FOUND.</span>
                 </div>
-                <div className={`whitespace-nowrap mt-1 ${step >= 6 ? "opacity-100" : "opacity-0"}`}>
-                    &gt; ROOT_IDENTITY: "LET'S MAKE SOMETHING TOGETHER"
+                <div className={`mt-1 ${step >= 6 ? "opacity-100" : "opacity-0"}`}>
+                    <div className="whitespace-pre">&gt; ROOT IDENTITY : </div>
+                    <div className="pl-6 sm:pl-8 whitespace-normal sm:whitespace-nowrap mt-1 font-bold">
+                        Let's Make Something Together!
+                    </div>
                 </div>
 
                 <div className={`mt-8 text-black transition-opacity duration-300 ${step >= 7 ? "opacity-100" : "opacity-0"}`}>
