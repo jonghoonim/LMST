@@ -47,7 +47,9 @@ export function SystemNav() {
                             : "text-zinc-500 hover:text-black"
                 )}
             >
-                {isActive ? label : `[${label}]`}
+                <span className={clsx(isActive && "opacity-0")}>[</span>
+                {label}
+                <span className={clsx(isActive && "opacity-0")}>]</span>
             </Link>
         );
     };
