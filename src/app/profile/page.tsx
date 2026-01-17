@@ -55,7 +55,7 @@ if (Logic == true) {
                         <div>
                             <h2 className="mb-4 bg-black px-1 text-white w-fit">3.0 RUNTIME_ENVIRONMENT</h2>
 
-                            <h3 className="mb-2 font-bold underline decoration-2 underline-offset-4">DEPENDENCIES</h3>
+                            <h3 className="mb-2 font-bold">[ DEPENDENCIES ]</h3>
                             <ul className="list-inside list-square space-y-1 text-zinc-600 mb-8 text-xs">
                                 <li>Rhinoceros 3D / Grasshopper</li>
                                 <li>Revit (BIM) / Dynamo</li>
@@ -64,7 +64,7 @@ if (Logic == true) {
                                 <li>Arduino / Physical Computing</li>
                             </ul>
 
-                            <h3 className="mb-2 font-bold underline decoration-2 underline-offset-4">CORE_MODULES</h3>
+                            <h3 className="mb-2 font-bold">[ CORE_MODULES ]</h3>
                             <div className="text-xs font-mono space-y-2 text-zinc-700">
                                 <div className="border-b border-zinc-200 pb-1">------------------------------------------------</div>
                                 <div className="flex gap-3">
