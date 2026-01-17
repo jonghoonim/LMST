@@ -35,6 +35,7 @@ export const INITIAL_LOGS: ProjectLog[] = [
         phase: "Competition",
         status: "UNREACHABLE",
         size: "2.1GB",
+        finalImage: "/projects/LOG_2505/LOG_2505_FINAL.jpg",
         description: "**염창초등학교 서관동 (Yeomchang Elementary School West Wing)**\n\n기존 학교의 맥락을 존중하면서도 미래 교육 과정을 담아낼 수 있는 유연한 학습 공간을 제안했다.",
     },
     {
