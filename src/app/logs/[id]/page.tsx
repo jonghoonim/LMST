@@ -19,23 +19,47 @@ Data flow:
 
 Final compilation achieved with 0.4s compute time per iteration. The system remains open for further adaptation to varying scales.`;
 
-export default function LogDetailPage({ params }: { params: Promise<{ id: string }> }) {
-    const { id } = use(params);
-    const log = INITIAL_LOGS.find((l) => l.id === id);
-    const [isExpanded, setIsExpanded] = useState(false);
+const { id } = use(params);
+const log = INITIAL_LOGS.find((l) => l.id === id);
+const [isExpanded, setIsExpanded] = useState(false);
+const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
-    if (!log) {
-        return (
-            <div className="flex h-screen items-center justify-center font-mono text-red-500">
-                ERROR_404: LOG_NOT_FOUND
-            </div>
-        );
-    }
-
+if (!log) {
     return (
-        <main className="flex h-screen w-full flex-col font-mono text-xs sm:text-sm -mt-12">
-            {/* Top Bar Info: System Breadcrumb */}
-            <div className="fixed top-20 sm:top-12 left-0 w-full flex items-center justify-between px-4 py-3 z-50 mix-blend-exclusion text-white">
+        <div className="flex h-screen items-center justify-center font-mono text-red-500">
+            ERROR_404: LOG_NOT_FOUND
+        </div>
+    );
+}
+
+return (
+        <>
+        {/* Lightbox Overlay */}
+        {isLightboxOpen && (
+            <div
+                className="fixed inset-0 z-[100] bg-[#F4F4F4] overflow-y-auto cursor-zoom-out"
+                onClick={() => setIsLightboxOpen(false)}
+            >
+                <div className="w-full min-h-screen">
+                    {log.finalImage && (
+                        <Image
+                            src={log.finalImage}
+                            alt={`${log.title} Full View`}
+                            width={3840}
+                            height={2160}
+                            sizes="100vw"
+                            className="w-full h-auto"
+                            priority
+                            unoptimized
+                        />
+                    )}
+                </div>
+            </div>
+        )}
+
+        <main className="flex h-screen w-full flex-col font-mono text-xs sm:text-sm">
+            {/* Top Bar Info: System Breadcrumb (Sticky Second Header) */}
+            <div className="sticky top-0 sm:top-12 left-0 w-full flex items-center justify-between px-4 py-3 z-40 bg-[#F4F4F4]/90 backdrop-blur-sm border-b border-black/10 text-black">
                 <div className="flex items-center gap-2 font-mono text-xs">
                     <Link href="/" className="hover:underline transition-all font-bold">
                         [ ../ ]
@@ -54,12 +78,13 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
 
                 {/* 1. Hero Image (Final Render) - Full Width */}
                 <div
-                    className="relative w-full border-b border-black"
+                    className="relative w-full border-b border-black cursor-zoom-in group"
                     onContextMenu={(e) => e.preventDefault()}
+                    onClick={() => setIsLightboxOpen(true)}
                 >
                     {/* View Label */}
-                    <div className="absolute bottom-0 left-0 bg-black text-white px-2 py-1 z-10">
-                        VIEW: FINAL_RENDER
+                    <div className="absolute bottom-0 left-0 bg-black text-white px-2 py-1 z-10 group-hover:bg-[#00FF00] group-hover:text-black transition-colors">
+                        VIEW: FINAL_RENDER [CLICK_TO_EXPAND]
                     </div>
 
                     <div className="relative w-full bg-zinc-200">
@@ -194,5 +219,5 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                 </div>
             </div>
         </main>
-    );
+        );
 }

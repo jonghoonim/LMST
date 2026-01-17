@@ -31,7 +31,8 @@ export function SystemNav() {
         return <span>SYS_MEM: {mem}%</span>;
     };
 
-    const isTransparentPage = pathname?.startsWith("/logs/") && pathname.length > 6;
+    // Force solid background everywhere to prevent font consistency issues
+    const isTransparentPage = false; // pathname?.startsWith("/logs/") && pathname.length > 6;
 
     const NavLink = ({ href, label }: { href: string; label: string }) => {
         const isActive = pathname === href || (href !== "/" && pathname?.startsWith(href));
