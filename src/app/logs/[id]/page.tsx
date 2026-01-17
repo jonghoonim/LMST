@@ -19,6 +19,22 @@ Data flow:
 
 Final compilation achieved with 0.4s compute time per iteration. The system remains open for further adaptation to varying scales.`;
 
+function FadeInImage(props: React.ComponentProps<typeof Image>) {
+    const [isLoading, setIsLoading] = useState(true);
+
+    return (
+        <Image
+            {...props}
+            className={clsx(
+                props.className,
+                "transition-all duration-700 ease-in-out",
+                isLoading ? "scale-[1.02] blur-xl grayscale opacity-0" : "scale-100 blur-0 grayscale-0 opacity-100"
+            )}
+            onLoadingComplete={() => setIsLoading(false)}
+        />
+    );
+}
+
 export default function LogDetailPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params);
     const log = INITIAL_LOGS.find((l) => l.id === id);
@@ -43,7 +59,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                 >
                     <div className="w-full min-h-screen">
                         {log.finalImage && (
-                            <Image
+                            <FadeInImage
                                 src={log.finalImage}
                                 alt={`${log.title} Full View`}
                                 width={3840}
@@ -88,9 +104,9 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                             VIEW: FINAL_RENDER [CLICK_TO_EXPAND]
                         </div>
 
-                        <div className="relative w-full bg-zinc-200">
+                        <div className="relative w-full bg-zinc-200 aspect-video overflow-hidden">
                             {log.finalImage ? (
-                                <Image
+                                <FadeInImage
                                     src={log.finalImage}
                                     alt={`${log.title} Final Render`}
                                     width={3840}
@@ -188,15 +204,15 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                             {log.rawImage ? (
                                 <div className="grid grid-cols-1 gap-8">
                                     <div
-                                        className="relative w-full"
+                                        className="relative w-full bg-zinc-100 overflow-hidden"
                                         onContextMenu={(e) => e.preventDefault()}
                                     >
-                                        <Image
+                                        <FadeInImage
                                             src={log.rawImage}
                                             alt="Process Log"
                                             width={1200}
                                             height={800}
-                                            className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-300 pointer-events-none"
+                                            className="w-full h-auto grayscale hover:grayscale-0 transition-grayscale duration-300 pointer-events-none"
                                         />
                                         <div className="text-xs mt-2 font-mono text-zinc-500">
                                             FIG 1. RAW_CAPTURE_{log.date}
