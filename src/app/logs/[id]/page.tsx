@@ -166,34 +166,32 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                             </div>
                         </div>
 
-                        {/* 3. Project Overview (Data Grid) */}
+                        {/* 3. Project Overview (List Style) */}
                         <div className="mb-24 w-full">
-                            <h2 className="text-sm font-bold uppercase border-b-2 border-black mb-4 pb-1">Project Data</h2>
-                            <div className="grid grid-cols-1 sm:grid-cols-4 border-t-2 border-black">
-                                {/* Column 1 */}
-                                <div className="border-b border-zinc-200 py-3 sm:border-r sm:pr-4">
-                                    <div className="text-xs text-zinc-500 mb-1">STATUS / PHASE</div>
-                                    <div className="font-bold">{log.status}</div>
-                                    <div className="text-xs text-zinc-500">{log.phase}</div>
-                                </div>
-                                {/* Column 2 */}
-                                <div className="border-b border-zinc-200 py-3 sm:border-r sm:px-4">
-                                    <div className="text-xs text-zinc-500 mb-1">LOCATION / DATE</div>
-                                    <div className="font-bold truncate">{log.location || "N/A"}</div>
-                                    <div className="text-xs text-zinc-500">{log.date}</div>
-                                </div>
-                                {/* Column 3 */}
-                                <div className="border-b border-zinc-200 py-3 sm:border-r sm:px-4">
-                                    <div className="text-xs text-zinc-500 mb-1">PROGRAM / STRUCTURE</div>
-                                    <div className="font-bold truncate">{log.program || "Algorithmic Study"}</div>
-                                    <div className="text-xs text-zinc-500">{log.structure || "-"}</div>
-                                </div>
-                                {/* Column 4 */}
-                                <div className="border-b border-zinc-200 py-3 sm:pl-4">
-                                    <div className="text-xs text-zinc-500 mb-1">AREA (SITE / TOTAL)</div>
-                                    <div className="font-bold">{log.siteArea || "-"} / {log.totalArea || "-"}</div>
-                                    <div className="text-xs text-zinc-500">{log.buildingScope || "-"}</div>
-                                </div>
+                            <h2 className="text-sm font-bold uppercase border-b-2 border-black mb-0 pb-2">Project Data</h2>
+                            <div className="flex flex-col border-t-0 border-black">
+                                {[
+                                    { label: "Location", value: log.location },
+                                    { label: "Program", value: log.program },
+                                    { label: "Site Area", value: log.siteArea },
+                                    { label: "Gross Floor Area", value: log.totalArea },
+                                    { label: "Building Scale", value: log.buildingScope },
+                                    { label: "Structure", value: log.structure },
+                                    { label: "Exterior Finish", value: log.exteriorFinish },
+                                    { label: "Architects", value: log.architects || log.team },
+                                    { label: "Status", value: log.phase },
+                                ].map((item, i) => (
+                                    item.value && (
+                                        <div key={i} className="flex flex-col sm:flex-row border-b border-black/10 py-3 sm:py-2 text-sm">
+                                            <div className="w-[180px] shrink-0 font-bold uppercase text-zinc-500 sm:text-black">
+                                                {item.label}
+                                            </div>
+                                            <div className="font-normal text-black font-pretendard">
+                                                {item.value}
+                                            </div>
+                                        </div>
+                                    )
+                                ))}
                             </div>
                         </div>
 

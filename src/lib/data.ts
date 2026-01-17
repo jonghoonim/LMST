@@ -19,6 +19,8 @@ export type ProjectLog = {
     totalArea?: string;
     structure?: string;
     buildingScope?: string;
+    exteriorFinish?: string;
+    architects?: string;
 };
 
 
@@ -27,10 +29,15 @@ export const INITIAL_LOGS: ProjectLog[] = [
         id: "LOG_2506",
         date: "2025.06.30",
         title: "POSCO Prefab Restroom Design",
-        phase: "Realization",
+        phase: "Completed (2025)",
         status: "COMPILED",
         size: "12.4GB",
         finalImage: "/projects/LOG_2506/05_Stone_Front_LMST.png",
+        client: "POSCO E&C / POSCO Steel",
+        program: "R&D, Product Design",
+        structure: "PosART, Prefab Frame",
+        buildingScope: "Concept ~ Mock-up",
+        team: "LMST Architects (w/ SEAL)",
         description: `Research for Industrialization: From Construction to Manufacturing (건설에서 제조로: 욕실의 상품화 연구)
 
 This project explores the industrialization of interior architecture. Moving away from labor-intensive on-site wet construction, we developed a modular bath unit based on Off-Site Construction (OSC) methodology. The primary logic was to achieve manufacturing precision, shorten construction timelines, and standardize design quality by pre-fabricating components in a controlled factory environment.
@@ -45,16 +52,18 @@ POSCO와의 협업을 통해 고해상도 프린팅 강판(PosART)을 적용, �
         id: "LOG_2505",
         date: "2025.05.15",
         title: "Yeomchang Elementary School West Wing",
-        phase: "Competition",
+        phase: "Design Proposal (2025)",
         status: "UNREACHABLE",
         size: "2.1GB",
         finalImage: "/projects/LOG_2505/LOG_2505_Final_v2.jpg",
-        location: "Seoul, Gangseo-gu, Yangcheon-ro 646-28",
-        program: "Educational Facility",
-        siteArea: "13,836.3m²",
-        totalArea: "12,866.92m²",
-        structure: "RC, Steel",
-        buildingScope: "B1 / 4F",
+        location: "Gangseo-gu, Seoul, Korea",
+        program: "Educational Facility (Elementary School)",
+        siteArea: "13,836.30 m²",
+        totalArea: "7,562.86 m² (Extension: 2,731.78 m²)",
+        buildingScope: "B1 - 4F",
+        structure: "RC + Steel Frame (Partial)",
+        exteriorFinish: "Clay Brick, Exposed Concrete, Low-E Triple Glazing, Vertical Louver",
+        architects: "LMST Architects",
         description: `A strategic 'Step-back' volume defines the reconstruction of Seoul Yeomchang Elementary School. Instead of a monolithic block typical of urban schools, the massing recedes at each level, responding to the dense residential context while securing optimal daylight conditions.
 
 서울염창초등학교 서관동의 형태는 전략적인 '스텝백(Step-back)' 볼륨으로 규정된다. 우리는 고밀도 주거지로 둘러싸인 대지에서, 위압적인 단일 매스 대신 층별로 후퇴하는 볼륨을 통해 주변 맥락에 대응하고 최적의 채광 환경을 확보했다.
