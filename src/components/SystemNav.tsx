@@ -66,8 +66,8 @@ export function SystemNav() {
             <div className="flex w-full sm:w-auto items-center justify-between sm:justify-start gap-4">
                 <Link href="/" className={clsx(
                     "font-archivo text-lg tracking-tighter hover:opacity-50 transition-opacity",
-                    // For difference mode, thicker font usually looks better, keeping ExtraBold
-                    isTransparentPage ? "font-extrabold" : "font-bold"
+                    // Reverting to consistently bold. The difference mode is solid enough now.
+                    "font-bold"
                 )}>
                     LMST_OS<span className="animate-blink inline-block bg-current w-[8px] h-[16px] align-middle ml-1">_</span>
                 </Link>

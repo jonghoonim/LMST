@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${archivoNarrow.variable} ${robotoCondensed.variable} ${geistMono.variable} subpixel-antialiased font-sans bg-[#F4F4F4] text-black selection:bg-black selection:text-white pb-8`}
+        className={`${archivoNarrow.variable} ${robotoCondensed.variable} ${geistMono.variable} antialiased font-sans bg-[#F4F4F4] text-black selection:bg-black selection:text-white pb-8`}
       >
         <SystemNav />
         <div className="pt-12">{children}</div>
