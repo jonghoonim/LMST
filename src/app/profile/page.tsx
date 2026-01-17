@@ -98,10 +98,10 @@ if (Logic == true) {
                                 </div>
                                 <ul className="space-y-1">
                                     <li>
-                                        <span className="font-bold text-zinc-900">[2012.05]</span> M.Arch, <span className="font-bold">UC Berkeley</span>
+                                        <span className="font-bold text-zinc-900">[2012]</span> M.Arch, <span className="font-bold">UC Berkeley</span>
                                     </li>
                                     <li>
-                                        <span className="font-bold text-zinc-900">[2006.02]</span> B.S. Arch, <span className="font-bold">Seoul National Univ.</span>
+                                        <span className="font-bold text-zinc-900">[2006]</span> M.S., <span className="font-bold">Seoul National Univ.</span>
                                     </li>
                                 </ul>
                             </div>
