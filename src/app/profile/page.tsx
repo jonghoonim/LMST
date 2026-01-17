@@ -26,8 +26,9 @@ export default function ProfilePage() {
                 </div>
 
                 {/* Main Content */}
-                <div className="grid gap-8 sm:grid-cols-2">
-                    <div className="flex flex-col gap-8">
+                <div className="flex flex-col sm:grid sm:grid-cols-2 gap-8">
+                    {/* 1.0 KERNEL_INFO */}
+                    <div className="order-1 flex flex-col gap-8">
                         <div>
                             <h2 className="mb-4 bg-black px-1 text-white w-fit">1.0 KERNEL_INFO</h2>
                             <div className="space-y-6 leading-relaxed text-zinc-900 font-mono">
@@ -63,43 +64,45 @@ if (Logic == true) {
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div>
-                            <h2 className="mb-4 bg-black px-1 text-white w-fit">3.0 RUNTIME_ENVIRONMENT</h2>
+                    {/* 3.0 RUNTIME_ENVIRONMENT */}
+                    <div className="order-3 sm:col-start-1">
+                        <h2 className="mb-4 bg-black px-1 text-white w-fit">3.0 RUNTIME_ENVIRONMENT</h2>
 
-                            <h3 className="mb-2 font-bold">[ DEPENDENCIES ]</h3>
-                            <ul className="list-inside list-square space-y-1 text-zinc-600 mb-8 text-xs">
-                                <li>Rhinoceros 3D / Grasshopper</li>
-                                <li>Revit (BIM) / Dynamo</li>
-                                <li>Python / C# (Scripting)</li>
-                                <li>Next.js / TypeScript (Web)</li>
-                                <li>Arduino / Physical Computing</li>
-                            </ul>
+                        <h3 className="mb-2 font-bold">[ DEPENDENCIES ]</h3>
+                        <ul className="list-inside list-square space-y-1 text-zinc-600 mb-8 text-xs">
+                            <li>Rhinoceros 3D / Grasshopper</li>
+                            <li>Revit (BIM) / Dynamo</li>
+                            <li>Python / C# (Scripting)</li>
+                            <li>Next.js / TypeScript (Web)</li>
+                            <li>Arduino / Physical Computing</li>
+                        </ul>
 
-                            <h3 className="mb-2 font-bold">[ CORE_MODULES ]</h3>
-                            <div className="text-xs font-mono space-y-2 text-zinc-700">
+                        <h3 className="mb-2 font-bold">[ CORE_MODULES ]</h3>
+                        <div className="text-xs font-mono space-y-2 text-zinc-700">
 
-                                <div className="flex gap-3">
-                                    <span className="text-zinc-400">[ ACTIVE ]</span>
-                                    <span>PARAMETRIC_DESIGN (Rhino.Inside)</span>
-                                </div>
-                                <div className="flex gap-3">
-                                    <span className="text-zinc-400">[ ACTIVE ]</span>
-                                    <span>DATA_VISUALIZATION (D3.js)</span>
-                                </div>
-                                <div className="flex gap-3">
-                                    <span className="text-purple-600 font-bold">[ OPTIMIZING ]</span>
-                                    <span>SYSTEM_ARCHITECTURE</span>
-                                </div>
-                                <div className="flex gap-3">
-                                    <span className="text-zinc-300">[ STANDBY ]</span>
-                                    <span>FABRICATION (Laser/CNC)</span>
-                                </div>
+                            <div className="flex gap-3">
+                                <span className="text-zinc-400">[ ACTIVE ]</span>
+                                <span>PARAMETRIC_DESIGN (Rhino.Inside)</span>
+                            </div>
+                            <div className="flex gap-3">
+                                <span className="text-zinc-400">[ ACTIVE ]</span>
+                                <span>DATA_VISUALIZATION (D3.js)</span>
+                            </div>
+                            <div className="flex gap-3">
+                                <span className="text-purple-600 font-bold">[ OPTIMIZING ]</span>
+                                <span>SYSTEM_ARCHITECTURE</span>
+                            </div>
+                            <div className="flex gap-3">
+                                <span className="text-zinc-300">[ STANDBY ]</span>
+                                <span>FABRICATION (Laser/CNC)</span>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    {/* 2.0 ARCHITECT_LOG */}
+                    <div className="order-2 sm:col-start-2 sm:row-start-1 sm:row-span-2">
                         <h2 className="mb-4 bg-black px-1 text-white w-fit">2.0 ARCHITECT_LOG</h2>
                         <div className="bg-zinc-50 p-4 border border-zinc-200 text-xs font-mono text-zinc-700 h-full">
 

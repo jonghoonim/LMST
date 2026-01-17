@@ -53,7 +53,6 @@ export function SystemNav() {
     };
 
     return (
-    return (
         <nav
             className={clsx(
                 "fixed top-0 left-0 z-50 w-full flex flex-col sm:grid sm:grid-cols-[180px_1fr_auto] items-center px-4 py-2 transition-all sm:h-12",
