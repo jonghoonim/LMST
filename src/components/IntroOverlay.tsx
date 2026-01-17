@@ -44,24 +44,25 @@ export function IntroOverlay() {
     return (
         <div
             onClick={handleEnter}
-            className={`fixed inset-0 z-[9999] flex items-center justify-center bg-[#F4F4F4]/90 backdrop-blur-md text-black font-mono text-lg sm:text-lg ${ready ? "cursor-pointer" : "cursor-wait"}`}
+            className={`fixed inset-0 z-[9999] flex items-center justify-center bg-[#F4F4F4]/90 backdrop-blur-md text-black font-mono text-xs sm:text-lg ${ready ? "cursor-pointer" : "cursor-wait"}`}
         >
-            <div className="flex flex-col gap-1 w-auto min-w-[300px]">
+            <div className="flex flex-col gap-1 w-auto min-w-[300px] max-w-[95vw]">
+                {/* L, M, S, T Alignment: Materializing (13 chars) is the anchor */}
                 <div className={`whitespace-pre ${step >= 1 ? "opacity-100" : "opacity-0"}`}>
-                    &gt;      DECODING_LOGIC... <span className="text-[#00FF00] font-bold">OK</span>
+                    &gt; DECODING_____LOGIC... <span className="text-[#00FF00] font-bold">OK</span>
                 </div>
                 <div className={`whitespace-pre ${step >= 2 ? "opacity-100" : "opacity-0"}`}>
                     &gt; MATERIALIZING_MATTER... <span className="text-[#00FF00] font-bold">OK</span>
                 </div>
                 <div className={`whitespace-pre ${step >= 3 ? "opacity-100" : "opacity-0"}`}>
-                    &gt;     OCCUPYING_SPACE... <span className="text-[#00FF00] font-bold">OK</span>
+                    &gt; OCCUPYING____SPACE... <span className="text-[#00FF00] font-bold">OK</span>
                 </div>
                 <div className={`whitespace-pre ${step >= 4 ? "opacity-100" : "opacity-0"}`}>
-                    &gt;     ARCHIVING_TIME... <span className="text-orange-500 font-bold">[IN PROGRESS]</span>
+                    &gt; ARCHIVING____TIME... <div className="inline-block sm:inline"><span className="text-orange-500 font-bold">[IN PROGRESS]</span></div>
                 </div>
 
                 <div className={`whitespace-pre mt-4 ${step >= 5 ? "opacity-100" : "opacity-0"}`}>
-                    &gt; CHECKING_KERNEL... <span className="text-[#00FF00] font-bold">FOUND.</span>
+                    &gt; CHECKING_____KERNEL... <span className="text-[#00FF00] font-bold">FOUND.</span>
                 </div>
                 <div className={`mt-1 ${step >= 6 ? "opacity-100" : "opacity-0"}`}>
                     <div className="whitespace-pre">&gt; ROOT IDENTITY : </div>
