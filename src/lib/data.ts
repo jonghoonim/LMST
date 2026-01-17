@@ -31,7 +31,15 @@ export const INITIAL_LOGS: ProjectLog[] = [
         status: "COMPILED",
         size: "12.4GB",
         finalImage: "/projects/LOG_2506/05_Stone_Front_LMST.png",
-        description: "포스코 프리패브 화장실 상품화 디자인 및 실시설계 (POSCO Modular Restroom)\n\n모듈러 건축의 효율성과 디자인적 가치를 결합한 프리패브 화장실 상품화 프로젝트. 시공 오차를 최소화하고 공사 기간을 단축하는 동시에, 사용자 중심의 쾌적한 환경을 제공하는 표준 모델을 개발했다.",
+        description: `Research for Industrialization: From Construction to Manufacturing (건설에서 제조로: 욕실의 상품화 연구)
+
+This project explores the industrialization of interior architecture. Moving away from labor-intensive on-site wet construction, we developed a modular bath unit based on Off-Site Construction (OSC) methodology. The primary logic was to achieve manufacturing precision, shorten construction timelines, and standardize design quality by pre-fabricating components in a controlled factory environment.
+
+이 프로젝트는 실내 건축의 상품화 가능성을 탐구한다. 노동 집약적인 현장 습식 공법에서 벗어나, OSC(Off-Site Construction) 방법론을 기반으로 한 모듈러 욕실 유닛을 개발했다. 통제된 공장 환경에서의 선제작을 통해 제조업 수준의 정밀도를 확보하고, 공기를 단축하며, 디자인 품질을 표준화하는 것이 핵심 논리다.
+
+Collaborating with POSCO, we utilized high-resolution printed steel panels (PosART) to replace traditional ceramic tiling. This dry assembly system eliminates unpredictable site variables and minimizes construction tolerance. We defined diverse design typologies—ranging from Minimal to Natural—transforming the bathroom from a 'built space' into a 'highly engineered product.'
+
+POSCO와의 협업을 통해 고해상도 프린팅 강판(PosART)을 적용, 전통적인 타일 마감을 대체하는 건식 조립 시스템을 구축했다. 이 시스템은 현장의 불확실성을 제거하고 시공 오차를 최소화한다. 우리는 미니멀에서 내추럴에 이르는 다양한 디자인 유형을 정의하여, 욕실을 현장에서 '지어지는 공간'이 아닌 공학적으로 설계된 '조립형 제품'으로 전환시켰다.`,
     },
     {
         id: "LOG_2505",
