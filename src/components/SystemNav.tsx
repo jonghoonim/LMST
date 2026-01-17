@@ -43,7 +43,7 @@ export function SystemNav() {
                     isActive
                         ? "bg-black text-white"
                         : isTransparentPage
-                            ? "text-white/70 hover:text-white mix-blend-exclusion"
+                            ? "text-white hover:text-white/80 mix-blend-difference"
                             : "text-zinc-500 hover:text-black"
                 )}
             >
@@ -59,13 +59,14 @@ export function SystemNav() {
             className={clsx(
                 "fixed top-0 left-0 z-50 w-full flex flex-col sm:grid sm:grid-cols-[180px_1fr_auto] items-center px-4 py-2 transition-all sm:h-12",
                 isTransparentPage
-                    ? "bg-transparent text-white mix-blend-exclusion border-b border-transparent"
+                    ? "bg-transparent text-white mix-blend-difference border-b border-transparent"
                     : "bg-[#F4F4F4]/90 border-b border-black/10 backdrop-blur-sm text-black"
             )}
         >
             <div className="flex w-full sm:w-auto items-center justify-between sm:justify-start gap-4">
                 <Link href="/" className={clsx(
                     "font-archivo text-lg tracking-tighter hover:opacity-50 transition-opacity",
+                    // For difference mode, thicker font usually looks better, keeping ExtraBold
                     isTransparentPage ? "font-extrabold" : "font-bold"
                 )}>
                     LMST_OS<span className="animate-blink inline-block bg-current w-[8px] h-[16px] align-middle ml-1">_</span>
@@ -82,7 +83,7 @@ export function SystemNav() {
 
             <div className={clsx(
                 "hidden sm:flex items-center justify-end gap-4 font-mono text-xs",
-                isTransparentPage ? "text-white/70 mix-blend-exclusion" : "text-zinc-400"
+                isTransparentPage ? "text-white mix-blend-difference" : "text-zinc-400"
             )}>
                 <SysMemIndicator />
                 <span>SYS.READY</span>
