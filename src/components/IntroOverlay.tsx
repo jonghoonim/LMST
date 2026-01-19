@@ -44,7 +44,7 @@ export function IntroOverlay() {
     return (
         <div
             onClick={handleEnter}
-            className={`fixed inset-0 z-[9999] flex items-center justify-center bg-[#F4F4F4]/90 backdrop-blur-md text-black font-mono text-xs sm:text-sm ${ready ? "cursor-pointer" : "cursor-wait"}`}
+            className={`fixed inset-0 z-[9999] flex items-center justify-center bg-[#F4F4F4]/90 backdrop-blur-md text-black font-courier text-xs sm:text-sm ${ready ? "cursor-pointer" : "cursor-wait"}`}
         >
             <div className="flex flex-col gap-1 w-auto min-w-[300px] max-w-[95vw]">
                 {/* L, M, S, T Alignment: Materializing_ (14 chars) is the anchor for the next word start */}
