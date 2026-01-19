@@ -253,10 +253,73 @@ We adopted a heavy timber structure (GLUELAM). The 3D curved roof components are
         id: "LOG_2401",
         date: "2024.01.05",
         title: "Seoul Dongmyung Elem. Green Smart School",
-        phase: "Competition",
+        phase: "Competition (2024)",
         status: "RUNTIME_ERROR",
         size: "3.9GB",
         finalImage: "/projects/LOG_2401/LOG_2401.png",
-        description: "서울동명초등학교 그린스마트 미래학교 (Seoul Dongmyung Elementary School)\n\n기존 교사의 노후화를 개선하고 탄소 중립 실현을 위한 그린 에너지 기술을 도입한 미래형 학교 모델.",
+        location: "29, Majang-ro 29-gil, Seongdong-gu, Seoul",
+        program: "Educational & Research Facility",
+        siteArea: "17,715.10 m²",
+        totalArea: "13,418.99 m²",
+        buildingScope: "B1 / 3F (H: 13.8m)",
+        structure: "RC (Reinforced Concrete)",
+        architects: "LMST Architects",
+        description: `Seoul Dongmyung Elementary School Green Smart School
+        
+[Decomposition of Conditions]
+The site borders three roads and possesses a 10m elevation difference. Pedestrian access is limited to the main and rear gates. The eastern Majang-ro 29-gil is a one-way street, restricting vehicle access and parking entry. An irregular site, high retaining walls, and disconnected access paths—these are analyzable inputs.
+
+Demolition of the existing building must precede construction, yet classes for all grades must continue. We planned a phased construction strategy involving the installation of 14 modular classrooms. Phase 1 involves moving general classes to modular units; Phase 2 begins the new construction and demolition of the existing building; Phase 3 involves removing modular units and completing the final move.
+
+[Logic of Mass]
+The first-floor mass is pushed inward. This expands the pedestrian area, connecting the main entrance, the Shared Garden, and the Kindergarten entrance via a corridor. By removing high retaining walls and fences, the school opens up as a pedestrian path for the village.
+
+All classrooms are oriented south. The atrium and courtyard—two open spaces—draw light into the building. The southern mass steps down sequentially so that front classrooms do not block light for those behind. Administrative spaces and special classrooms are arranged linearly north-to-south, linked with general classrooms.
+
+Corridors expand both planimetrically and sectionally. Rather than a fixed width, the corridor widens, narrows, rises, and lowers. Halls and corridor spaces, distinct for each grade, accommodate individual study, small group activities, rest, and play.
+
+[Reconfiguration of Program]
+Unit classrooms are no longer fixed spaces. Multi-purpose rooms adjacent to special classrooms (Art, Music, Science, Reading, AV) expand via movable walls to become independent or integrated convergence education spaces. The 2nd-floor multi-purpose classroom is located near the Art Room, accommodating both classes and exhibitions. The 3rd-floor multi-purpose room serves as a Drama/Musical room, utilizing movable walls and retractable seating for simultaneous performance and practice.
+
+The library and AV room are planned in conjunction. Opening the revolving door wall turns the AV room into stepped reading seating for the library. The kindergarten cafeteria, multi-purpose room, and playroom can be integrated via moving walls (soundproof and fire-rated).
+
+The atrium is a venue for school-wide performances and lectures. Automated irrigation planting absorbs noise and purifies the air. Stepped seating connecting from the 1st to the 3rd floor serves as both a reading space and an auditorium.
+
+[Continuity of External Spaces]
+Corridors and external spaces expanded around the two open areas are extensions of the classrooms. The Shared Garden is an outdoor exhibition, play, and learning space opening to the main gate courtyard. It connects directly to the 1st-floor Teacher's Center for safety. The 'Dream-Dam' Terrace Playground is an outdoor space with gentle mounds, directly connected to classrooms. The 'Dream-Dam' Sky Playground is a play space on the 3rd-floor rooftop, meeting the sky.
+
+South-facing balconies of classrooms serve as extended outdoor learning areas. They open south to admit high-quality light and connect directly to the playground, linking learning and play. They also function as safe evacuation routes in emergencies.
+
+Rose Garden, Lawn Yard, Performance Yard, School Forest, Village Forest, Village Hill. Landscaping covers 31.91% of the school site. These spaces are places for play as well as nature observation and ecological learning.
+
+--------------------------------------------------
+
+서울동명초등학교 그린스마트 미래학교
+
+[조건의 분해]
+대지는 세 도로와 접하며 10m의 고저차를 가진다. 보행 접근은 정문과 후문 두 지점으로 제한된다. 동측 마장로29길은 일방통행로로 차량의 통행과 주차 진출입이 제한적이다. 이형의 대지, 높은 옹벽, 단절된 접근로. 이것들은 분석 가능한 입력값이다.
+
+기존 교사동 철거가 선행되어야 하고, 공사 중에도 전 학년의 수업이 지속되어야 한다. 모듈러 교실 14개를 설치하고, 단계적 공사를 계획했다. 1단계에서 일반교실을 모듈러로 이사하고, 2단계에서 개축동 공사를 시작하며 일반교사동을 철거한다. 3단계에서 모듈러를 철거하고 최종 이사를 완료한다.
+
+[매스의 논리]
+1층 매스를 안으로 밀어 넣었다. 보행 영역이 확장되고 회랑을 통해 주출입구, 모두의정원, 유치원 출입구가 연결된다. 높은 옹벽과 담장을 제거하여 학교는 마을의 보행길로 열린다.
+
+모든 교실은 남향으로 배치된다. 아트리움과 중정, 두 개의 오픈 공간이 교사동 내부로 빛을 끌어들인다. 남측 매스를 차례로 낮춰 앞 교실이 뒤 교실의 채광을 막지 않도록 했다. 관리행정공간과 특수교실은 남북 방향으로 선형 배치되며 일반교실과 연계된다.
+
+복도는 평면적으로, 단면적으로 확장된다. 일정한 폭의 복도가 아니라 넓어지고 좁아지며, 높아지고 낮아지는 공간이다. 학년별로 다른 홀과 복도 공간은 개인 학습, 소그룹 활동, 휴식, 놀이를 수용한다.
+
+[프로그램의 재구성]
+단위교실은 더 이상 고정된 공간이 아니다. 특별교실(미술, 음악, 과학, 독서, 시청각실)과 인접한 다목적실은 가변형 벽체를 통해 독립적으로 사용되거나 통합된 융복합 교육공간으로 확장된다. 2층 다목적교실은 미술실과 가까운 곳에 위치하며 수업과 전시를 모두 수용한다. 3층 다목적교실은 드라마실, 뮤지컬실로 사용되며 가변형 벽체와 수납식 좌석을 활용해 공연과 연습을 동시에 수용한다.
+
+도서관과 시청각실은 연계 계획되었다. 리볼딩 도어로 무대 쪽 벽체를 열면 시청각실은 도서관의 계단식 열람석이 된다. 유치원 식당, 다목적실, 유희실은 무빙월(차음, 방화가 가능한 가변형 벽체)을 통해 통합될 수 있다.
+
+아트리움은 전교생이 모이는 공연 및 강연 장소다. 자동 관수가 가능한 식재는 소음을 흡수하고 공기를 정화한다. 1층에서 3층까지 이어지는 계단식 좌석은 독서 공간이자 관람석이 된다.
+
+[외부공간의 연속]
+두 오픈 영역을 중심으로 확장된 복도와 외부공간은 교실의 연장이다. 모두의 정원은 정문마당으로 열린 외부 전시, 놀이, 학습공간이다. 1층 교무센터에서 직접 연결되어 안전을 고려했다. 꿈담 테라스 놀이터는 완만한 마운딩이 있는 외부공간으로 교실과 직접 연결된다. 꿈담 하늘놀이터는 3층 옥상에 배치된 하늘과 맞닿은 놀이공간이다.
+
+교실 남측의 발코니는 외부 학습 확장 영역이다. 남향으로 열려 양질의 빛을 유입하며 꿈담놀이터로 직접 연결되어 학습과 놀이를 연계한다. 비상시 안전한 피난통로로도 활용된다.
+
+장미정원, 잔디마당, 공연마당, 학교숲, 마을숲, 마을언덕. 조경면적이 학교 부지의 31.91%를 차지한다. 이 공간들은 놀이의 장소이자 자연관찰, 생태학습의 공간이다.`,
     },
 ];
