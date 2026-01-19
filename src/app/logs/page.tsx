@@ -20,8 +20,8 @@ const MOCK_FILES: Omit<LogNode, "type">[] = [
     { date: "2026.01.14", name: "SH_Housing_Idea_Note", ext: ".txt", size: "2KB" },
     {
         date: "2024.02.01",
-        name: "LMST_MANIFESTO_v1.0",
-        ext: ".txt",
+        name: "LMST_OFFICE_STATEMENT",
+        ext: ".md",
         size: "4KB",
         content: PHILOSOPHY_CONTENT
     },
