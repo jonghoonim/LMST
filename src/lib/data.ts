@@ -125,9 +125,16 @@ By dissolving the boundaries between exhibition and circulation, the museum tran
         id: "LOG_2501",
         date: "2025.01.20",
         title: "Muk 1-dong Community Complex",
-        phase: "Competition",
+        phase: "Competition (2025)",
         status: "RUNTIME_ERROR",
         size: "3.5GB",
+        location: "120-2, Muk-dong, Jungnang-gu, Seoul",
+        program: "Public Office Facility",
+        siteArea: "1,290.00 m²",
+        totalArea: "4,081.41 m²",
+        buildingScope: "B3 / 3F (H: 17.39m)",
+        structure: "RC (Reinforced Concrete)",
+        architects: "LMST Architects",
         description: `Muk 1-dong Community Complex
 
 [Point of Boundary]
