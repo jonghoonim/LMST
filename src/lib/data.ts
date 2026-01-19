@@ -129,6 +129,7 @@ By dissolving the boundaries between exhibition and circulation, the museum tran
         phase: "Competition",
         status: "UNREACHABLE",
         size: "1.8GB",
+        finalImage: "/projects/LOG_2403/MoneyShot.png",
         description: "화성 우리꽃 식물원 건축 리모델링 (Hwaseong Our Flower Botanical Garden)\n\n노후화된 온실과 전시관을 리모델링하여 생태 교육과 휴식이 공존하는 새로운 식물원 환경을 조성하는 제안.",
     },
     {
