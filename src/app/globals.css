@@ -39,7 +39,7 @@
   }
 
   .font-swis721 {
-    font-family: "Swis721 Cn BT", "Swis721", sans-serif;
+    font-family: "Swis721 Cn BT", "Swis721", var(--font-roboto-condensed), sans-serif;
   }
 
   .font-archivo {

@@ -139,20 +139,22 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                             <div className="text-base sm:text-lg font-pretendard font-medium leading-relaxed text-black">
                                 {(() => {
                                     const text = log.description || MOCK_RAW_DATA;
-                                    const paragraphs = text.split(/\n\n/);
-                                    const firstParagraph = paragraphs[0];
-                                    const hasMore = paragraphs.length > 1;
+                                    const isLongText = text.length > 200;
 
                                     return (
                                         <>
-                                            <div className="transition-all duration-300">
-                                                <p className="whitespace-pre-wrap text-left">
-                                                    {isExpanded ? text : firstParagraph}
-                                                    {!isExpanded && hasMore && "..."}
+                                            <div className={`transition-all duration-300 relative`}>
+                                                <p
+                                                    className={`whitespace-pre-wrap text-left ${!isExpanded ? 'line-clamp-[8]' : ''}`}
+                                                >
+                                                    {text}
                                                 </p>
+                                                {!isExpanded && isLongText && (
+                                                    <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-white to-transparent" />
+                                                )}
                                             </div>
 
-                                            {hasMore && (
+                                            {isLongText && (
                                                 <button
                                                     onClick={() => setIsExpanded(!isExpanded)}
                                                     className="mt-4 underline decoration-2 underline-offset-4 hover:bg-black hover:text-white transition-all font-bold text-sm uppercase"
