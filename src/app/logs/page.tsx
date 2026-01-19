@@ -16,15 +16,15 @@ type LogNode = {
 };
 
 const MOCK_FILES: Omit<LogNode, "type">[] = [
-    { date: "2026.01.15", name: "Facade_Pattern_Test", ext: ".gh", size: "124KB" },
-    { date: "2026.01.14", name: "SH_Housing_Idea_Note", ext: ".txt", size: "2KB" },
     {
-        date: "2024.02.01",
+        date: "2026.01.19",
         name: "LMST_OFFICE_STATEMENT",
         ext: ".md",
         size: "4KB",
         content: PHILOSOPHY_CONTENT
     },
+    { date: "2026.01.15", name: "Facade_Pattern_Test", ext: ".gh", size: "124KB" },
+    { date: "2026.01.14", name: "SH_Housing_Idea_Note", ext: ".txt", size: "2KB" },
     { date: "2025.12.02", name: "Optimization_Logic_v3", ext: ".py", size: "15KB" },
     { date: "2025.07.11", name: "Site_Analysis_Map", ext: ".dwg", size: "5.4MB" },
     { date: "2025.04.20", name: "Structure_Review_Report", ext: ".pdf", size: "8.1MB" },
