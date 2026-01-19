@@ -256,6 +256,7 @@ We adopted a heavy timber structure (GLUELAM). The 3D curved roof components are
         phase: "Competition",
         status: "RUNTIME_ERROR",
         size: "3.9GB",
+        finalImage: "/projects/LOG_2401/LOG_2401.png",
         description: "서울동명초등학교 그린스마트 미래학교 (Seoul Dongmyung Elementary School)\n\n기존 교사의 노후화를 개선하고 탄소 중립 실현을 위한 그린 에너지 기술을 도입한 미래형 학교 모델.",
     },
 ];
