@@ -6,7 +6,7 @@ A few clicks reveal a pattern. 'Sustainability,' 'Placeness,' 'People-centric Sp
 
 We are Architects and Developers. Not of real estate, but of systems. It means creating the logic, relationships, and structures that make architecture work. We handle four variables: Logic, Matter, Space, Time.
 
-Every project begins with conditions. Urban codes, site constraints, programmatic conflicts, and the client’s lifestyle and specific demands. These are analyzable inputs. We decompose, recombine, and verify them.
+Every project begins with conditions. Urban and building codes, site constraints, programmatic conflicts, and the client’s lifestyle and specific demands. These are analyzable inputs. We decompose, recombine, and verify them.
 
 Sometimes we use Grasshopper; other times, we iterate through hand sketches. What matters is not the tool, but the logic of the process. We believe in the power of intuition, but we minimize improvisation. We believe it is more efficient to design to prevent problems rather than solving them after they arise.
 
@@ -24,7 +24,7 @@ Architecture is not completed by inspiration alone. Nor is it completed by calcu
 
 우리는 건축가이자 개발자다. 부동산이 아니라 시스템을 개발한다. 건축이 작동하기 위한 논리, 관계, 구조를 만든다는 의미다. 우리가 다루는 요소는 네 가지다: Logic, Matter, Space, Time.
 
-모든 프로젝트는 조건에서 시작한다. 도시의 법규, 대지의 제약, 프로그램 간의 충돌, 건축주의 생활 방식과 구체적 요구. 이것들은 분석 가능한 입력값이다. 우리는 이 값들을 분해하고, 조합하고, 검증한다.
+모든 프로젝트는 조건에서 시작한다. 도시와 건축법규, 대지의 제약, 프로그램 간의 충돌, 건축주의 생활 방식과 구체적 요구. 이것들은 분석 가능한 입력값이다. 우리는 이 값들을 분해하고, 조합하고, 검증한다.
 
 Grasshopper를 쓸 때도 있고, 손으로 스케치하며 반복할 때도 있다. 중요한 건 도구가 아니라 과정의 논리다. 직관의 힘을 믿지만 즉흥은 최소화한다. 문제가 발생한 뒤 해결하는 것보다, 발생하지 않도록 설계하는 편이 효율적이라고 믿는다.
 
