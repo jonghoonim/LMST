@@ -128,7 +128,59 @@ By dissolving the boundaries between exhibition and circulation, the museum tran
         phase: "Competition",
         status: "RUNTIME_ERROR",
         size: "3.5GB",
-        description: "중랑구 묵1동 복합청사 (Jungnang-gu Muk 1-dong Complex Center)\n\n주민 밀착형 행정 서비스와 문화 공간을 통합한 복합 청사 계획안.",
+        description: `Muk 1-dong Community Complex
+
+[Point of Boundary]
+This is a transitional zone. To the south and west, a low-rise, dense village fabric is formed, while large apartment complexes sit to the northeast, creating spatial openness. To the east, Bonghwasan Neighborhood Park unfolds, connecting the city to nature. The topography limits and varies, density fluctuates, and the visual environment is in stark contrast.
+
+The northern road is the main access axis. Pedestrians and vehicles intersect, naturally forming an open space. Conversely, the south and west are compressed by topographic level differences and adjacent buildings, limiting views. The Muk 1-dong Complex sits like a puzzle piece within this context. It accepts the topographic flow, orchestrates visual experiences, and modulates the balance between density and openness.
+
+[Circulation Logic]
+Vehicles approach from the eastern road. Although the slope is unfavorable, this avoids interference with the main pedestrian access and public transit on the southern road. We overcame the disadvantage by placing hygiene spaces and shafts along the ramp.
+
+The main entrance forms from the northern road, connecting linearly to the southern sub-entrance via an internal stair. The Civil Affairs Office has increased accessibility through a direct stair from the northern road. Staff access their workspace via independent circulation without interference.
+
+The 'Community Step' connects the basement and the first floor, linking the Resident Lounge, the Small Library reading area, and the southern outdoor space. The 2nd-floor Living Culture Center is directly linked to the Community Step via an external stair, encouraging organic communication between floors.
+
+[Programmatic Overlay]
+The Civil Affairs Office shifts function over time. It operates as an administrative service during the day but transforms into a community space combined with the Small Library in the evening. Open layouts and flexible furniture realize a space where administration and culture overlap.
+
+The 2nd floor is where community activity is most vibrant. The program rooms of the Resident Council and the floor space of the Living Culture Center connect organically to the 'Encounter Space' via flexible glass walls. Independent when closed, they expand into a single grand space when open, accommodating workshops, lectures, performances, and gatherings. Sound-proof spaces are placed in the northeast corner to minimize impact on the southern residential area.
+
+The B1 Health Center is placed adjacent to the road for accessibility. The Resident Lounge becomes a book café connecting to the library and expands into a small stage using the library stairs. Folding doors connect the interior to the exterior, functioning as a small plaza when flea markets are held.
+
+[Façade Strategy]
+The façade responds to the urban fabric and environmental context. The upper levels on the north, east, and west consist of metal fabric wrapping glass curtain walls to control light and improve energy performance. The lower levels use stone and brick to form a stable podium, while high-strength wood panels on the north create a friendly interface with the village.
+
+The west minimizes openings for privacy, while the south induces daylight between vertical walls. These walls establish a rhythm reflecting the village's urban tissue. The diagonal line of the Civil Affairs Office stair acts as a medium emphasizing the entrance.
+
+--------------------------------------------------
+
+묵1동 복합청사
+
+[경계의 지점]
+이곳은 전이 구역이다. 남쪽과 서쪽은 낮고 밀도 높은 마을 조직이 형성되어 있고, 북동쪽으로는 대형 아파트 단지가 자리하며 공간적 여유가 생긴다. 동쪽으로는 봉화산 근린공원이 펼쳐지며 도시가 자연으로 이어진다. 지형은 높낮이를 달리하고, 밀도는 변화를 거듭하며, 시각적 환경은 극명하게 대비된다.
+
+북측 도로는 주요 접근축이다. 보행과 차량이 교차하며 자연스럽게 열린 공간을 형성한다. 반면 남측과 서측은 지형의 고저차와 인접 건축물에 의해 시야가 제한되며 공간이 압축된다. 묵1동 청사는 이 모든 맥락 속에서 하나의 퍼즐 조각처럼 자리한다. 지형적 흐름을 수용하고, 시각적 경험을 조율하며, 밀도와 개방감 사이의 균형을 조정한다.
+
+[동선의 논리]
+차량은 동측 도로에서 접근한다. 경사로가 불리한 조건이지만 남측 도로의 주요 접근로와 대중교통의 간섭을 피하기 위함이다. 위생공간과 샤프트를 경사로를 따라 배치하여 불리함을 극복했다.
+
+북측 도로에서 청사 주출입구가 형성되고 내부 계단을 통해 일직선으로 남쪽 부출입구와 연결된다. 민원실은 북측 도로에서 직접 연결된 계단을 통해 접근성을 높였다. 직원들은 독립적인 동선을 통해 다른 공간과의 간섭 없이 업무 공간에 접근한다.
+
+커뮤니티 스텝은 지하 1층과 1층을 잇는 연결 고리로, 주민사랑방에서 작은도서관 열람 공간을 거쳐 남측 외부 공간까지 이어진다. 2층 생활문화센터는 외부 계단을 통해 커뮤니티 스텝으로 직접 연결되어 층간의 유기적 소통을 유도한다.
+
+[프로그램의 중첩]
+민원실은 시간에 따라 기능이 전환된다. 낮에는 행정 서비스가 운영되지만 저녁이 되면 작은도서관과 결합된 커뮤니티 공간으로 변모한다. 개방형 배치와 가변형 가구를 통해 행정과 문화가 중첩되는 공간을 구현했다.
+
+2층은 공동체 활동이 가장 활발한 층이다. 자치회관의 프로그램실과 생활문화센터의 마루공간은 가변형 유리 벽체를 통해 마주침공간과 유기적으로 연결된다. 닫혀 있을 때는 독립적 공간이지만 문을 열면 하나의 큰 공간으로 확장되어 워크숍, 강연, 공연, 주민 모임 등 다양한 프로그램을 수용한다. 소음이 발생할 수 있는 방음공간은 북동쪽 코너에 배치하여 남쪽 주거지로의 영향을 최소화했다.
+
+지하 1층 보건지소는 도로와 맞닿은 위치에 배치하여 접근성을 확보했다. 주민사랑방은 북카페가 되어 도서관과 연결되고, 도서관의 계단을 활용해 작은 무대로 확장된다. 폴딩도어를 통해 실내와 외부가 하나로 이어지며, 플리마켓이 열리면 작은 광장처럼 기능한다.
+
+[입면의 전략]
+입면은 도시 조직과 환경적 맥락에 반응한다. 북·동·서측 상층부는 유리 커튼월을 감싸는 메탈 패브릭으로 구성해 빛을 조절하고 에너지 성능을 향상시킨다. 저층부는 석재와 전벽돌을 적용해 기단부의 안정감을 형성하며, 북측에는 고강도 목재 패널을 사용해 마을과의 친밀한 접점을 만든다.
+
+서측은 개구부를 최소화해 프라이버시를 확보하고, 남측은 수직 벽체 사이로 채광을 유도했다. 이 벽체들은 마을의 도시 조직을 반영하는 리듬을 형성한다. 민원실 계단의 사선은 입구성을 강조하는 매개로 작용한다.`,
     },
     {
         id: "LOG_2403",
