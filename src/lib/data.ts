@@ -125,12 +125,39 @@ By dissolving the boundaries between exhibition and circulation, the museum tran
     {
         id: "LOG_2403",
         date: "2024.03.10",
-        title: "Hwaseong Botanical Garden Remodeling",
-        phase: "Competition",
+        title: "Hwaseong 'Our Flower' Botanical Garden",
+        phase: "Competition (2nd Prize)",
         status: "UNREACHABLE",
         size: "1.8GB",
         finalImage: "/projects/LOG_2403/MoneyShot.png",
-        description: "화성 우리꽃 식물원 건축 리모델링 (Hwaseong Our Flower Botanical Garden)\n\n노후화된 온실과 전시관을 리모델링하여 생태 교육과 휴식이 공존하는 새로운 식물원 환경을 조성하는 제안.",
+        location: "Hwaseong, Gyeonggi-do, Korea",
+        program: "Cultural Facility (Botanical Garden)",
+        architects: "LMST Architects",
+        description: `Hwaseong Our Flower Botanical Garden Remodeling (화성시 우리꽃식물원 리모델링)
+
+[Re-defining the Problem]
+The existing visitor center was merely a passageway—dark, low-ceilinged, and with disconnected circulation. Visitors would pass through quickly without staying. We redefined this space as a destination in itself.
+
+기존 방문자센터는 거쳐가는 공간이었다. 어두운 실내, 낮은 층고, 비순환적 동선. 방문자들은 눈으로만 보고 빠르게 빠져나갔다. 우리는 이 공간을 머무는 공간으로 재정의했다.
+
+[Design Logic]
+The original complex separated the visitor center from the greenhouse. We removed the central stair tower and extended the structure westward to create a continuous loop. Exhibition, rest, cafe, and viewing areas are reconstructed as a seamless public ring, generating synergy.
+
+기존 건물은 방문자센터와 사계절 온실이 분리되어 있었다. 중앙 계단탑을 철거하고 서측으로 확장하여 순환 가능한 배치를 만들었다. 전시, 휴게, 카페, 관람으로 이어지는 공공영역은 연속된 고리로 재구성되어 시너지를 생성한다.
+
+We reinterpreted the traditional Hanok rafter structure. The rafter system, with progressively changing slope and height, transforms static space into dynamic space. Calculating ceiling heights from 2,700mm at the ground to 5,300mm on the second floor allows visitors to experience spatial expansion.
+
+전통 한옥의 서까래 구조를 현대적으로 재해석했다. 경사도와 높이가 점진적으로 변화하는 연속된 서까래는 정적 공간을 동적 공간으로 전환한다. 1층 2,700mm에서 시작해 2층 5,300mm까지 확장되는 층고는 프로그램 특성에 따라 조정되며, 방문자는 공간감의 변화를 체험한다.
+
+[Program Reconfiguration]
+The 1st-floor 'Our Flower Library' includes a seed library and specialized botanical collection. The 'story path' combines indoor planter exhibits with views of the outdoor garden. The 2nd-floor cafe overlooks the western hills and ecological pond. The stepped seating serves as a resting spot and transforms into an event space.
+
+1층 우리꽃 도서관은 식물 관련 전문 서적과 종자 도서관을 포함한다. 우리꽃 이야기길은 실내 플랜터 전시와 창밖정원을 동시에 체험하는 경사로 동선이다. 2층 우리꽃 카페는 서측 등고산 전망과 생태연못을 조망한다. 계단식 좌석은 평상시 휴게 공간이며 강연과 이벤트 장소로 전환된다.
+
+[Structural System]
+We adopted a heavy timber structure (GLUELAM). The 3D curved roof components are prefabricated to minimize on-site work. The hierarchy of Girder-Purlin-Rafter supports the 30T structural decking. The wood texture harmonizes naturally with the botanical garden.
+
+중목구조를 채택했다. 3차원 곡면 지붕을 구성하는 부재는 공장 제작으로 현장 작업을 최소화한다. 콘크리트 기초 위 복합기초에 GLUELAM 기둥이 정착되고, 거더-펄린-서까래로 이어지는 위계적 구조가 30T 구조/마감 겸용 판재를 지지한다. 목재의 질감은 식물원과 자연스럽게 조화된다.`,
     },
     {
         id: "LOG_2402",
