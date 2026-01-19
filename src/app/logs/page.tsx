@@ -1,7 +1,9 @@
 "use client";
 
 import { INITIAL_LOGS, ProjectLog } from "@/lib/data";
+import { PHILOSOPHY_CONTENT } from "@/lib/philosophy";
 import Link from "next/link";
+import { useState } from "react";
 
 type LogNode = {
     type: "PROJECT" | "FILE";
@@ -10,11 +12,19 @@ type LogNode = {
     size?: string;
     id?: string; // Only for PROJECT
     ext?: string; // Only for FILE
+    content?: string; // Only for text files
 };
 
-const MOCK_FILES = [
+const MOCK_FILES: Omit<LogNode, "type">[] = [
     { date: "2026.01.15", name: "Facade_Pattern_Test", ext: ".gh", size: "124KB" },
     { date: "2026.01.14", name: "SH_Housing_Idea_Note", ext: ".txt", size: "2KB" },
+    {
+        date: "2024.02.01",
+        name: "LMST_MANIFESTO_v1.0",
+        ext: ".txt",
+        size: "4KB",
+        content: PHILOSOPHY_CONTENT
+    },
     { date: "2025.12.02", name: "Optimization_Logic_v3", ext: ".py", size: "15KB" },
     { date: "2025.07.11", name: "Site_Analysis_Map", ext: ".dwg", size: "5.4MB" },
     { date: "2025.04.20", name: "Structure_Review_Report", ext: ".pdf", size: "8.1MB" },
@@ -23,6 +33,8 @@ const MOCK_FILES = [
 ];
 
 export default function LogsIndexPage() {
+    const [selectedFile, setSelectedFile] = useState<LogNode | null>(null);
+
     // Merge Real Projects and Mock Files
     const nodes: LogNode[] = [
         ...INITIAL_LOGS.map((log: ProjectLog) => ({
@@ -38,6 +50,7 @@ export default function LogsIndexPage() {
             name: file.name,
             size: file.size,
             ext: file.ext,
+            content: file.content,
         })),
     ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
@@ -66,9 +79,8 @@ export default function LogsIndexPage() {
                             </div>
 
                             {groupedNodes[year].map((node, j) => {
-                                // Last item in the year group?
-                                // Actually we just tree it down.
                                 const isProject = node.type === "PROJECT";
+                                const isClickableFile = node.type === "FILE" && node.content;
 
                                 return (
                                     <div key={j} className="flex gap-2 pl-8 hover:bg-zinc-200/50 transition-colors group">
@@ -84,10 +96,13 @@ export default function LogsIndexPage() {
                                                 <span className="text-blue-600 ml-2">[DIR]</span>
                                             </Link>
                                         ) : (
-                                            <span className="text-zinc-500 cursor-not-allowed flex gap-2">
+                                            <div
+                                                className={`flex gap-2 ${isClickableFile ? "cursor-pointer text-zinc-800 hover:bg-black hover:text-white px-1 -ml-1" : "cursor-not-allowed text-zinc-500"}`}
+                                                onClick={() => isClickableFile && setSelectedFile(node)}
+                                            >
                                                 <span>{node.name}{node.ext}</span>
-                                                <span className="text-zinc-400 opacity-50 ml-2">({node.size})</span>
-                                            </span>
+                                                <span className={`${isClickableFile ? "" : "opacity-50"} ml-2 text-zinc-400`}>({node.size})</span>
+                                            </div>
                                         )}
                                     </div>
                                 );
@@ -104,6 +119,32 @@ export default function LogsIndexPage() {
                 TOTAL_NODES: {nodes.length}<br />
                 LAST_SYNC: {new Date().toLocaleDateString()}
             </div>
+
+            {/* File Viewer Modal */}
+            {selectedFile && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+                    onClick={() => setSelectedFile(null)}
+                >
+                    <div
+                        className="bg-white w-full max-w-2xl max-h-[80vh] overflow-y-auto border border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <div className="flex justify-between items-center mb-4 border-b border-black pb-2">
+                            <h2 className="font-bold text-lg">{selectedFile.name}{selectedFile.ext}</h2>
+                            <button
+                                onClick={() => setSelectedFile(null)}
+                                className="hover:bg-red-500 hover:text-white px-2 font-bold"
+                            >
+                                [X] CLOSE
+                            </button>
+                        </div>
+                        <pre className="whitespace-pre-wrap font-mono text-sm leading-relaxed text-zinc-800">
+                            {selectedFile.content}
+                        </pre>
+                    </div>
+                </div>
+            )}
         </main>
     );
 }
