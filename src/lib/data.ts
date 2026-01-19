@@ -128,7 +128,7 @@ By dissolving the boundaries between exhibition and circulation, the museum tran
         phase: "Competition (2025)",
         status: "RUNTIME_ERROR",
         size: "3.5GB",
-        finalImage: "/projects/LOG_2501/LOG_2501_AXON2.png",
+        finalImage: "/projects/LOG_2501/LOG_2501_AXON3.png",
         location: "120-2, Muk-dong, Jungnang-gu, Seoul",
         program: "Public Office Facility",
         siteArea: "1,290.00 m²",
