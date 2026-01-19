@@ -49,6 +49,10 @@
   .font-pretendard {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   }
+
+  .font-mono {
+    font-family: "Courier New", Courier, monospace;
+  }
 }
 
 @keyframes blink {
