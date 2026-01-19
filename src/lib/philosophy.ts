@@ -2,7 +2,7 @@ export const PHILOSOPHY_CONTENT = `Operating System
 
 The cursor blinks. Writing an architect’s statement is arguably the most inefficient task.
 
-A quick search reveals a pattern: 'Sustainability,' 'Poetic Sensibility,' 'Humanistic Value.' We do not believe these languages are wrong. They simply do not fit our work. So, instead of packaging, we describe our operating system.
+A few clicks reveal a pattern. 'Sustainability,' 'Placeness,' 'People-centric Space.' Everyone says the same thing. We do not believe these words are wrong. They just do not seem very different from saying nothing at all. So, we describe how we operate.
 
 We are Architects and Developers. Not of real estate, but of systems. It means creating the logic, relationships, and structures that make architecture work. We handle four variables: Logic, Matter, Space, Time.
 
@@ -20,7 +20,7 @@ Architecture is not completed by inspiration alone. Nor is it completed by calcu
 
 커서가 깜빡인다. 건축가 소개글을 쓰는 일만큼 비효율적인 작업도 드물다.
 
-검색해보면 다들 비슷하다. '지속 가능성', '시적 감수성', '인문학적 가치'. 우리는 이 언어들이 틀렸다고 생각하지 않는다. 다만 우리 작업을 설명하는 데 적합하지 않다. 그래서 우리는 포장 대신 작동 방식을 서술한다.
+검색해보면 다들 비슷하다. '지속 가능성', '장소성', '사람 중심의 공간'. 다들 같은 말을 한다. 우리는 이 언어들이 틀렸다고 생각하지 않는다. 다만 아무 말도 하지 않는 것과 크게 달라보이지 않는다. 그래서 우리는 작동 방식을 서술한다.
 
 우리는 건축가이자 개발자다. 부동산이 아니라 시스템을 개발한다. 건축이 작동하기 위한 논리, 관계, 구조를 만든다는 의미다. 우리가 다루는 요소는 네 가지다: Logic, Matter, Space, Time.
 
