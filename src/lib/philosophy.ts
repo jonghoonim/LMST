@@ -38,6 +38,11 @@ Grasshopper를 쓸 때도 있고, 손으로 스케치하며 반복할 때도 있
 
 ————————————————————————————————————
 
+2026.03.04. 건축사사무소 개설신고 완료
+2026.03.05. 사업자등록 완료
+
+————————————————————————————————————
+
 In the Korean architectural design market, 'process' does not exist. What exists are result images, award histories, and area tables.
 
 There is a structural gap between the criteria by which a design is selected and the criteria by which architecture actually works. Within this gap, most judgments evaporate. Why this dimension, why this circulation, why this structure.
