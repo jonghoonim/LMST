@@ -4,10 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { clsx } from "clsx";
 import { useEffect, useState } from "react";
+import { SyncModal } from "./SyncModal";
 
 export function SystemNav() {
     const pathname = usePathname();
     const [time, setTime] = useState("");
+    const [showSync, setShowSync] = useState(false);
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -84,6 +86,12 @@ export function SystemNav() {
                 <NavLink href="/logs" label="LOGS" />
                 <NavLink href="/profile" label="PROFILE" />
                 <NavLink href="/io" label="I/O" />
+                <button
+                    onClick={() => setShowSync(true)}
+                    className="sm:hidden px-2 py-1 font-mono text-sm uppercase tracking-tight text-zinc-500 hover:text-black transition-colors cursor-pointer"
+                >
+                    [SYNC]
+                </button>
             </div>
 
             <div className={clsx(
@@ -91,9 +99,17 @@ export function SystemNav() {
                 isTransparentPage ? "text-white mix-blend-difference" : "text-zinc-400"
             )}>
                 <SysMemIndicator />
+                <button
+                    onClick={() => setShowSync(true)}
+                    className="hover:text-black transition-colors cursor-pointer"
+                    title="Sync preferences across devices"
+                >
+                    SYNC
+                </button>
                 <span>SYS.READY</span>
                 <span>{time}</span>
             </div>
+            {showSync && <SyncModal onClose={() => setShowSync(false)} />}
         </nav>
     );
 }

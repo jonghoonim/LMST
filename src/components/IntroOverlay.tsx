@@ -1,16 +1,20 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePreferences } from "./PreferencesProvider";
 
 export function IntroOverlay() {
+    const { prefs, updatePrefs, isLoaded } = usePreferences();
     const [step, setStep] = useState(0);
     const [visible, setVisible] = useState(true);
     const [ready, setReady] = useState(false);
 
     useEffect(() => {
-        // Check session storage to only run once per session
+        if (!isLoaded) return;
+
+        // Skip if preference says so, or already seen this session
         const hasSeenIntro = sessionStorage.getItem("lmst_intro_seen_v25");
-        if (hasSeenIntro) {
+        if (prefs.skipIntro || hasSeenIntro) {
             setVisible(false);
             return;
         }
@@ -25,11 +29,9 @@ export function IntroOverlay() {
             { time: 4300, action: () => { setStep(7); setReady(true); } }, // AWAITING_INPUT + Ready
         ];
 
-        timeline.forEach(({ time, action }) => {
-            setTimeout(action, time);
-        });
-
-    }, []);
+        const timers = timeline.map(({ time, action }) => setTimeout(action, time));
+        return () => timers.forEach(clearTimeout);
+    }, [isLoaded, prefs.skipIntro]);
 
     const handleEnter = () => {
         // Only allow click if the sequence is complete (ready)

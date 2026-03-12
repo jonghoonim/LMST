@@ -5,6 +5,7 @@ import { INITIAL_LOGS } from "@/lib/data";
 import Link from "next/link";
 import Image from "next/image";
 import { clsx } from "clsx";
+import { usePreferences } from "@/components/PreferencesProvider";
 
 // Mock raw data for demonstration
 const MOCK_RAW_DATA = `OMA-STYLE NARRATION MOCKUP:
@@ -38,8 +39,13 @@ function FadeInImage(props: React.ComponentProps<typeof Image>) {
 export default function LogDetailPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params);
     const log = INITIAL_LOGS.find((l) => l.id === id);
+    const { trackLog } = usePreferences();
     const [isExpanded, setIsExpanded] = useState(false);
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
+    useEffect(() => {
+        if (log) trackLog(id);
+    }, [id, log, trackLog]);
 
     if (!log) {
         return (
