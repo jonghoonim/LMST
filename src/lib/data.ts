@@ -394,7 +394,7 @@ We adopted a heavy timber structure (GLUELAM). The 3D curved roof components are
                 src: "/projects/LOG_2402/01_Final.jpg",
                 filename: "01_Final.jpg",
                 label: "Final aerial. Full landscape, sports field, pedestrian bridge complete.",
-                meta: "Rhino ViewCapture + Photoshop / 16.2MB",
+                meta: "Rhino Display Mode / 16.2MB",
             },
             {
                 timestamp: "2024.07.08 22:00",
@@ -402,7 +402,7 @@ We adopted a heavy timber structure (GLUELAM). The 3D curved roof components are
                 src: "/projects/LOG_2402/04_Final.jpg",
                 filename: "04_Final.jpg",
                 label: "Street-level perspective. The new school meets Bomunsa-gil.",
-                meta: "Rhino ViewCapture + Photoshop / 8.1MB",
+                meta: "Rhino Display Mode / 8.1MB",
             },
             {
                 timestamp: "2024.07.12 23:59",

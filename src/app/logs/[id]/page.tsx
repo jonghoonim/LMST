@@ -271,7 +271,11 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                                                                     alt={artifact.label}
                                                                     width={1200}
                                                                     height={800}
-                                                                    className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500 pointer-events-none select-none"
+                                                                    className={`w-full h-auto transition-all duration-500 pointer-events-none select-none ${
+                                                                        artifact.type === "SITE_PHOTO"
+                                                                            ? "grayscale"
+                                                                            : "grayscale hover:grayscale-0"
+                                                                    }`}
                                                                 />
                                                             </div>
                                                         )}
