@@ -21,6 +21,7 @@ Final compilation achieved with 0.4s compute time per iteration. The system rema
 
 function FadeInImage(props: React.ComponentProps<typeof Image>) {
     const [isLoading, setIsLoading] = useState(true);
+    const hasGrayscale = props.className?.includes("grayscale") && !props.className?.includes("grayscale-0");
 
     return (
         <Image
@@ -28,7 +29,7 @@ function FadeInImage(props: React.ComponentProps<typeof Image>) {
             className={clsx(
                 props.className,
                 "transition-all duration-700 ease-in-out",
-                isLoading ? "scale-[1.02] blur-xl grayscale opacity-0" : "scale-100 blur-0 grayscale-0 opacity-100"
+                isLoading ? "scale-[1.02] blur-xl grayscale opacity-0" : `scale-100 blur-0 opacity-100 ${hasGrayscale ? "" : "grayscale-0"}`
             )}
             onLoadingComplete={() => setIsLoading(false)}
         />
