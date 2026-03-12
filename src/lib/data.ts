@@ -244,10 +244,43 @@ We adopted a heavy timber structure (GLUELAM). The 3D curved roof components are
         id: "LOG_2402",
         date: "2024.02.14",
         title: "Seoul Dongshin Elem. Green Smart School",
-        phase: "Competition",
+        phase: "Competition (2024)",
         status: "RUNTIME_ERROR",
         size: "4.2GB",
-        description: "서울동신초등학교 그린스마트 미래학교 (Seoul Dongshin Elementary School)\n\n미래 교육을 위한 스마트 학습 환경과 친환경 건축 요소를 결합한 학교 개축 프로젝트.",
+        finalImage: "/projects/LOG_2402/04_Final.jpg",
+        location: "50, Bomunsa-gil, Seongbuk-gu, Seoul",
+        program: "Educational Facility (Elementary School)",
+        structure: "RC (Reinforced Concrete)",
+        architects: "LMST Architects",
+        description: `Seoul Dongshin Elementary School Green Smart School
+
+[Topographic Response]
+The site sits on a sloped terrain in Seongbuk-gu, surrounded by dense residential fabric and high-rise apartment complexes. The existing school suffered from disconnected levels and dark interior corridors. We accepted the elevation difference as a design driver rather than an obstacle, carving the building into the hillside to create a multi-level ground condition.
+
+[Atrium as Engine]
+A central atrium penetrates through the building section, drawing daylight deep into the interior and connecting all floor levels visually. Stepped seating along the atrium serves as an informal gathering space, a reading area, and an auditorium. The atrium operates as the school's social and environmental engine—driving natural ventilation through the stack effect while fostering spontaneous interaction between students.
+
+[Material Dialogue]
+The façade establishes a dialogue between the existing brick context and contemporary transparency. Red-toned brick volumes anchor the building to its neighborhood, while large glass curtain walls expose the active interior life of the school. The interplay between solid brick masses and transparent voids articulates a rhythm that responds to both the residential scale and the institutional program.
+
+[Circulation as Learning Space]
+Corridors are no longer mere passages. They expand, contract, rise, and connect to exterior terraces at multiple levels. Each floor offers distinct spatial qualities—widened corridor zones accommodate small group activities, individual study, and informal play. The boundary between corridor and classroom dissolves, transforming circulation into a continuous learning landscape.
+
+--------------------------------------------------
+
+서울동신초등학교 그린스마트 미래학교
+
+[지형의 수용]
+대지는 성북구의 경사지에 위치하며, 밀도 높은 주거지와 고층 아파트 단지에 둘러싸여 있다. 기존 학교는 층간 단절과 어두운 내부 복도가 문제였다. 우리는 고저차를 설계의 장애가 아닌 동력으로 수용하여, 건물을 경사지에 맞물리게 배치함으로써 다층적 지면 조건을 만들었다.
+
+[아트리움이라는 엔진]
+건물 단면을 관통하는 중앙 아트리움은 자연광을 내부 깊숙이 끌어들이며 모든 층을 시각적으로 연결한다. 아트리움을 따라 배치된 계단식 좌석은 비공식적 모임 장소이자 독서 공간, 강당의 역할을 겸한다. 아트리움은 굴뚝 효과를 통한 자연 환기를 유도하는 동시에, 학생들 간의 자발적 교류를 촉진하는 학교의 사회적·환경적 엔진으로 작동한다.
+
+[재료의 대화]
+입면은 기존의 벽돌 맥락과 현대적 투명성 사이의 대화를 시도한다. 붉은 톤의 벽돌 볼륨은 건물을 주변 마을에 정착시키고, 대형 유리 커튼월은 학교 내부의 활동적인 풍경을 외부로 노출시킨다. 육중한 벽돌 매스와 투명한 보이드의 교차는 주거 스케일과 시설 프로그램 모두에 반응하는 리듬을 형성한다.
+
+[동선이 곧 학습 공간]
+복도는 더 이상 단순한 통로가 아니다. 확장되고, 수축되며, 높아지고, 여러 레벨의 외부 테라스로 연결된다. 각 층은 고유한 공간적 성격을 가진다—넓어진 복도 영역은 소그룹 활동, 개인 학습, 비공식적 놀이를 수용한다. 복도와 교실의 경계가 허물어지며, 동선 자체가 연속적인 학습의 풍경으로 전환된다.`,
     },
     {
         id: "LOG_2401",
