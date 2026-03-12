@@ -1,3 +1,12 @@
+export type ArchiveArtifact = {
+    timestamp: string;       // e.g. "2024.06.25 14:29"
+    type: "SITE_PHOTO" | "MASS_STUDY" | "RENDER_WIP" | "RENDER_FINAL" | "DIAGRAM" | "DOCUMENT";
+    src: string;             // image path
+    filename: string;        // original filename
+    label: string;           // short description
+    meta?: string;           // file size, tool used, etc.
+};
+
 export type ProjectLog = {
     id: string;
     date: string;
@@ -10,6 +19,7 @@ export type ProjectLog = {
     finalImage?: string;
     rawImage?: string;
     images?: string[]; // Array of image paths for MOS-style grid display
+    archive?: ArchiveArtifact[]; // Archaeological timeline artifacts
     // OMA Style Data
     location?: string;
     client?: string;
@@ -297,6 +307,112 @@ We adopted a heavy timber structure (GLUELAM). The 3D curved roof components are
         structure: "RC (Reinforced Concrete), Partial Steel",
         exteriorFinish: "Clay Brick, Exposed Concrete, Low-E Triple Glazing, Aluminum Insulated Frame",
         architects: "LMST Architects",
+        archive: [
+            {
+                timestamp: "2024.06.13 09:00",
+                type: "DOCUMENT",
+                src: "",
+                filename: "20240613_Topo pancake model.3dm",
+                label: "Terrain extraction from survey data. Contour lines converted to 3D topology.",
+                meta: "Rhino 8 / 45.2MB",
+            },
+            {
+                timestamp: "2024.06.25 14:29",
+                type: "MASS_STUDY",
+                src: "/projects/LOG_2402/archive/mass_0625_courtyard.jpg",
+                filename: "ViewCapture20240625_142912.jpg",
+                label: "Interior courtyard study. Stepped section through the bridging lounge.",
+                meta: "Rhino ViewCapture / 7.9MB",
+            },
+            {
+                timestamp: "2024.06.25 14:30",
+                type: "MASS_STUDY",
+                src: "/projects/LOG_2402/archive/mass_0625_birdseye.jpg",
+                filename: "ViewCapture20240625_143020.jpg",
+                label: "Bird's eye view. Massing on sloped site with retaining wall logic.",
+                meta: "Rhino ViewCapture / 3.6MB",
+            },
+            {
+                timestamp: "2024.06.25 14:35",
+                type: "MASS_STUDY",
+                src: "/projects/LOG_2402/archive/mass_0625_interior.jpg",
+                filename: "ViewCapture20240625_143525.jpg",
+                label: "Front elevation. Classroom grid and entrance canopy articulation.",
+                meta: "Rhino ViewCapture / 3.4MB",
+            },
+            {
+                timestamp: "2024.07.01 11:00",
+                type: "SITE_PHOTO",
+                src: "/projects/LOG_2402/archive/site_0701_street.jpg",
+                filename: "IMG_0482.JPG",
+                label: "Approach from Bomunsa-gil. Existing school behind apartment blocks.",
+                meta: "iPhone / 5.0MB",
+            },
+            {
+                timestamp: "2024.07.01 11:15",
+                type: "SITE_PHOTO",
+                src: "/projects/LOG_2402/archive/site_0701_yard.jpg",
+                filename: "IMG_0500.JPG",
+                label: "Schoolyard stairs and canopy. The slope that defines the section.",
+                meta: "iPhone / 4.9MB",
+            },
+            {
+                timestamp: "2024.07.01 11:30",
+                type: "SITE_PHOTO",
+                src: "/projects/LOG_2402/archive/site_0701_entrance.jpg",
+                filename: "IMG_0530.JPG",
+                label: "Main entrance with children's mural. The school to be replaced.",
+                meta: "iPhone / 12.9MB",
+            },
+            {
+                timestamp: "2024.07.01 11:45",
+                type: "SITE_PHOTO",
+                src: "/projects/LOG_2402/archive/site_0701_facade.jpg",
+                filename: "IMG_0560.JPG",
+                label: "South facade and entry signage. Brick + concrete + polycarbonate canopy.",
+                meta: "iPhone / 6.4MB",
+            },
+            {
+                timestamp: "2024.07.07 09:00",
+                type: "RENDER_WIP",
+                src: "/projects/LOG_2402/archive/render_0707_birdseye.jpg",
+                filename: "img_01.jpg",
+                label: "First render pass. Bird's eye without landscape — raw massing exposed.",
+                meta: "V-Ray / 20.6MB",
+            },
+            {
+                timestamp: "2024.07.07 14:00",
+                type: "RENDER_WIP",
+                src: "/projects/LOG_2402/archive/render_0707_aerial.jpg",
+                filename: "01.jpg",
+                label: "Aerial with partial context. Testing building orientation and shadow.",
+                meta: "V-Ray / 6.5MB",
+            },
+            {
+                timestamp: "2024.07.08 18:00",
+                type: "RENDER_FINAL",
+                src: "/projects/LOG_2402/01_Final.jpg",
+                filename: "01_Final.jpg",
+                label: "Final aerial. Full landscape, sports field, pedestrian bridge complete.",
+                meta: "V-Ray + Photoshop / 16.2MB",
+            },
+            {
+                timestamp: "2024.07.08 22:00",
+                type: "RENDER_FINAL",
+                src: "/projects/LOG_2402/04_Final.jpg",
+                filename: "04_Final.jpg",
+                label: "Street-level perspective. The new school meets Bomunsa-gil.",
+                meta: "V-Ray + Photoshop / 8.1MB",
+            },
+            {
+                timestamp: "2024.07.12 23:59",
+                type: "DOCUMENT",
+                src: "",
+                filename: "설계설명서.pdf",
+                label: "Final submission document. 16 pages. Competition deadline.",
+                meta: "InDesign → PDF / 52MB",
+            },
+        ],
         description: `SCAPE BRIDGING: Seoul Dongshin Elementary Green Smart School
 
 Today's education extends beyond one-directional information transfer, operating through multidimensional relationships between city, nature, and people. Dongshin Elementary School aims to become a new educational space where these diverse relationships are physically and emotionally connected, communicated, and integrated. Going beyond simple architectural connections, the project proposes a school that more actively bridges environments—Landscape, Cityscape, Eduscape—creating a space where nature, city, community, and diverse learning environments become one.

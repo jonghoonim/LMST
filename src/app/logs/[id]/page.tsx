@@ -1,7 +1,7 @@
 "use client";
 
 import { use, useEffect, useState } from "react";
-import { INITIAL_LOGS } from "@/lib/data";
+import { INITIAL_LOGS, ArchiveArtifact } from "@/lib/data";
 import Link from "next/link";
 import Image from "next/image";
 import { clsx } from "clsx";
@@ -198,41 +198,147 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                             </div>
                         </div>
 
-                        {/* 4. Process Images (The "Small Images") */}
-                        <div className="w-full">
-                            <h2 className="text-sm font-bold uppercase border-b-2 border-black mb-8 pb-1">Process Documentation</h2>
+                        {/* 4. Archive Timeline (Archaeological Excavation) */}
+                        {log.archive && log.archive.length > 0 ? (
+                            <div className="w-full">
+                                <h2 className="text-sm font-bold uppercase border-b-2 border-black mb-0 pb-2">
+                                    Excavation Log
+                                    <span className="font-normal text-zinc-500 ml-2">
+                                        {log.archive.length} artifacts recovered
+                                    </span>
+                                </h2>
 
-                            {log.rawImage ? (
-                                <div className="grid grid-cols-1 gap-8">
-                                    <div
-                                        className="relative w-full bg-zinc-100 overflow-hidden"
-                                        onContextMenu={(e) => e.preventDefault()}
-                                    >
-                                        <FadeInImage
-                                            src={log.rawImage}
-                                            alt="Process Log"
-                                            width={1200}
-                                            height={800}
-                                            className="w-full h-auto grayscale hover:grayscale-0 transition-grayscale duration-300 pointer-events-none"
-                                        />
-                                        <div className="text-xs mt-2 font-mono text-zinc-500">
-                                            FIG 1. RAW_CAPTURE_{log.date}
+                                <div className="relative mt-0">
+                                    {/* Timeline spine */}
+                                    <div className="absolute left-[7px] top-0 bottom-0 w-px bg-black/15" />
+
+                                    {log.archive.map((artifact, i) => {
+                                        const typeColors: Record<string, string> = {
+                                            SITE_PHOTO: "bg-emerald-600",
+                                            MASS_STUDY: "bg-blue-600",
+                                            RENDER_WIP: "bg-amber-500",
+                                            RENDER_FINAL: "bg-black",
+                                            DIAGRAM: "bg-violet-600",
+                                            DOCUMENT: "bg-zinc-400",
+                                        };
+                                        const isNewDay = i === 0 || artifact.timestamp.slice(0, 10) !== log.archive![i - 1].timestamp.slice(0, 10);
+
+                                        return (
+                                            <div key={i}>
+                                                {/* Date separator */}
+                                                {isNewDay && (
+                                                    <div className="flex items-center gap-3 pt-8 pb-3 pl-6">
+                                                        <div className="font-mono text-xs font-bold text-black tracking-wider">
+                                                            {artifact.timestamp.slice(0, 10).replace(/\./g, "/")}
+                                                        </div>
+                                                        <div className="flex-1 h-px bg-black/10" />
+                                                    </div>
+                                                )}
+
+                                                <div className="relative flex gap-4 pl-0 pb-6 group">
+                                                    {/* Timeline dot */}
+                                                    <div className={clsx(
+                                                        "relative z-10 w-[15px] h-[15px] rounded-full border-2 border-white shrink-0 mt-1 transition-transform group-hover:scale-125",
+                                                        typeColors[artifact.type] || "bg-zinc-400"
+                                                    )} />
+
+                                                    {/* Content */}
+                                                    <div className="flex-1 min-w-0">
+                                                        {/* Header row */}
+                                                        <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
+                                                            <span className="font-mono text-[10px] text-zinc-400">
+                                                                {artifact.timestamp.slice(11) || "—"}
+                                                            </span>
+                                                            <span className={clsx(
+                                                                "font-mono text-[10px] text-white px-1.5 py-0.5 uppercase tracking-wider",
+                                                                typeColors[artifact.type] || "bg-zinc-400"
+                                                            )}>
+                                                                {artifact.type.replace(/_/g, " ")}
+                                                            </span>
+                                                            <span className="font-mono text-[10px] text-zinc-400 truncate">
+                                                                {artifact.filename}
+                                                            </span>
+                                                        </div>
+
+                                                        {/* Image */}
+                                                        {artifact.src && (
+                                                            <div
+                                                                className="relative w-full mb-2 overflow-hidden bg-zinc-100"
+                                                                onContextMenu={(e) => e.preventDefault()}
+                                                            >
+                                                                <FadeInImage
+                                                                    src={artifact.src}
+                                                                    alt={artifact.label}
+                                                                    width={1200}
+                                                                    height={800}
+                                                                    className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500 pointer-events-none select-none"
+                                                                />
+                                                            </div>
+                                                        )}
+
+                                                        {/* Label */}
+                                                        <p className="font-mono text-xs text-zinc-600 leading-relaxed">
+                                                            {artifact.label}
+                                                        </p>
+                                                        {artifact.meta && (
+                                                            <p className="font-mono text-[10px] text-zinc-400 mt-1">
+                                                                {artifact.meta}
+                                                            </p>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+
+                                    {/* End marker */}
+                                    <div className="flex items-center gap-3 pl-0 pt-2">
+                                        <div className="w-[15px] h-[15px] border-2 border-black/20 rounded-full shrink-0 flex items-center justify-center">
+                                            <div className="w-[5px] h-[5px] bg-black/20 rounded-full" />
+                                        </div>
+                                        <span className="font-mono text-[10px] text-zinc-400 uppercase">
+                                            end_of_excavation
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        ) : (
+                            /* Fallback: Original Process Documentation */
+                            <div className="w-full">
+                                <h2 className="text-sm font-bold uppercase border-b-2 border-black mb-8 pb-1">Process Documentation</h2>
+
+                                {log.rawImage ? (
+                                    <div className="grid grid-cols-1 gap-8">
+                                        <div
+                                            className="relative w-full bg-zinc-100 overflow-hidden"
+                                            onContextMenu={(e) => e.preventDefault()}
+                                        >
+                                            <FadeInImage
+                                                src={log.rawImage}
+                                                alt="Process Log"
+                                                width={1200}
+                                                height={800}
+                                                className="w-full h-auto grayscale hover:grayscale-0 transition-grayscale duration-300 pointer-events-none"
+                                            />
+                                            <div className="text-xs mt-2 font-mono text-zinc-500">
+                                                FIG 1. RAW_CAPTURE_{log.date}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ) : (
-                                <div className="text-zinc-400 italic">topological_data_pending...</div>
-                            )}
+                                ) : (
+                                    <div className="text-zinc-400 italic">topological_data_pending...</div>
+                                )}
+                            </div>
+                        )}
 
-                            {log.warningMessage && (
-                                <div className="mt-12 p-6 border-l-4 border-red-600 bg-red-50">
-                                    <div className="text-red-600 font-bold uppercase mb-2 text-xs">System Alert</div>
-                                    <div className="text-red-600 font-mono text-lg font-bold">
-                                        {log.warningMessage}
-                                    </div>
+                        {log.warningMessage && (
+                            <div className="mt-12 p-6 border-l-4 border-red-600 bg-red-50">
+                                <div className="text-red-600 font-bold uppercase mb-2 text-xs">System Alert</div>
+                                <div className="text-red-600 font-mono text-lg font-bold">
+                                    {log.warningMessage}
                                 </div>
-                            )}
-                        </div>
+                            </div>
+                        )}
 
                     </div>
                 </div>
