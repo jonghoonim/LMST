@@ -65,7 +65,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                                 width={3840}
                                 height={2160}
                                 sizes="100vw"
-                                className="w-full h-auto"
+                                className={`w-full h-auto ${log.id === "LOG_2402" ? "grayscale" : ""}`}
                                 priority
                                 unoptimized
                             />
@@ -112,7 +112,7 @@ export default function LogDetailPage({ params }: { params: Promise<{ id: string
                                     width={3840}
                                     height={2160}
                                     sizes="100vw"
-                                    className="w-full h-auto select-none pointer-events-none"
+                                    className={`w-full h-auto select-none pointer-events-none ${log.id === "LOG_2402" ? "grayscale" : ""}`}
                                     priority
                                     unoptimized
                                 />
