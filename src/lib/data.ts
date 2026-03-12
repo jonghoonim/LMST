@@ -9,7 +9,7 @@ export type ProjectLog = {
     warningMessage?: string;
     finalImage?: string;
     rawImage?: string;
-    // OMA Style Data
+    images?: string[]; // Array of image paths for MOS-style grid display
     // OMA Style Data
     location?: string;
     client?: string;
@@ -33,6 +33,13 @@ export const INITIAL_LOGS: ProjectLog[] = [
         status: "COMPILED",
         size: "12.4GB",
         finalImage: "/projects/LOG_2506/05_Stone_Front_LMST.png",
+        images: [
+            "/projects/LOG_2506/05_Stone_Front_LMST.png",
+            "/projects/LOG_2506/bathroom_detail.png",
+            "/projects/LOG_2506/assembly.png",
+            "/projects/LOG_2506/panel_variations.png",
+            "/projects/LOG_2506/05_Stone_Front_LMST_RESIZE.png",
+        ],
         client: "POSCO E&C / POSCO Steel",
         program: "R&D, Product Design",
         structure: "PosART, Prefab Frame",
@@ -60,6 +67,17 @@ POSCO와의 협업을 통해 고해상도 프린팅 강판(PosART)을 적용, �
         status: "UNREACHABLE",
         size: "2.1GB",
         finalImage: "/projects/LOG_2505/LOG_2505_Final_v2.jpg",
+        images: [
+            "/projects/LOG_2505/LOG_2505_Final_v2.jpg",
+            "/projects/LOG_2505/주출입구 전경.jpg",
+            "/projects/LOG_2505/부출입구 전경_2048.jpg",
+            "/projects/LOG_2505/3층 도서실 전경.jpg",
+            "/projects/LOG_2505/4층 공용부 전경.jpg",
+            "/projects/LOG_2505/stepback.png",
+            "/projects/LOG_2505/atrium.png",
+            "/projects/LOG_2505/garden.png",
+            "/projects/LOG_2505/LOG_2505_FINAL.jpg",
+        ],
         location: "Gangseo-gu, Seoul, Korea",
         program: "Educational Facility (Elementary School)",
         siteArea: "13,836.30 m²",
@@ -95,6 +113,13 @@ Reinterpreting the brick materiality of the existing main building, the new desi
         size: "8.37GB",
         finalImage: "/images/LOG_2503_FINAL.png",
         rawImage: "/images/LOG_2503_PROCESS.png",
+        images: [
+            "/images/LOG_2503_FINAL.png",
+            "/projects/LOG_2503/exterior.png",
+            "/projects/LOG_2503/atrium.png",
+            "/projects/LOG_2503/section.png",
+            "/images/LOG_2503_PROCESS.png",
+        ],
         location: "Hwaseong, Gyeonggi-do, Korea",
         program: "Cultural & Educational Facility",
         siteArea: "4,251.20 m²",
@@ -129,6 +154,16 @@ By dissolving the boundaries between exhibition and circulation, the museum tran
         status: "RUNTIME_ERROR",
         size: "3.5GB",
         finalImage: "/projects/LOG_2501/LOG_2501_AXON4.png",
+        images: [
+            "/projects/LOG_2501/LOG_2501_AXON4.png",
+            "/projects/LOG_2501/facade.png",
+            "/projects/LOG_2501/interior.png",
+            "/projects/LOG_2501/LOG_2501_Final.png",
+            "/projects/LOG_2501/LOG_2501_AXON.png",
+            "/projects/LOG_2501/LOG_2501_AXON2.png",
+            "/projects/LOG_2501/LOG_2501_AXON3.png",
+            "/projects/LOG_2501/LOG_2501.png",
+        ],
         location: "120-2, Muk-dong, Jungnang-gu, Seoul",
         program: "Public Office Facility",
         siteArea: "1,290.00 m²",
@@ -198,6 +233,11 @@ The west minimizes openings for privacy, while the south induces daylight betwee
         status: "UNREACHABLE",
         size: "1.8GB",
         finalImage: "/projects/LOG_2403/MoneyShot.png",
+        images: [
+            "/projects/LOG_2403/MoneyShot.png",
+            "/projects/LOG_2403/glulam.png",
+            "/projects/LOG_2403/cafe.png",
+        ],
         location: "179-18, Maegok-ri, Paltan-myeon, Hwaseong-si",
         program: "Cultural Facility (Botanical Garden)",
         siteArea: "45,525.00 m²",
@@ -247,6 +287,8 @@ We adopted a heavy timber structure (GLUELAM). The 3D curved roof components are
         phase: "Competition",
         status: "RUNTIME_ERROR",
         size: "4.2GB",
+        finalImage: "/projects/LOG_2402/04_Final.jpg",
+        images: ["/projects/LOG_2402/04_Final.jpg"],
         description: "서울동신초등학교 그린스마트 미래학교 (Seoul Dongshin Elementary School)\n\n미래 교육을 위한 스마트 학습 환경과 친환경 건축 요소를 결합한 학교 개축 프로젝트.",
     },
     {
@@ -257,6 +299,9 @@ We adopted a heavy timber structure (GLUELAM). The 3D curved roof components are
         status: "RUNTIME_ERROR",
         size: "3.9GB",
         finalImage: "/projects/LOG_2401/LOG_2401.png",
+        images: [
+            "/projects/LOG_2401/LOG_2401.png",
+        ],
         location: "29, Majang-ro 29-gil, Seongdong-gu, Seoul",
         program: "Educational & Research Facility",
         siteArea: "17,715.10 m²",
