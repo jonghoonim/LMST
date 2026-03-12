@@ -284,12 +284,52 @@ We adopted a heavy timber structure (GLUELAM). The 3D curved roof components are
         id: "LOG_2402",
         date: "2024.02.14",
         title: "Seoul Dongshin Elem. Green Smart School",
-        phase: "Competition",
+        phase: "Competition (2024)",
         status: "RUNTIME_ERROR",
         size: "4.2GB",
         finalImage: "/projects/LOG_2402/04_Final.jpg",
         images: ["/projects/LOG_2402/04_Final.jpg"],
-        description: "서울동신초등학교 그린스마트 미래학교 (Seoul Dongshin Elementary School)\n\n미래 교육을 위한 스마트 학습 환경과 친환경 건축 요소를 결합한 학교 개축 프로젝트.",
+        location: "50, Bomunsa-gil, Seongbuk-gu, Seoul",
+        program: "Educational Facility (Elementary School)",
+        siteArea: "16,961.90 m\u00B2",
+        totalArea: "8,214.25 m\u00B2",
+        buildingScope: "B1 / 5F (H: 18m)",
+        structure: "RC (Reinforced Concrete), Partial Steel",
+        exteriorFinish: "Clay Brick, Exposed Concrete, Low-E Triple Glazing, Aluminum Insulated Frame",
+        architects: "LMST Architects",
+        description: `SCAPE BRIDGING: Seoul Dongshin Elementary Green Smart School
+
+Today's education extends beyond one-directional information transfer, operating through multidimensional relationships between city, nature, and people. Dongshin Elementary School aims to become a new educational space where these diverse relationships are physically and emotionally connected, communicated, and integrated. Going beyond simple architectural connections, the project proposes a school that more actively bridges environments—Landscape, Cityscape, Eduscape—creating a space where nature, city, community, and diverse learning environments become one.
+
+[Connection]
+Through bridging lounges, open libraries, sunken stairs, and performance steps, the interior and exterior of the building are naturally connected, enabling free and flexible movement.
+
+[Communication]
+Beyond homeroom classrooms, spaces such as the library, hub-type areas (lower-grade free learning spaces, upper-grade mini book cafes), bridging lounges, and club rooms are flexibly arranged to create an environment where students can communicate and collaborate. Open spaces are placed at circulation nodes where masses intersect, encouraging natural exchange.
+
+[Mediation]
+Multi-functional spaces are planned to balance learning, play, and rest, while educators can observe and supervise from close proximity. Lower-grade floor-seated classrooms and teacher research rooms paired with hub-type spaces enable appropriate levels of supervision and care.
+
+[Integration]
+The interior and exterior are naturally connected, creating a nature-friendly learning environment through natural lighting, ventilation, and greenery. As a platform strengthening connections with the future local community, the school provides opportunities for students to interact with and participate in the community. Beyond simple curriculum, diverse learning experiences in arts, physical education, and ecology are integrated throughout the building, supporting holistic student development.
+
+--------------------------------------------------
+
+스케이프 브릿징: 서울동신초등학교 그린스마트 미래학교
+
+오늘날의 교육은 일방향의 정보 전달을 넘어 도시와 자연, 그리고 사람과의 다양한 관계를 통해 다차원적으로 이루어진다. 동신초등학교는 이러한 다양한 관계들이 물리적, 정서적으로 연결되고 소통하며 통합되는 새로운 교육공간이 되고자 한다. 단순한 건축적 연결을 넘어 전체적인 환경(Landscape, Cityscape, Eduscape)을 보다 적극적으로 연결하고 그에 다가갈 수 있는 공간 — 자연, 도시, 커뮤니티, 그리고 다양한 학습환경이 하나가 되는 학교를 제안한다.
+
+[연결 CONNECTION]
+브릿징 라운지, 개방형 도서관, 선큰 계단, 공연 스텝 등을 통하여 건물 내외부를 자연스럽게 연결하여 자유롭고 유연한 이동이 가능하도록 계획한다.
+
+[소통 COMMUNICATION]
+상주 교실뿐 아니라 도서관, 허브형 공간(저학년 자유학습공간, 고학년 미니북카페), 브릿징 라운지, 동아리실 등의 공간을 유연하게 배치하여 학생들이 서로 소통하고 협력할 수 있는 환경을 조성한다. 매스가 교차하는 동선의 결절점에는 오픈 공간을 마련하여 학생들이 자연스럽게 교류하고 소통할 수 있도록 한다.
+
+[매개 MEDIATION]
+학습과 놀이, 휴식을 균형 있게 할 수 있는 멀티 기능 공간을 계획하고 교육의 주체가 근거리에서 보호 관찰할 수 있는 환경을 마련한다. 저학년 복층형 좌식 교실과 허브형 공간과 한쌍으로 계획된 교사연구실을 통하여 적정 수준의 감시와 보호가 가능하도록 한다.
+
+[통합 INTEGRATION]
+건물 내부와 외부를 자연스럽게 연결하여 자연 채광, 환기, 녹지의 유입을 통해 자연 친화적인 학습 환경을 조성한다. 미래 지역 사회와의 연결을 강화할 수 있는 플랫폼으로서의 학교로서 학생들이 지역 사회와 상호작용하고 참여할 수 있는 기회를 제공한다. 교실에서 이루어지는 단순 교과 과정을 넘어서 예술, 체육, 생태 등 다양한 분야의 학습 경험이 건물 내외부에 통합되어 학생들의 전인적 성장을 지원한다.`,
     },
     {
         id: "LOG_2401",
