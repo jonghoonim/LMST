@@ -378,7 +378,7 @@ We adopted a heavy timber structure (GLUELAM). The 3D curved roof components are
                 src: "/projects/LOG_2402/archive/render_0707_birdseye.jpg",
                 filename: "img_01.jpg",
                 label: "First render pass. Bird's eye without landscape — raw massing exposed.",
-                meta: "V-Ray / 20.6MB",
+                meta: "Rhino ViewCapture / 20.6MB",
             },
             {
                 timestamp: "2024.07.07 14:00",
@@ -386,7 +386,7 @@ We adopted a heavy timber structure (GLUELAM). The 3D curved roof components are
                 src: "/projects/LOG_2402/archive/render_0707_aerial.jpg",
                 filename: "01.jpg",
                 label: "Aerial with partial context. Testing building orientation and shadow.",
-                meta: "V-Ray / 6.5MB",
+                meta: "Rhino ViewCapture / 6.5MB",
             },
             {
                 timestamp: "2024.07.08 18:00",
@@ -394,7 +394,7 @@ We adopted a heavy timber structure (GLUELAM). The 3D curved roof components are
                 src: "/projects/LOG_2402/01_Final.jpg",
                 filename: "01_Final.jpg",
                 label: "Final aerial. Full landscape, sports field, pedestrian bridge complete.",
-                meta: "V-Ray + Photoshop / 16.2MB",
+                meta: "Rhino ViewCapture + Photoshop / 16.2MB",
             },
             {
                 timestamp: "2024.07.08 22:00",
@@ -402,7 +402,7 @@ We adopted a heavy timber structure (GLUELAM). The 3D curved roof components are
                 src: "/projects/LOG_2402/04_Final.jpg",
                 filename: "04_Final.jpg",
                 label: "Street-level perspective. The new school meets Bomunsa-gil.",
-                meta: "V-Ray + Photoshop / 8.1MB",
+                meta: "Rhino ViewCapture + Photoshop / 8.1MB",
             },
             {
                 timestamp: "2024.07.12 23:59",
