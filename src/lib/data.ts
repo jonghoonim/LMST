@@ -36,6 +36,129 @@ export type ProjectLog = {
 
 export const INITIAL_LOGS: ProjectLog[] = [
     {
+        id: "LOG_2606",
+        date: "2026.07.20",
+        title: "Seoul Startup Hub Gwanak",
+        phase: "Competition (2026)",
+        status: "UNREACHABLE",
+        size: "24.1GB",
+        finalImage: "/projects/LOG_2606/LOG_2606_FINAL.jpg",
+        images: [
+            "/projects/LOG_2606/LOG_2606_FINAL.jpg",
+        ],
+        archive: [
+            {
+                timestamp: "2026.07.12 15:00",
+                type: "RENDER_WIP",
+                src: "/projects/LOG_2606/archive/lab.jpg",
+                filename: "03_Lab_Floor.png",
+                label: "Deep-tech lab floor. Robotics, AI and bio workbenches under the banded skin.",
+                meta: "D5 Render",
+            },
+            {
+                timestamp: "2026.07.13 16:00",
+                type: "RENDER_WIP",
+                src: "/projects/LOG_2606/archive/cafe.jpg",
+                filename: "07_Cafe.png",
+                label: "Ground-floor café opening onto the public plaza.",
+                meta: "D5 Render",
+            },
+            {
+                timestamp: "2026.07.16 11:00",
+                type: "RENDER_WIP",
+                src: "/projects/LOG_2606/archive/network.jpg",
+                filename: "06_Network_Zone.png",
+                label: "Networking zone threading the leased studios together.",
+                meta: "D5 Render",
+            },
+            {
+                timestamp: "2026.07.16 15:00",
+                type: "RENDER_WIP",
+                src: "/projects/LOG_2606/archive/entrance.jpg",
+                filename: "05_Entrance.png",
+                label: "Main entrance beneath the deep cantilever.",
+                meta: "D5 Render",
+            },
+            {
+                timestamp: "2026.07.18 20:00",
+                type: "RENDER_FINAL",
+                src: "/projects/LOG_2606/LOG_2606_FINAL.jpg",
+                filename: "001_Mainview.png",
+                label: "Final street view from Sillim-ro at dusk.",
+                meta: "D5 Render",
+            },
+            {
+                timestamp: "2026.07.19 13:00",
+                type: "RENDER_FINAL",
+                src: "/projects/LOG_2606/archive/vc.jpg",
+                filename: "08_VC.png",
+                label: "Venture / VC lounge — where projects meet capital.",
+                meta: "D5 Render",
+            },
+            {
+                timestamp: "2026.07.19 18:00",
+                type: "RENDER_FINAL",
+                src: "/projects/LOG_2606/archive/sub.jpg",
+                filename: "02_Sub_Morning.png",
+                label: "Secondary approach in morning light.",
+                meta: "D5 Render",
+            },
+            {
+                timestamp: "2026.07.19 22:00",
+                type: "RENDER_FINAL",
+                src: "/projects/LOG_2606/archive/backside.jpg",
+                filename: "10_Backside.png",
+                label: "Rear elevation toward Sillim-ro 8-gil.",
+                meta: "D5 Render",
+            },
+            {
+                timestamp: "2026.07.20 10:00",
+                type: "RENDER_FINAL",
+                src: "/projects/LOG_2606/archive/eventhall.jpg",
+                filename: "09_Event_Hall.png",
+                label: "Event hall — the public room at grade, opening to residents.",
+                meta: "D5 Render",
+            },
+        ],
+        location: "Sillim-dong, Gwanak-gu, Seoul",
+        program: "Startup R&D Complex (Educational Research Facility)",
+        siteArea: "3,575.00 m²",
+        totalArea: "15,567.69 m²",
+        buildingScope: "B3 / 8F (H: 33.15m)",
+        structure: "RC + Steel Frame (Partial)",
+        exteriorFinish: "Curved Aluminum Horizontal Band, Low-E Triple Glazing, U-Channel Glass, BIPV Spandrel",
+        architects: "TAAL Architects + LMST Architects (Joint Entry)",
+        description: `Seoul Startup Hub Gwanak
+
+[Ground Given Back]
+The site sits at the edge of Gwanak S-Valley, fronting Sillim-ro, with the Sillim Line light-rail running underground along its boundary—a buried tunnel that fixes how deep the building may reach. Rather than sealing itself off, the building opens: a low public base slips a plaza beneath a deep cantilever, returning its ground to the street precisely where the city moves fastest.
+
+[Projects Before Products]
+Deep tech begins with projects, not products—and projects grow into companies. The program is organized as that trajectory. Robotics, AI and bio labs form a small but symbolic anchor, the district's single industry–academia deep-tech core. Venture and networking floors thread the working studios together, and leased suites for teams of six to thirty stack above. The building is planned as a machine for growth rather than a container for tenants.
+
+[The Banded Volume]
+A horizontal-banded skin of curved aluminum unifies the stack. Its convex profile deepens toward the south to shade the glass and flattens toward the north to admit light, so the section of a single band does the work of a brise-soleil. BIPV spandrels are folded into the upper facets of each band, letting energy generation read as part of the architecture rather than an appliance added to it.
+
+[Public Interface]
+At grade, plaza, event hall and café open the building to residents, while a through-block walk and shared parking stitch it into the neighborhood. The result aims to behave less like a civic office and more like a piece of the city's ground—an infrastructure for the people who will start the next companies here.
+
+--------------------------------------------------
+
+서울창업허브 관악
+
+[되돌려준 지면]
+대지는 관악S밸리의 가장자리, 신림로에 면해 있고, 신림선 경전철이 그 경계를 따라 지하로 지난다—건물이 얼마나 깊이 내려갈 수 있는지를 고정하는 묻힌 터널이다. 건물은 스스로를 닫는 대신 연다: 저층 공공 기단이 깊은 캔틸레버 아래로 광장을 밀어넣어, 도시가 가장 빠르게 흐르는 지점에서 오히려 자신의 지면을 거리로 되돌려준다.
+
+[제품보다 프로젝트]
+딥테크는 제품이 아니라 프로젝트에서 시작하고, 프로젝트는 기업으로 자란다. 프로그램은 그 궤적으로 조직된다. 로봇·AI·바이오 랩은 면적은 작지만 상징적인 앵커—지역 유일의 산학협력 딥테크 거점—를 이룬다. 벤처와 네트워킹 층이 작업 스튜디오들을 엮고, 6~30인 팀을 위한 임대 실들이 그 위로 적층된다. 건물은 입주자를 담는 그릇이 아니라 성장을 위한 장치로 계획된다.
+
+[띠의 볼륨]
+곡면 알루미늄의 수평 띠 표피가 적층을 하나로 묶는다. 볼록한 단면은 남측에서 깊어져 유리를 그늘 지우고 북측에서 얕아져 빛을 들이니, 하나의 띠 단면이 곧 브리즈솔레유가 된다. BIPV 스팬드럴은 각 띠의 상단 면에 접혀 들어가, 에너지 생산이 덧붙여진 설비가 아니라 건축의 일부로 읽히게 한다.
+
+[공공 인터페이스]
+지상에서는 광장·다목적홀·카페가 건물을 주민에게 열고, 단지를 관통하는 보행로와 개방 주차가 이를 동네에 꿰맨다. 관공서 같은 사무소보다 도시의 지면 한 조각처럼—이곳에서 다음 기업을 시작할 사람들을 위한 인프라로—작동하기를 목표한다.`,
+    },
+    {
         id: "LOG_2506",
         date: "2025.06.30",
         title: "POSCO Prefab Restroom Design",
