@@ -52,7 +52,7 @@ export const INITIAL_LOGS: ProjectLog[] = [
                 type: "RENDER_WIP",
                 src: "/projects/LOG_2606/archive/lab.jpg",
                 filename: "03_Lab_Floor.png",
-                label: "Deep-tech lab floor. Robotics, AI and bio workbenches under the banded skin.",
+                label: "Deep-tech research floor — AI, bio and robotics clusters.",
                 meta: "D5 Render",
             },
             {
@@ -68,7 +68,7 @@ export const INITIAL_LOGS: ProjectLog[] = [
                 type: "RENDER_WIP",
                 src: "/projects/LOG_2606/archive/network.jpg",
                 filename: "06_Network_Zone.png",
-                label: "Networking zone threading the leased studios together.",
+                label: "Networking within the open Commons.",
                 meta: "D5 Render",
             },
             {
@@ -92,7 +92,7 @@ export const INITIAL_LOGS: ProjectLog[] = [
                 type: "RENDER_FINAL",
                 src: "/projects/LOG_2606/archive/vc.jpg",
                 filename: "08_VC.png",
-                label: "Venture / VC lounge — where projects meet capital.",
+                label: "Vertical Commons — the growth hub for investment, demo-days and networking.",
                 meta: "D5 Render",
             },
             {
@@ -116,7 +116,7 @@ export const INITIAL_LOGS: ProjectLog[] = [
                 type: "RENDER_FINAL",
                 src: "/projects/LOG_2606/archive/eventhall.jpg",
                 filename: "09_Event_Hall.png",
-                label: "Event hall — the public room at grade, opening to residents.",
+                label: "Event hall — part of the ground-floor Urban Living Room.",
                 meta: "D5 Render",
             },
         ],
@@ -128,35 +128,65 @@ export const INITIAL_LOGS: ProjectLog[] = [
         structure: "RC + Steel Frame (Partial)",
         exteriorFinish: "Curved Aluminum Horizontal Band, Low-E Triple Glazing, U-Channel Glass, BIPV Spandrel",
         architects: "TAAL Architects + LMST Architects (Joint Entry)",
-        description: `Seoul Startup Hub Gwanak
+        description: `Growing Deep Tech
+Architecture that Organizes Growth
 
-[Ground Given Back]
-The site sits at the edge of Gwanak S-Valley, fronting Sillim-ro, with the Sillim Line light-rail running underground along its boundary—a buried tunnel that fixes how deep the building may reach. Rather than sealing itself off, the building opens: a low public base slips a plaza beneath a deep cantilever, returning its ground to the street precisely where the city moves fastest.
+Deep tech does not begin with a company. It begins with a single project.
 
-[Projects Before Products]
-Deep tech begins with projects, not products—and projects grow into companies. The program is organized as that trajectory. Robotics, AI and bio labs form a small but symbolic anchor, the district's single industry–academia deep-tech core. Venture and networking floors thread the working studios together, and leased suites for teams of six to thirty stack above. The building is planned as a machine for growth rather than a container for tenants.
+Deep tech matures into a company through a long process of research, experiment, prototyping, demonstration and commercialization. Yet most startup-support facilities concentrate on providing office space for companies that are already organized, and so fail to hold the spatial needs of the early stage in which a project is first begun and grown.
 
-[The Banded Volume]
-A horizontal-banded skin of curved aluminum unifies the stack. Its convex profile deepens toward the south to shade the glass and flattens toward the north to admit light, so the section of a single band does the work of a brise-soleil. BIPV spandrels are folded into the upper facets of each band, letting energy generation read as part of the architecture rather than an appliance added to it.
+This proposal redefines the startup hub not as a building (a Container) that houses companies, but as an architecture (an Infrastructure) that organizes growth. The architecture is a growth platform that spatially organizes the process by which a project grows through research and experiment into a company and connects back into the innovation ecosystem — Project → Lab → Company → Scale-up → Innovation Ecosystem.
 
-[Public Interface]
-At grade, plaza, event hall and café open the building to residents, while a through-block walk and shared parking stitch it into the neighborhood. The result aims to behave less like a civic office and more like a piece of the city's ground—an infrastructure for the people who will start the next companies here.
+The building is composed by vertically stacking research clusters in the deep-tech fields — AI, bio, robotics, advanced materials, DX. Each floor holds a graded spatial structure running Knowledge Street → Lab Band → Open Lab → Focused Lab. The Knowledge Street is a street of knowledge where researchers and projects perceive and exchange one another's activity; the Lab Band is a semi-open interface where research results, prototypes and the process of experiment are made visible; the Open Lab is a flexible research space for project-based research and collaboration; and the Focused Lab is an independent research space requiring security and concentration. This depth of space continuously links openness with concentration, and sharing with protection, extending the visualization of research into natural learning and collaboration.
+
+Each research cluster is connected into a single innovation ecosystem through the Vertical Commons that runs through the building. This is not a mere atrium but the central axis of growth, where investment, demo-days, mentoring, technology exhibition and networking take place. Here a project connects with companies, investors and research institutions and grows, and the grown company in turn generates new projects and collaborations — forming a virtuous cycle.
+
+Growing Deep Tech is not a project that designs space, but a project that designs the mechanism of growth. This architecture is a new growth infrastructure that grows projects into companies and connects individual research into a sustainable deep-tech ecosystem.
+
+An Urban Interface for Growing Deep Tech
+
+Seoul Startup Hub Gwanak is not a single building but an urban interface that connects Gwanak S-Valley.
+
+The site lies at the boundary where Seoul National University's research axis meets the Sillim living quarter — a node where diverse startup-support facilities, universities and the local community overlap. This proposal interprets that urban character not as a single independent object but as an open platform that connects the many flows of the city.
+
+The building empties its lower floors toward the city and forms an open Commons. The ground floor is planned as an Urban Living Room in which plaza, event hall and networking space run continuously, making a place of urban exchange where residents, researchers and startups meet naturally.
+
+The upper floors are composed as a research platform holding deep-tech research and growth programs. Each floor is an independent research cluster, yet together with the open lower floors and the Vertical Commons it forms a single growth ecosystem. Research programs that require security are placed above, and public programs that communicate with the city are placed below, securing openness and security at once.
+
+The building's form emerged in the process of tuning the surrounding urban scale. The lower floors answer the living quarter and the pedestrian scale, while the upper horizontal mass holds the flexibility and expandability of the deep-tech research spaces. The mass lifted into the air makes an open front toward the city, and the Commons beneath it becomes a new center for Gwanak S-Valley.
+
+This proposal offers not a single building but a new Urban Interface connecting city and research, startup and community — a platform that lets projects grow into companies.
 
 --------------------------------------------------
 
-서울창업허브 관악
+Growing Deep Tech
+Architecture that Organizes Growth
 
-[되돌려준 지면]
-대지는 관악S밸리의 가장자리, 신림로에 면해 있고, 신림선 경전철이 그 경계를 따라 지하로 지난다—건물이 얼마나 깊이 내려갈 수 있는지를 고정하는 묻힌 터널이다. 건물은 스스로를 닫는 대신 연다: 저층 공공 기단이 깊은 캔틸레버 아래로 광장을 밀어넣어, 도시가 가장 빠르게 흐르는 지점에서 오히려 자신의 지면을 거리로 되돌려준다.
+Deep Tech 는 기업에서 시작되지 않는다. 하나의 프로젝트에서 시작된다.
 
-[제품보다 프로젝트]
-딥테크는 제품이 아니라 프로젝트에서 시작하고, 프로젝트는 기업으로 자란다. 프로그램은 그 궤적으로 조직된다. 로봇·AI·바이오 랩은 면적은 작지만 상징적인 앵커—지역 유일의 산학협력 딥테크 거점—를 이룬다. 벤처와 네트워킹 층이 작업 스튜디오들을 엮고, 6~30인 팀을 위한 임대 실들이 그 위로 적층된다. 건물은 입주자를 담는 그릇이 아니라 성장을 위한 장치로 계획된다.
+Deep Tech 는 연구, 실험, 프로토타입 제작, 실증, 사업화를 거치는 긴 성장 과정을 통해 기업으로 발전한다. 그러나 대부분의 창업지원시설은 이미 조직화된 기업을 위한 업무공간을 제공하는 데 집중되어 있어 프로젝트가 시작되고 성장하는 초기 단계의 공간적 요구를 충분히 담아내지 못하고 있다.
 
-[띠의 볼륨]
-곡면 알루미늄의 수평 띠 표피가 적층을 하나로 묶는다. 볼록한 단면은 남측에서 깊어져 유리를 그늘 지우고 북측에서 얕아져 빛을 들이니, 하나의 띠 단면이 곧 브리즈솔레유가 된다. BIPV 스팬드럴은 각 띠의 상단 면에 접혀 들어가, 에너지 생산이 덧붙여진 설비가 아니라 건축의 일부로 읽히게 한다.
+본 계획은 창업허브를 기업을 수용하는 건물(Container)이 아닌 성장을 조직하는 건축(Infrastructure)으로 새롭게 정의한다. 건축은 프로젝트가 연구와 실험을 거쳐 기업으로 성장하고, 다시 혁신 생태계와 연결되는 과정(Project → Lab → Company → Scale-up → Innovation Ecosystem)을 공간적으로 조직하는 성장 플랫폼이다.
 
-[공공 인터페이스]
-지상에서는 광장·다목적홀·카페가 건물을 주민에게 열고, 단지를 관통하는 보행로와 개방 주차가 이를 동네에 꿰맨다. 관공서 같은 사무소보다 도시의 지면 한 조각처럼—이곳에서 다음 기업을 시작할 사람들을 위한 인프라로—작동하기를 목표한다.`,
+건물은 AI, 바이오, 로보틱스, 첨단소재, DX 등 Deep Tech 분야의 연구 클러스터를 수직적으로 적층하여 구성된다. 각 층은 Knowledge Street → Lab Band → Open Lab → Focused Lab 으로 이어지는 단계적 공간구조를 갖는다. Knowledge Street 는 연구자와 프로젝트가 서로의 활동을 인지하고 교류하는 지식의 가로이며, Lab Band 는 연구성과와 프로토타입, 실험 과정이 드러나는 반공개 인터페이스이다. Open Lab 은 프로젝트 단위의 연구와 협업이 이루어지는 유연한 연구공간이며, Focused Lab 은 보안과 집중이 요구되는 독립 연구공간이다. 이러한 공간의 깊이는 개방과 집중, 공유와 보호를 연속적으로 연결하며 연구의 가시화를 자연스러운 학습과 협업으로 확장시킨다.
+
+각 연구 클러스터는 건물을 관통하는 Vertical Commons 를 통해 하나의 혁신 생태계로 연결된다. 이곳은 단순한 아트리움이 아니라 투자, 데모데이, 멘토링, 기술 전시와 네트워킹이 이루어지는 성장의 중심축이다. 프로젝트는 이 공간에서 기업, 투자자, 연구기관과 연결되며 성장하고, 성장한 기업은 다시 새로운 프로젝트와 협업을 만들어내는 선순환을 형성한다.
+
+Growing Deep Tech 는 공간을 설계하는 프로젝트가 아니라 성장의 메커니즘을 설계하는 프로젝트이다. 이 건축은 프로젝트를 기업으로 성장시키고, 개별 연구를 지속가능한 Deep Tech 생태계로 연결하는 새로운 성장 인프라이다.
+
+An Urban Interface for Growing Deep Tech
+
+서울창업허브 관악은 하나의 건축물이 아니라 관악 S-Valley 를 연결하는 도시적 인터페이스이다.
+
+대상지는 서울대학교 연구축과 신림 생활권이 만나는 경계에 위치하며, 다양한 창업지원시설과 대학, 지역사회가 중첩되는 결절점이다. 본 계획은 이러한 도시적 특성을 하나의 독립된 오브젝트가 아닌 다양한 도시 흐름을 연결하는 개방형 플랫폼으로 해석하였다.
+
+건물은 도시를 향해 저층부를 비우고 열린 Commons 를 형성한다. 1층은 광장, 이벤트홀, 네트워킹 공간이 연속되는 Urban Living Room 으로 계획되어 지역 주민, 연구자, 창업기업이 자연스럽게 만나는 도시적 교류의 장을 만든다.
+
+상층부는 Deep Tech 연구와 성장 프로그램을 담는 연구 플랫폼으로 구성된다. 각 층은 독립적인 연구 클러스터이면서도, 열린 저층부와 Vertical Commons 를 통해 하나의 성장 생태계를 형성한다. 보안이 요구되는 연구 프로그램은 상부에, 도시와 소통하는 공공 프로그램은 저층에 배치하여 개방성과 보안성을 동시에 확보하였다.
+
+건축의 형태는 주변 도시 스케일을 조율하는 과정에서 형성되었다. 저층부는 생활권과 보행 스케일에 대응하고, 상부의 수평적 매스는 Deep Tech 연구공간의 유연성과 확장성을 담는다. 공중으로 들어 올려진 매스는 도시를 향한 열린 전면을 만들고, 그 아래의 Commons 는 관악 S-Valley 의 새로운 중심이 된다.
+
+본 계획은 하나의 건축물을 제안하는 것이 아니라 도시와 연구, 창업과 지역사회를 연결하는 새로운 Urban Interface 이자 프로젝트가 기업으로 성장케하는 플랫폼이다.`,
     },
     {
         id: "LOG_2506",
