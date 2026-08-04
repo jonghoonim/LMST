@@ -190,29 +190,131 @@ An Urban Interface for Growing Deep Tech
     },
     {
         id: "LOG_2506",
-        date: "2025.06.30",
+        date: "2025.12.22",
         title: "POSCO Prefab Restroom Design",
         phase: "Completed (2025)",
         status: "COMPILED",
         size: "12.4GB",
-        finalImage: "/projects/LOG_2506/05_Stone_Front_LMST.png",
+        finalImage: "/projects/LOG_2506/LOG_2506_FINAL.jpg",
         images: [
-            "/projects/LOG_2506/05_Stone_Front_LMST.png",
-            "/projects/LOG_2506/bathroom_detail.png",
-            "/projects/LOG_2506/assembly.png",
-            "/projects/LOG_2506/panel_variations.png",
-            "/projects/LOG_2506/05_Stone_Front_LMST_RESIZE.png",
+            "/projects/LOG_2506/LOG_2506_FINAL.jpg",
+        ],
+        archive: [
+            {
+                timestamp: "2025.08.12 18:00",
+                type: "RENDER_WIP",
+                src: "/projects/LOG_2506/archive/scene01.jpg",
+                filename: "Scene 1.png",
+                label: "First interior study of the module.",
+                meta: "Enscape",
+            },
+            {
+                timestamp: "2025.08.20 15:00",
+                type: "MASS_STUDY",
+                src: "/projects/LOG_2506/archive/type_2400.jpg",
+                filename: "1500X2400 FRONT.png",
+                label: "Plan type 1500×2400 — the standard unit.",
+                meta: "Enscape",
+            },
+            {
+                timestamp: "2025.08.20 15:30",
+                type: "MASS_STUDY",
+                src: "/projects/LOG_2506/archive/type_3300.jpg",
+                filename: "1500X3300 FRONT.png",
+                label: "Plan type 1500×3300 — the long unit, wet and dry zones split.",
+                meta: "Enscape",
+            },
+            {
+                timestamp: "2025.09.16 11:00",
+                type: "RENDER_WIP",
+                src: "/projects/LOG_2506/archive/section.jpg",
+                filename: "Main Section.png",
+                label: "Sectional perspective after tone correction.",
+                meta: "Enscape + Camera Raw",
+            },
+            {
+                timestamp: "2025.09.16 11:30",
+                type: "RENDER_WIP",
+                src: "/projects/LOG_2506/archive/washbasin.jpg",
+                filename: "Wash Basin@3x.png",
+                label: "Basin zone — stone counter against hairline steel.",
+                meta: "Enscape + Camera Raw",
+            },
+            {
+                timestamp: "2025.09.16 12:00",
+                type: "RENDER_WIP",
+                src: "/projects/LOG_2506/archive/toilet_shower.jpg",
+                filename: "Toile and Shower@3x.png",
+                label: "Toilet and shower zone, single wet floor.",
+                meta: "Enscape + Camera Raw",
+            },
+            {
+                timestamp: "2025.12.18 14:00",
+                type: "RENDER_FINAL",
+                src: "/projects/LOG_2506/archive/style_casual.jpg",
+                filename: "01_Casual_Front.png",
+                label: "Style 01 — CASUAL.",
+                meta: "Catalogue plate",
+            },
+            {
+                timestamp: "2025.12.18 14:20",
+                type: "RENDER_FINAL",
+                src: "/projects/LOG_2506/archive/style_calm.jpg",
+                filename: "02_Calm_Front.png",
+                label: "Style 02 — CALM & QUIET.",
+                meta: "Catalogue plate",
+            },
+            {
+                timestamp: "2025.12.18 14:40",
+                type: "RENDER_FINAL",
+                src: "/projects/LOG_2506/archive/style_wood.jpg",
+                filename: "03_Wood_Front.png",
+                label: "Style 03 — MINIMAL WOOD.",
+                meta: "Catalogue plate",
+            },
+            {
+                timestamp: "2025.12.18 15:00",
+                type: "RENDER_FINAL",
+                src: "/projects/LOG_2506/archive/style_gray.jpg",
+                filename: "04_Gray_Front.png",
+                label: "Style 04 — DARK & GREY.",
+                meta: "Catalogue plate",
+            },
+            {
+                timestamp: "2025.12.19 16:00",
+                type: "RENDER_FINAL",
+                src: "/projects/LOG_2506/archive/style_stone.jpg",
+                filename: "05_Stone_Front.png",
+                label: "Style 05 — PRIMAL STONE.",
+                meta: "Catalogue plate",
+            },
+            {
+                timestamp: "2025.12.22 09:00",
+                type: "DOCUMENT",
+                src: "/projects/LOG_2506/archive/cat_styles.jpg",
+                filename: "Final_SEAL.pdf p.6",
+                label: "The five-style lineup as issued.",
+                meta: "157pp catalogue",
+            },
+            {
+                timestamp: "2025.12.22 09:10",
+                type: "DOCUMENT",
+                src: "/projects/LOG_2506/archive/cat_userguide.jpg",
+                filename: "Final_SEAL.pdf p.10",
+                label: "User guide — size and plan, style, material matching, accessories, then spec list and drawings.",
+                meta: "157pp catalogue",
+            },
         ],
         client: "POSCO E&C / POSCO Steel",
         program: "R&D, Product Design",
-        structure: "PosART, Prefab Frame",
+        structure: "PosMAC Steel Panel, Prefab Frame",
         buildingScope: "Concept ~ Mock-up",
         team: "LMST Architects (w/ SEAL)",
         description: `Research for Industrialization: From Construction to Manufacturing
 
 This project explores the industrialization of interior architecture. Moving away from labor-intensive on-site wet construction, we developed a modular bath unit based on Off-Site Construction (OSC) methodology. The primary logic was to achieve manufacturing precision, shorten construction timelines, and standardize design quality by pre-fabricating components in a controlled factory environment.
 
-Collaborating with POSCO, we utilized high-resolution printed steel panels (PosART) to replace traditional ceramic tiling. This dry assembly system eliminates unpredictable site variables and minimizes construction tolerance. We defined diverse design typologies—ranging from Minimal to Natural—transforming the bathroom from a 'built space' into a 'highly engineered product.'
+Collaborating with POSCO, we specified PosMAC coated steel in white and dark-bronze hairline as a panel finish, matched against stone, tile and wood, and developed a new hairline series for the project in three grades of directional grain. This dry assembly system eliminates unpredictable site variables and minimizes construction tolerance. We defined five design styles—CASUAL, CALM & QUIET, MINIMAL WOOD, DARK & GREY, PRIMAL STONE—across three plan types, transforming the bathroom from a 'built space' into a 'highly engineered product.'
 
 --------------------------------------------------
 
@@ -220,7 +322,7 @@ Collaborating with POSCO, we utilized high-resolution printed steel panels (PosA
 
 이 프로젝트는 실내 건축의 상품화 가능성을 탐구한다. 노동 집약적인 현장 습식 공법에서 벗어나, OSC(Off-Site Construction) 방법론을 기반으로 한 모듈러 욕실 유닛을 개발했다. 통제된 공장 환경에서의 선제작을 통해 제조업 수준의 정밀도를 확보하고, 공기를 단축하며, 디자인 품질을 표준화하는 것이 핵심 논리다.
 
-POSCO와의 협업을 통해 고해상도 프린팅 강판(PosART)을 적용, 전통적인 타일 마감을 대체하는 건식 조립 시스템을 구축했다. 이 시스템은 현장의 불확실성을 제거하고 시공 오차를 최소화한다. 우리는 미니멀에서 내추럴에 이르는 다양한 디자인 유형을 정의하여, 욕실을 현장에서 '지어지는 공간'이 아닌 공학적으로 설계된 '조립형 제품'으로 전환시켰다.`,
+POSCO와의 협업을 통해 포스맥(PosMAC) 강판의 화이트 헤어라인과 다크브론즈 헤어라인을 패널 마감으로 적용하고, 스톤·타일·우드와 짝지어 팔레트를 구성했다. 이 프로젝트를 위해 결의 강도를 세 단계로 나눈 새로운 헤어라인 계열을 제작했다. 건식 조립 시스템은 현장의 불확실성을 제거하고 시공 오차를 최소화한다. 우리는 세 개의 평면 타입 위에 다섯 개의 디자인 스타일 — CASUAL, CALM & QUIET, MINIMAL WOOD, DARK & GREY, PRIMAL STONE — 을 정의하여, 욕실을 현장에서 '지어지는 공간'이 아닌 공학적으로 설계된 '조립형 제품'으로 전환시켰다.`,
     },
     {
         id: "LOG_2505",
