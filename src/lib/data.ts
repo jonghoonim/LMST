@@ -213,7 +213,7 @@ An Urban Interface for Growing Deep Tech
                 type: "MASS_STUDY",
                 src: "/projects/LOG_2506/archive/type_2400.jpg",
                 filename: "1500X2400 FRONT.png",
-                label: "Plan type 1500×2400 — the standard unit.",
+                label: "Size study at 1,500×2,400, before the range settled on 1,800.",
                 meta: "Enscape",
             },
             {
@@ -221,7 +221,7 @@ An Urban Interface for Growing Deep Tech
                 type: "MASS_STUDY",
                 src: "/projects/LOG_2506/archive/type_3300.jpg",
                 filename: "1500X3300 FRONT.png",
-                label: "Plan type 1500×3300 — the long unit, wet and dry zones split.",
+                label: "Size study at 1,500×3,300 — wet and dry zones split.",
                 meta: "Enscape",
             },
             {
@@ -310,19 +310,27 @@ An Urban Interface for Growing Deep Tech
         structure: "PosMAC Steel Panel, Prefab Frame",
         buildingScope: "Concept ~ Mock-up",
         team: "LMST Architects (w/ SEAL)",
-        description: `Research for Industrialization: From Construction to Manufacturing
+        description: `POSCO Prefab Bathroom
 
-This project explores the industrialization of interior architecture. Moving away from labor-intensive on-site wet construction, we developed a modular bath unit based on Off-Site Construction (OSC) methodology. The primary logic was to achieve manufacturing precision, shorten construction timelines, and standardize design quality by pre-fabricating components in a controlled factory environment.
+The design of the prefabricated bathroom begins from four principles: simplicity, materiality, consistency, and selective composition. A composition stripped of the unnecessary receives movement easily; surfaces in wood, stone, concrete and metal each disclose their own depth and temperature. Wall-hung fixtures, recessed storage and slim taps raise the density of the room while lowering its visual weight, and lighting works beyond function, tuning the grain of surfaces and the depth of the space.
 
-Collaborating with POSCO, we specified PosMAC coated steel in white and dark-bronze hairline as a panel finish, matched against stone, tile and wood, and developed a new hairline series for the project in three grades of directional grain. This dry assembly system eliminates unpredictable site variables and minimizes construction tolerance. We defined five design styles—CASUAL, CALM & QUIET, MINIMAL WOOD, DARK & GREY, PRIMAL STONE—across three plan types, transforming the bathroom from a 'built space' into a 'highly engineered product.'
+The system is built less to give a single answer than to let each user complete the bathroom that suits their home and their taste. On a framework of size and plan — Private Bath (1,500×2,100), Family Bath (1,800×2,400), Grand Bath (1,800×3,300) — design style, finish and accessory grade are combined step by step. The advantages of prefabrication hold: stable construction, uniform quality, efficient maintenance. Character and market appeal are not traded away for them.
+
+Five collections form that emotional spectrum. CASUAL makes a comfortable everyday bathroom from bright neutral tones and soft detail. CALM & QUIET offers a quiet hour within the city through low saturation and gentle shadow. MINIMAL WOOD holds the warmth of wood inside a restrained structure. DARK & GREY builds a dense, contemporary mood from deep tone and linear light. PRIMAL STONE places the grain, the layering and the weight of natural stone at the centre of the room, completing a high-end bathroom in which the force of the material is felt.
+
+Finish, accessory and lighting were planned not as separate specifications but as elements of a single spatial language. Eighty-six items are specified across the line grades; the pattern and hairline of the PosMAC panel reinterpret the texture of tile and natural material for a prefabricated environment; and the lighting accounts for both the economy of the base specification and the spatial quality of the high-end one. Beyond the assumption that an industrialised bathroom must be uniform, this work makes a bathroom brand that is precisely produced, carefully chosen, and comfortable over time.
 
 --------------------------------------------------
 
-건설에서 제조로: 욕실의 상품화 연구
+POSCO 프리패브 욕실
 
-이 프로젝트는 실내 건축의 상품화 가능성을 탐구한다. 노동 집약적인 현장 습식 공법에서 벗어나, OSC(Off-Site Construction) 방법론을 기반으로 한 모듈러 욕실 유닛을 개발했다. 통제된 공장 환경에서의 선제작을 통해 제조업 수준의 정밀도를 확보하고, 공기를 단축하며, 디자인 품질을 표준화하는 것이 핵심 논리다.
+프리패브 욕실의 디자인 출발점은 단순함, 재료성, 일관성, 그리고 선택 가능한 조합이다. 불필요한 요소를 덜어낸 구성은 사용자의 움직임을 편안하게 받아들이고, 우드·스톤·콘크리트·메탈의 표면은 각 재료가 지닌 고유한 깊이와 온도를 드러낸다. 벽걸이형 도기, 매립형 수납, 슬림한 수전과 같은 정돈된 설비는 공간의 밀도를 높이는 대신 시각적 부담은 낮추며, 조명은 기능을 넘어 표면의 질감과 공간의 깊이를 조율하는 장치로 작동한다.
 
-POSCO와의 협업을 통해 포스맥(PosMAC) 강판의 화이트 헤어라인과 다크브론즈 헤어라인을 패널 마감으로 적용하고, 스톤·타일·우드와 짝지어 팔레트를 구성했다. 이 프로젝트를 위해 결의 강도를 세 단계로 나눈 새로운 헤어라인 계열을 제작했다. 건식 조립 시스템은 현장의 불확실성을 제거하고 시공 오차를 최소화한다. 우리는 세 개의 평면 타입 위에 다섯 개의 디자인 스타일 — CASUAL, CALM & QUIET, MINIMAL WOOD, DARK & GREY, PRIMAL STONE — 을 정의하여, 욕실을 현장에서 '지어지는 공간'이 아닌 공학적으로 설계된 '조립형 제품'으로 전환시켰다.`,
+이 시스템은 하나의 정답을 제시하기보다, 사용자가 자신의 주거 환경과 취향에 맞는 욕실을 완성할 수 있도록 설계되었다. Private Bath(1,500×2,100), Family Bath(1,800×2,400), Grand Bath(1,800×3,300)로 이어지는 규모와 평면의 체계 위에 디자인 스타일, 마감재, 액세서리 등급을 단계적으로 조합한다. 이를 통해 프리패브의 장점인 시공 안정성·품질 균일성·유지관리 효율을 확보하면서도, 프로젝트별 개성과 상품성은 잃지 않는다.
+
+다섯 개의 컬렉션이 그 감성적 스펙트럼을 이룬다. CASUAL은 밝은 뉴트럴 톤과 부드러운 디테일로 편안한 일상의 욕실을 만들고, CALM & QUIET은 낮은 채도와 은은한 음영으로 도심 속 고요한 휴식의 시간을 제안한다. MINIMAL WOOD는 절제된 구조 안에 우드의 온기를 담아 따뜻한 균형을 구현하며, DARK & GREY는 깊은 톤과 선형 조명으로 밀도 높은 현대적 분위기를 만든다. PRIMAL STONE은 자연석의 결, 층위, 무게감을 공간의 중심에 두어 재료 본연의 힘이 느껴지는 하이엔드 욕실을 완성한다.
+
+마감재와 액세서리, 조명은 별개의 사양이 아니라 하나의 공간 언어를 완성하는 요소로 계획되었다. 86개 품목이 라인 등급에 따라 지정되고, 포스맥 패널의 패턴과 헤어라인은 타일 및 자연 소재의 질감을 프리패브 환경에 적합하게 재해석하며, 조명은 기본 사양의 경제성과 고급 사양의 공간감을 모두 고려한다. 결과적으로 이 작업은 공업화된 욕실이 획일적이라는 인식을 넘어, 정확하게 생산되고 섬세하게 선택되며 오래도록 편안한 경험을 제공하는 욕실 브랜드를 만든다.`,
     },
     {
         id: "LOG_2505",
